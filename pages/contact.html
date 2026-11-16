@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — BrightSmile Dental Care</title>
+  <meta name="description" content="Get in touch with BrightSmile Dental Care in Boston. Clinic location, emergency phone lines, hours of operation, interactive map, and online consultation inquiry.">
+  <link rel="canonical" href="https://demo.brightsmiledental.com/pages/contact.html">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Contact Us — BrightSmile Dental Care">
+  <meta property="og:description" content="Reach our patient care team in Boston. Clinic hours, direct phone, emergency triage, and online consultation form.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://demo.brightsmiledental.com/pages/contact.html">
+  <meta property="og:image" content="https://demo.brightsmiledental.com/assets/images/page-banners/banner-contact.jpg">
+
+  <!-- DentalClinic Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DentalClinic",
+    "name": "BrightSmile Dental Care",
+    "image": "https://demo.brightsmiledental.com/assets/images/logo/logo.jpg",
+    "telephone": "+1-555-234-5678",
+    "email": "contact@brightsmiledental.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "450 Medical Boulevard, Suite 300, Healthcare Plaza",
+      "addressLocality": "Boston",
+      "addressRegion": "MA",
+      "postalCode": "02115",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 42.3584308,
+      "longitude": -71.0636114
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "16:00"
+      }
+    ],
+    "medicalSpecialty": [
+      "Dentistry",
+      "Orthodontics",
+      "Prosthodontics",
+      "Periodontics",
+      "OralSurgery"
+    ]
+  }
+  </script>
+
+  <!-- FOUC Prevention Script -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('brightsmile_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var savedRtl = localStorage.getItem('brightsmile_dental_rtl') || localStorage.getItem('rtl');
+        var isRtl = (savedRtl === 'true' || savedRtl === 'rtl');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark-mode');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark-mode');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+        if (isRtl) {
+          document.documentElement.classList.add('rtl-mode');
+          document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+          document.documentElement.classList.remove('rtl-mode');
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts: Outfit (Headings) & Plus Jakarta Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Logo Anchor Left -->
+      <a href="index.html" class="header-logo" aria-label="BrightSmile Dental Care Home">
+        <img src="../assets/images/logo/logo.jpg" alt="BrightSmile Dental Care" class="logo-light" width="160" height="38">
+        <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" class="logo-dark" width="160" height="38">
+      </a>
+
+      <!-- Desktop Navigation Links Center -->
+      <nav class="header-nav" aria-label="Main Navigation">
+        <div class="nav-item dropdown">
+          <a href="index.html" class="nav-link dropdown-toggle" role="button" aria-expanded="false">
+            <span>Home</span>
+            <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1 — General Clinic</a>
+            <a href="index-2.html" class="dropdown-item">Home 2 — Modern Care</a>
+          </div>
+        </div>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="doctors.html" class="nav-link">Doctors</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+
+      <!-- Desktop Header Actions Right -->
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button type="button" class="btn-icon desktop-only" data-action="toggle-theme" aria-label="Toggle Dark/Light Mode">
+          <span class="theme-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+
+        <!-- RTL Toggle -->
+        <button type="button" class="btn-icon desktop-only" data-action="toggle-rtl" aria-label="Toggle Layout Direction" title="Switch to RTL">
+          <span class="rtl-label" style="font-size: 0.82rem; font-weight: 700; font-family: var(--font-body);">RTL</span>
+        </button>
+
+        <!-- Patient Portal Link -->
+        <a href="../patient-dashboard/index.html" class="btn btn-outline desktop-only portal-btn" style="padding: 10px 18px; font-size: 0.92rem;">
+          <span class="icon-text">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Patient Portal</span>
+          </span>
+        </a>
+
+        <!-- Book Appointment CTA -->
+        <a href="login.html" class="btn btn-primary desktop-only header-login-btn" style="padding: 10px 20px; font-size: 0.92rem;">
+          <span class="icon-text">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+            <span>Login</span>
+          </span>
+        </a>
+
+        <!-- Mobile Drawer Hamburger Trigger -->
+        <button type="button" class="hamburger-btn" data-action="open-drawer" aria-label="Open Navigation Menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE NAVIGATION DRAWER
+       ========================================================================== -->
+  <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="header-logo" aria-label="BrightSmile Dental Care Home">
+        <img src="../assets/images/logo/logo.jpg" alt="BrightSmile Dental Care" class="logo-light" width="160" height="38">
+        <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" class="logo-dark" width="160" height="38">
+      </a>
+      <button type="button" class="btn-icon" data-action="close-drawer" aria-label="Close Navigation Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <ul class="mobile-nav-links">
+      <li class="mobile-dropdown">
+        <a href="index.html" class="nav-link">Home (General &amp; Modern)</a>
+        <div class="mobile-sublinks" style="padding-left: 16px; display: flex; flex-direction: column; gap: 4px; margin-top: 4px; margin-bottom: 8px;">
+          <a href="index.html" class="nav-link" style="font-size: 0.92rem; padding: 6px 12px;">↳ Home 1 — General Clinic</a>
+          <a href="index-2.html" class="nav-link" style="font-size: 0.92rem; padding: 6px 12px;">↳ Home 2 — Modern Care</a>
+        </div>
+      </li>
+      <li><a href="services.html" class="nav-link">Dental Services</a></li>
+      <li><a href="doctors.html" class="nav-link">Our Dentists</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="pricing.html" class="nav-link">Pricing Plans</a></li>
+      <li><a href="contact.html" class="nav-link active">Contact &amp; Hours</a></li>
+    </ul>
+
+    <div class="mobile-drawer-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%; margin-bottom: var(--space-2);"><span class="icon-text" style="justify-content: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg><span>Login</span></span></a>
+      <a href="../patient-dashboard/index.html" class="portal-btn btn btn-outline" style="width: 100%; margin-bottom: var(--space-4);">
+        <span class="icon-text">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          <span>Patient Portal</span>
+        </span>
+      </a>
+
+      <div style="display: flex; gap: var(--space-2);">
+        <button type="button" class="btn btn-outline" data-action="toggle-theme" style="flex: 1;">
+          <span class="icon-text">
+            <span class="theme-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span class="theme-label">Theme</span>
+          </span>
+        </button>
+        <button type="button" class="btn btn-outline" data-action="toggle-rtl" style="flex: 1;">
+          <span class="icon-text">
+            <span class="rtl-label">RTL</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       MAIN CONTENT WRAPPER
+       ========================================================================== -->
+  <main id="main-content">
+    
+    <!-- Banner Section -->
+    <section class="page-banner">
+      <div class="container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <ul class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-separator">/</li>
+            <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+          </ul>
+        </nav>
+        <span class="section-tag">Get In Touch</span>
+        <h1 style="font-size: clamp(2.2rem, 4vw, 3rem); line-height: 1.2; margin-bottom: var(--space-3); color: var(--color-text-main);">
+          Connect With Our Dental Care Team
+        </h1>
+        <p class="lead" style="max-width: 820px; margin-bottom: 0; color: var(--color-text-muted);">
+          Have questions about a treatment, dental insurance coverage, or need immediate assistance? Our patient coordination team is standing by to assist you.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact & Details Grid Section -->
+    <section class="section-full">
+      <div class="container">
+        
+        <!-- Clinic Facility Banner Image -->
+        <div style="margin-bottom: var(--space-8); text-align: center;">
+          <img src="../assets/images/page-banners/banner-contact.jpg" alt="Contact BrightSmile Dental Care" width="1200" height="320" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: var(--border-radius-lg); border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);">
+        </div>
+
+        <!-- 2-Column Contact Info & Inquiry Form Grid -->
+        <div class="contact-grid" style="margin-bottom: var(--space-10);">
+          
+          <!-- Left Column: Clinic Contact Cards & Operating Hours -->
+          <div class="contact-info-list">
+            
+            <!-- Address Card -->
+            <div class="contact-card">
+              <div style="display: flex; gap: var(--space-3); align-items: flex-start;">
+                <div style="width: 44px; height: 44px; border-radius: var(--border-radius); background-color: var(--color-primary-tint); color: var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div>
+                  <h3 style="font-size: 1.15rem; margin-bottom: 6px; color: var(--color-text-main);">Clinic Location</h3>
+                  <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 6px; line-height: 1.5;">
+                    BrightSmile Dental Care<br>
+                    450 Medical Boulevard, Suite 300<br>
+                    Healthcare Plaza, Boston, MA 02115
+                  </p>
+                  <span style="font-size: 0.85rem; color: var(--color-primary); font-weight: 500;">Valid parking validated for 2 hours in Plaza Garage B</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phone & Emergency Hotline Card -->
+            <div class="contact-card">
+              <div style="display: flex; gap: var(--space-3); align-items: flex-start;">
+                <div style="width: 44px; height: 44px; border-radius: var(--border-radius); background-color: var(--color-primary-tint); color: var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <h3 style="font-size: 1.15rem; margin-bottom: 6px; color: var(--color-text-main);">Telephone &amp; Direct Lines</h3>
+                  <div style="margin-bottom: 6px;">
+                    <span style="font-size: 0.85rem; color: var(--color-text-muted); display: block;">Front Desk &amp; Appointments:</span>
+                    <a href="tel:+15552345678" style="font-size: 1.05rem; font-weight: 600; color: var(--color-text-main); text-decoration: none;">(555) 234-5678</a>
+                  </div>
+                  <div>
+                    <span style="font-size: 0.85rem; color: var(--color-primary); font-weight: 600; display: block;">24/7 Dental Trauma Hotline:</span>
+                    <a href="tel:+15559993368" style="font-size: 0.95rem; font-weight: 600; color: var(--color-primary); text-decoration: none;">(555) 999-DENT (3368)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email Card -->
+            <div class="contact-card">
+              <div style="display: flex; gap: var(--space-3); align-items: flex-start;">
+                <div style="width: 44px; height: 44px; border-radius: var(--border-radius); background-color: var(--color-primary-tint); color: var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <h3 style="font-size: 1.15rem; margin-bottom: 6px; color: var(--color-text-main);">Email Correspondence</h3>
+                  <div style="margin-bottom: 4px;">
+                    <a href="mailto:contact@brightsmiledental.com" style="font-size: 0.95rem; color: var(--color-text-main); text-decoration: none;">contact@brightsmiledental.com</a>
+                  </div>
+                  <div>
+                    <a href="mailto:appointments@brightsmiledental.com" style="font-size: 0.95rem; color: var(--color-text-muted); text-decoration: none;">appointments@brightsmiledental.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Office Hours Card -->
+            <div class="contact-card">
+              <div style="display: flex; gap: var(--space-3); align-items: flex-start;">
+                <div style="width: 44px; height: 44px; border-radius: var(--border-radius); background-color: var(--color-primary-tint); color: var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <div style="flex: 1;">
+                  <h3 style="font-size: 1.15rem; margin-bottom: 6px; color: var(--color-text-main);">Hours of Operation</h3>
+                  <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.9rem; color: var(--color-text-muted);">
+                    <li style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                      <span>Monday – Friday:</span>
+                      <strong style="color: var(--color-text-main);">8:00 AM – 7:00 PM</strong>
+                    </li>
+                    <li style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                      <span>Saturday:</span>
+                      <strong style="color: var(--color-text-main);">9:00 AM – 4:00 PM</strong>
+                    </li>
+                    <li style="display: flex; justify-content: space-between;">
+                      <span>Sunday:</span>
+                      <span style="color: var(--color-primary); font-weight: 600;">Emergency Calls Only</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Consultation & Appointment Inquiry Form -->
+          <div class="card" style="padding: var(--space-6); border: 1px solid var(--color-border); background-color: var(--color-card-bg); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm);">
+            
+            <div style="margin-bottom: var(--space-5);">
+              <span class="section-tag" style="margin-bottom: 6px;">Direct Patient Inquiry</span>
+              <h2 style="font-size: 1.6rem; margin-bottom: 8px; color: var(--color-text-main);">Send a Consultation Request</h2>
+              <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 0;">
+                Fill out the secure intake form below. Our clinical staff responds within 2 business hours.
+              </p>
+            </div>
+
+            <!-- Formspree / Netlify Functional Endpoint Placeholder -->
+            <form id="contact-form" data-contact-form method="POST" action="https://formspree.io/f/placeholder-brightsmile-dental">
+              
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-4);">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="first-name" class="form-label">First Name *</label>
+                  <input type="text" id="first-name" name="first_name" class="form-control" placeholder="Jane" required>
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="last-name" class="form-label">Last Name *</label>
+                  <input type="text" id="last-name" name="last_name" class="form-control" placeholder="Doe" required>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-4);">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="jane.doe@example.com" required>
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="phone" class="form-label">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="(555) 000-0000" required>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: var(--space-4);">
+                <label for="treatment-interest" class="form-label">Primary Clinical Department</label>
+                <select id="treatment-interest" name="treatment_interest" class="form-control">
+                  <option value="general-checkup">General Diagnostic Checkup &amp; Cleaning</option>
+                  <option value="cosmetic">Cosmetic Dentistry (Veneers / Whitening)</option>
+                  <option value="orthodontics">Orthodontics &amp; Clear Aligners (Invisalign)</option>
+                  <option value="implants">3D Guided Dental Implants</option>
+                  <option value="periodontics">Periodontal Gum Therapy</option>
+                  <option value="emergency">Urgent Emergency Consultation</option>
+                  <option value="other">Other Inquiry / Second Opinion</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin-bottom: var(--space-4);">
+                <label for="message" class="form-label">Detailed Inquiry or Symptoms *</label>
+                <textarea id="message" name="message" class="form-control" rows="4" placeholder="Describe your dental concern, symptoms, insurance carrier, or preferred consultation days..." required></textarea>
+              </div>
+
+              <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: var(--space-5);">
+                <input type="checkbox" id="hipaa-consent" name="hipaa_consent" required style="margin-top: 4px; accent-color: var(--color-primary); width: 18px; height: 18px; cursor: pointer;">
+                <label for="hipaa-consent" style="font-size: 0.85rem; color: var(--color-text-muted); cursor: pointer; line-height: 1.4;">
+                  I consent to BrightSmile Dental Care contacting me regarding my inquiry. Medical information submitted is strictly confidential per HIPAA guidelines.
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px 24px; font-size: 1.05rem;">
+                <span class="icon-text">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                  <span>Submit Consultation Inquiry</span>
+                </span>
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+        <!-- Google Maps Integration Section -->
+        <div style="margin-bottom: var(--space-10);">
+          <div style="margin-bottom: var(--space-4); display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: var(--space-3);">
+            <div>
+              <span class="section-tag" style="margin-bottom: 6px;">Interactive Map</span>
+              <h2 style="font-size: 1.75rem; margin-bottom: 4px; color: var(--color-text-main);">Find Our Boston Clinic</h2>
+              <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 0;">Located conveniently at Healthcare Plaza with ground floor elevator access.</p>
+            </div>
+            <a href="https://maps.google.com/?q=Boston,MA" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+              <span class="icon-text">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+                <span>Open in Google Maps</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="map-container">
+            <!-- Accessible interactive map iframe with clean fallback styling -->
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.847587121045!2d-71.0636114!3d42.3584308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37084e3d748f3%3A0x6b4e6d7bb3d94498!2sBoston%2C%20MA!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+              title="BrightSmile Dental Care Location Map"
+              loading="lazy" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Emergency Urgent Dental Triage Banner -->
+        <div style="background-color: var(--color-surface-alt); border: 1px solid var(--color-border); border-radius: var(--border-radius-lg); padding: var(--space-6); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-4);">
+          <div style="max-width: 650px;">
+            <div style="display: inline-flex; align-items: center; gap: 8px; color: var(--color-primary); font-weight: 700; margin-bottom: 6px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <span>Experiencing Acute Tooth Pain or a Dental Emergency?</span>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 0;">
+              Same-day emergency visits are reserved daily for knocked-out teeth, severe pulpitis, fractured crowns, and acute facial swelling.
+            </p>
+          </div>
+          <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+            <a href="tel:+15559993368" class="btn btn-outline" style="border-color: var(--color-primary); color: var(--color-primary);">Call Emergency Line</a>
+            <a href="appointment.html" class="btn btn-primary">Book Rapid Visit</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER COMPONENT
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="index.html" class="footer-logo" aria-label="BrightSmile Dental Care Home">
+              <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" width="160" height="38">
+            </a>
+            <p class="footer-desc">
+              Boston's trusted comprehensive family dental clinic and surgical oral care center. Dedicated to painless dentistry and lifelong smile health.
+            </p>
+            <div style="font-size: 0.85rem; color: var(--color-dark-section-muted); margin-top: 12px;">
+              <strong>Emergency Triage:</strong> (555) 234-5678<br>
+              <strong>Email:</strong> care@brightsmiledental.com
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Clinical Treatments</h4>
+            <ul class="footer-links">
+              <li><a href="service-details.html">Preventive Checkups</a></li>
+              <li><a href="service-details.html">Ultrasonic Cleaning</a></li>
+              <li><a href="service-details.html">Laser Teeth Whitening</a></li>
+              <li><a href="service-details.html">3D Guided Implants</a></li>
+              <li><a href="service-details.html">Clear Aligners / Invisalign</a></li>
+              <li><a href="service-details.html">Microscopic Root Canal</a></li>
+              <li><a href="blog.html">Oral Health Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Patient Portals</h4>
+            <ul class="footer-links">
+              <li><a href="../patient-dashboard/index.html">Patient Dashboard</a></li>
+              <li><a href="../patient-dashboard/appointments.html">Manage Appointments</a></li>
+              <li><a href="../patient-dashboard/treatment-history.html">Tooth Health Chart</a></li>
+              <li><a href="../patient-dashboard/prescriptions.html">Digital Prescriptions</a></li>
+              <li><a href="../patient-dashboard/payments.html">Invoices & Receipts</a></li>
+              <li><a href="../admin-dashboard/index.html">Staff & Admin Login</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Clinic Hours</h4>
+            <ul class="footer-links" style="font-size: 0.9rem;">
+              <li style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span>Mon – Fri:</span>
+                <span style="color: var(--accent);">8:00 AM – 7:00 PM</span>
+              </li>
+              <li style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span>Saturday:</span>
+                <span style="color: var(--accent);">9:00 AM – 4:00 PM</span>
+              </li>
+              <li style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                <span>Sunday:</span>
+                <span style="color: rgba(255,255,255,0.5);">Emergency Only</span>
+              </li>
+            </ul>
+            <a href="appointment.html" class="btn btn-primary" style="width: 100%; text-align: center; font-size: 0.9rem; padding: 10px 16px;">
+              Schedule Online
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p class="footer-copy">
+            &copy; 2026 BrightSmile Dental Care. All rights reserved.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="contact.html">Privacy Policy</a>
+            <a href="contact.html">Terms of Clinical Service</a>
+            <a href="contact.html">HIPAA Compliance</a>
+            <a href="../documentation/index.html">Template Documentation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

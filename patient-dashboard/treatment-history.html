@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dental Treatment History & Chart | BrightSmile</title>
+  <meta name="description" content="Interactive universal dental chart (Teeth 1-32), clinical diagnostic notes, restorations history, and periodontal probing records.">
+  <link rel="canonical" href="https://demo.brightsmiledental.com/patient-dashboard/treatment-history.html">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Dental Treatment History & Chart | BrightSmile">
+  <meta property="og:description" content="Interactive universal dental chart (Teeth 1-32), clinical diagnostic notes, restorations history, and periodontal probing records.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://demo.brightsmiledental.com/patient-dashboard/treatment-history.html">
+  <meta property="og:image" content="https://demo.brightsmiledental.com/assets/images/og-preview.jpg">
+
+  <!-- DentalClinic Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DentalClinic",
+    "name": "BrightSmile Dental Care",
+    "image": "https://demo.brightsmiledental.com/assets/images/clinic-exterior.jpg",
+    "@id": "https://demo.brightsmiledental.com",
+    "url": "https://demo.brightsmiledental.com",
+    "telephone": "+1-555-234-5678",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "450 Medical Boulevard, Suite 300",
+      "addressLocality": "Boston",
+      "addressRegion": "MA",
+      "postalCode": "02115",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 42.3584,
+      "longitude": -71.0636
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "16:00"
+      }
+    ],
+    "medicalSpecialty": [
+      "Dentistry",
+      "Orthodontics",
+      "Prosthodontics",
+      "Periodontics",
+      "OralSurgery"
+    ]
+  }
+  </script>
+
+  
+  
+
+  <!-- Open Graph Meta Tags -->
+  
+  
+  
+  
+  
+
+  <!-- DentalClinic Structured Data (JSON-LD) -->
+  
+
+  
+    <!-- FOUC Prevention Script -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('brightsmile_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var savedRtl = localStorage.getItem('brightsmile_dental_rtl') || localStorage.getItem('rtl');
+        var isRtl = (savedRtl === 'true' || savedRtl === 'rtl');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark-mode');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark-mode');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+        if (isRtl) {
+          document.documentElement.classList.add('rtl-mode');
+          document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+          document.documentElement.classList.remove('rtl-mode');
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+  <!-- Overlay for Mobile Sidebar -->
+  <div class="drawer-overlay dashboard-overlay"></div>
+
+  <!-- Patient Portal Sidebar -->
+  <aside class="dashboard-sidebar" aria-label="Patient Navigation">
+    <div class="sidebar-header">
+      <a href="../pages/index.html" class="sidebar-brand" aria-label="BrightSmile Dental Care Home">
+        <img src="../assets/images/logo/logo.jpg" alt="BrightSmile Dental Care" class="logo-light" width="136" height="32">
+        <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" class="logo-dark" width="136" height="32">
+        <span class="badge badge-accent badge-sm">PATIENT</span>
+      </a>
+      <button class="action-btn-sm" data-action="toggle-sidebar" aria-label="Toggle Sidebar" title="Collapse Sidebar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+    </div>
+
+    <div class="sidebar-nav-wrap">
+      <div class="sidebar-group-title">Patient Portal</div>
+      
+      <a href="index.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        <span>Overview</span>
+      </a>
+
+      <a href="appointments.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        <span>Appointments</span>
+        <span class="badge-count">2</span>
+      </a>
+
+      <a href="treatment-history.html" class="sidebar-link active">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        <span>Treatment History</span>
+      </a>
+
+      <a href="prescriptions.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+        <span>Prescriptions</span>
+      </a>
+
+      <a href="payments.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+        <span>Billing & Invoices</span>
+      </a>
+
+      <div class="sidebar-group-title">Account</div>
+
+      <a href="profile.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span>My Profile</span>
+      </a>
+
+      <a href="settings.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>Settings</span>
+      </a>
+
+      <div class="sidebar-group-title">Portals</div>
+
+      <a href="../admin-dashboard/index.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Admin Console &rarr;</span>
+      </a>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="user-snippet">
+        <img src="../assets/images/logo/patient-avatar.jpg" alt="Eleanor Vance avatar" width="32" height="32" style="border-radius: 50%; object-fit: cover; border: 1px solid var(--color-border); vertical-align: middle;">
+        <div class="user-snippet-details" style="min-width: 0;">
+          <div style="font-weight: 600; font-size: 0.9rem; color: var(--color-text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Eleanor Vance</div>
+          <div style="font-size: 0.78rem; color: var(--color-text-muted);">#PAT-84920</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="dashboard-main">
+    <!-- Dashboard Sticky Topbar -->
+    <header class="dashboard-topbar">
+      <div class="topbar-left">
+        <button class="topbar-toggle-btn" data-action="toggle-sidebar" aria-label="Toggle Navigation Drawer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+
+        <div class="topbar-search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="topbar-search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" class="form-control" placeholder="Search records, appointments..." aria-label="Search dashboard">
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <button class="action-btn-sm" data-action="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <button class="action-btn-sm" data-action="toggle-rtl" aria-label="Toggle RTL Mirroring" title="Toggle RTL">
+          <span style="font-size: 0.75rem; font-weight: 700;">RTL</span>
+        </button>
+
+        <div class="topbar-dropdown">
+          <button class="dropdown-trigger" data-dropdown-trigger="notifications-menu" aria-label="View notifications">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-primary); display: inline-block;"></span>
+          </button>
+          
+          <div class="dropdown-menu-custom" id="notifications-menu">
+            <div style="padding: 10px 16px; border-bottom: 1px solid var(--color-border); font-weight: 700; font-size: 0.9rem;">
+              Clinic Notifications (3)
+            </div>
+            <div style="max-height: 240px; overflow-y: auto;">
+              <a href="appointments.html" class="dropdown-item-custom" style="display: block; border-bottom: 1px solid var(--color-border-subtle);">
+                <div style="font-weight: 600; font-size: 0.85rem; color: var(--color-text-main);">Appointment Reminder</div>
+                <div style="font-size: 0.78rem; color: var(--color-text-muted);">Upcoming visit in 3 days with Dr. Sarah Mitchell.</div>
+              </a>
+              <a href="prescriptions.html" class="dropdown-item-custom" style="display: block; border-bottom: 1px solid var(--color-border-subtle);">
+                <div style="font-weight: 600; font-size: 0.85rem; color: var(--color-primary);">Prescription Dispatched</div>
+                <div style="font-size: 0.78rem; color: var(--color-text-muted);">Amoxicillin 500mg prescription ready for download.</div>
+              </a>
+              <a href="payments.html" class="dropdown-item-custom" style="display: block;">
+                <div style="font-weight: 600; font-size: 0.85rem; color: var(--color-text-main);">Payment Confirmed</div>
+                <div style="font-size: 0.78rem; color: var(--color-text-muted);">Receipt for $120.00 hygiene treatment ready.</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="topbar-dropdown">
+          <button class="dropdown-trigger" data-dropdown-trigger="user-profile-menu">
+            <img src="../assets/images/logo/patient-avatar.jpg" alt="Eleanor Vance avatar" width="32" height="32" style="border-radius: 50%; object-fit: cover; border: 1px solid var(--color-border); vertical-align: middle;">
+            <span style="font-size: 0.88rem; font-weight: 600;">Eleanor Vance</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+
+          <div class="dropdown-menu-custom" id="user-profile-menu">
+            <div style="padding: 10px 16px; border-bottom: 1px solid var(--color-border);">
+              <div style="font-weight: 600; font-size: 0.9rem;">Eleanor Vance</div>
+              <div style="font-size: 0.78rem; color: var(--color-text-muted);">patient@brightsmiledental.com</div>
+            </div>
+            <a href="profile.html" class="dropdown-item-custom">My Clinical Profile</a>
+            <a href="settings.html" class="dropdown-item-custom">Account Settings</a>
+            <a href="../pages/index.html" class="dropdown-item-custom">Return to Website</a>
+            <div style="border-top: 1px solid var(--color-border); margin-top: 4px;"></div>
+            <a href="../pages/login.html" class="dropdown-item-custom" style="color: var(--color-primary);">Sign Out</a>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <main class="dashboard-body">
+      <!-- Fictional Demo Data Notice -->
+      <div class="demo-disclaimer-banner">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        <span><strong>Clinical Demo Notice:</strong> This patient portal displays illustrative mock patient health records for template demonstration purposes. Compliant with HIPAA privacy principles.</span>
+      </div>
+
+      <div class="dashboard-page-header">
+        <div>
+          <ul class="breadcrumbs-list">
+            <li><a href="../pages/index.html">Home</a></li>
+            <li>/</li>
+            <li><a href="index.html">Patient Portal</a></li>
+            <li>/</li>
+            <li style="color: var(--color-primary); font-weight: 600;">Treatment History</li>
+          </ul>
+          <h1>Clinical Treatment History & Tooth Chart</h1>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 0;">
+            Interactive universal dental notation chart (Teeth 1–32) and comprehensive periodontal treatment log.
+          </p>
+        </div>
+      </div>
+
+      <!-- Interactive Tooth Arch Section -->
+      <div class="tooth-chart-card">
+        <div style="margin-bottom: var(--space-4);">
+          <h2 style="font-size: 1.15rem; margin-bottom: 2px;">Interactive Universal Dental Arch (Upper & Lower)</h2>
+          <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 0;">Click on any tooth to inspect restorations, materials used, and periodontal health.</p>
+        </div>
+
+        <div style="font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); text-align: center; margin-bottom: 4px;">Maxilla (Upper Jaw — Right to Left 1-16)</div>
+        <div class="jaw-arch">
+          <!-- Upper Jaw 1 to 16 -->
+          <div class="tooth-box" data-tooth-num="1" data-tooth-name="Maxillary Right 3rd Molar (Wisdom)" data-tooth-condition="Extracted (2020)" data-last-procedure="Surgical Extraction">
+            <span class="tooth-num">1</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="2" data-tooth-name="Maxillary Right 2nd Molar" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">2</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box treated" data-tooth-num="3" data-tooth-name="Maxillary Right 1st Molar" data-tooth-condition="Composite Filling (MO)" data-last-procedure="Resin Restoration (Oct 2024)">
+            <span class="tooth-num">3</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="4" data-tooth-name="Maxillary Right 2nd Premolar" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">4</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="5" data-tooth-name="Maxillary Right 1st Premolar" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">5</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="6" data-tooth-name="Maxillary Right Canine" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">6</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="7" data-tooth-name="Maxillary Right Lateral Incisor" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">7</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box treated active" data-tooth-num="8" data-tooth-name="Maxillary Right Central Incisor" data-tooth-condition="Composite Veneer (Intact)" data-last-procedure="Porcelain repair Nov 2025">
+            <span class="tooth-num">8</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="9" data-tooth-name="Maxillary Left Central Incisor" data-tooth-condition="Natural Healthy" data-last-procedure="Prophylaxis Aug 2026">
+            <span class="tooth-num">9</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="10" data-tooth-name="Maxillary Left Lateral Incisor" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">10</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="11" data-tooth-name="Maxillary Left Canine" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">11</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="12" data-tooth-name="Maxillary Left 1st Premolar" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">12</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="13" data-tooth-name="Maxillary Left 2nd Premolar" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">13</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box treated" data-tooth-num="14" data-tooth-name="Maxillary Left 1st Molar" data-tooth-condition="Zirconia Crown (Stable)" data-last-procedure="Crown delivery March 2026">
+            <span class="tooth-num">14</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="15" data-tooth-name="Maxillary Left 2nd Molar" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">15</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="16" data-tooth-name="Maxillary Left 3rd Molar (Wisdom)" data-tooth-condition="Extracted (2020)" data-last-procedure="Surgical Extraction">
+            <span class="tooth-num">16</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+        </div>
+
+        <div style="font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); text-align: center; margin: 16px 0 4px;">Mandible (Lower Jaw — Left to Right 17-32)</div>
+        <div class="jaw-arch">
+          <div class="tooth-box" data-tooth-num="17" data-tooth-name="Mandibular Left 3rd Molar" data-tooth-condition="Extracted" data-last-procedure="Extraction">
+            <span class="tooth-num">17</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="18" data-tooth-name="Mandibular Left 2nd Molar" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">18</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box treated" data-tooth-num="19" data-tooth-name="Mandibular Left 1st Molar" data-tooth-condition="Titanium Implant (Osseointegrated)" data-last-procedure="Implant Crown Torque Check Jan 2026">
+            <span class="tooth-num">19</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="20" data-tooth-name="Mandibular Left 2nd Premolar" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">20</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="21" data-tooth-name="Mandibular Left 1st Premolar" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">21</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="22" data-tooth-name="Mandibular Left Canine" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">22</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="23" data-tooth-name="Mandibular Left Lateral Incisor" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">23</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="24" data-tooth-name="Mandibular Left Central Incisor" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">24</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="25" data-tooth-name="Mandibular Right Central Incisor" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">25</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="26" data-tooth-name="Mandibular Right Lateral Incisor" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">26</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="27" data-tooth-name="Mandibular Right Canine" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">27</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="28" data-tooth-name="Mandibular Right 1st Premolar" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">28</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="29" data-tooth-name="Mandibular Right 2nd Premolar" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">29</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="30" data-tooth-name="Mandibular Right 1st Molar" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">30</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="31" data-tooth-name="Mandibular Right 2nd Molar" data-tooth-condition="Healthy" data-last-procedure="Prophylaxis">
+            <span class="tooth-num">31</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+          <div class="tooth-box" data-tooth-num="32" data-tooth-name="Mandibular Right 3rd Molar" data-tooth-condition="Extracted" data-last-procedure="Extraction">
+            <span class="tooth-num">32</span>
+            <svg class="tooth-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+          </div>
+        </div>
+
+        <div id="tooth-selected-info" style="background-color: var(--color-surface-alt); border: 1px solid var(--color-border); border-radius: var(--border-radius); padding: var(--space-4); margin-top: var(--space-4);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="font-weight: 700; color: var(--color-primary); font-size: 1.1rem;">Tooth #8: Maxillary Right Central Incisor</span>
+            <span class="badge-status badge-confirmed">Composite Veneer (Intact)</span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 4px;">
+            <strong>Recent Procedure:</strong> Porcelain incisal edge repair (Nov 2025) performed by Dr. Sarah Mitchell.
+          </p>
+          <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 0;">
+            <strong>Periodontal Probing Depth:</strong> 2mm across mesial, mid-buccal, and distal. No bleeding on probing.
+          </p>
+        </div>
+      </div>
+
+      <!-- Treatment History Table -->
+      <div class="table-card">
+        <div class="table-card-header">
+          <h2 style="font-size: 1.15rem; margin-bottom: 0;">Complete Clinical Procedures Ledger</h2>
+          <span style="font-size: 0.85rem; color: var(--color-text-muted);">Verified Electronic Dental Records (EDR)</span>
+        </div>
+
+        <div class="dental-table-responsive">
+          <table class="dental-table dental-table-stack">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Tooth</th>
+                <th>Procedure & CDT Code</th>
+                <th>Clinician</th>
+                <th>Anesthesia</th>
+                <th>Clinical Notes</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Date">Aug 12, 2026</td>
+                <td data-label="Tooth">#14</td>
+                <td data-label="Procedure & CDT Code">
+                  <div style="font-weight: 600; color: var(--color-text-main);">Porcelain Crown Seating (D2740)</div>
+                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">High-translucency Zirconia</span>
+                </td>
+                <td data-label="Clinician">Dr. Sarah Mitchell</td>
+                <td data-label="Anesthesia">Local (Lidocaine 2%)</td>
+                <td data-label="Clinical Notes">Torqued to 35 Ncm. Occlusion verified with shimstock paper. Fit excellent.</td>
+                <td data-label="Status"><span class="badge-status badge-completed">Completed</span></td>
+              </tr>
+              <tr>
+                <td data-label="Date">May 10, 2026</td>
+                <td data-label="Tooth">General</td>
+                <td data-label="Procedure & CDT Code">
+                  <div style="font-weight: 600; color: var(--color-text-main);">Comprehensive Oral Exam & CBCT (D0150)</div>
+                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">Full Mouth Radiographs</span>
+                </td>
+                <td data-label="Clinician">Dr. David Chen</td>
+                <td data-label="Anesthesia">None</td>
+                <td data-label="Clinical Notes">Full 3D scan mapped for clear aligner treatment. Zero periapical pathology noted.</td>
+                <td data-label="Status"><span class="badge-status badge-completed">Completed</span></td>
+              </tr>
+              <tr>
+                <td data-label="Date">Jan 15, 2026</td>
+                <td data-label="Tooth">#19</td>
+                <td data-label="Procedure & CDT Code">
+                  <div style="font-weight: 600; color: var(--color-text-main);">Implant Torque & Abutment Check (D6010)</div>
+                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">Bone-level titanium fixture</span>
+                </td>
+                <td data-label="Clinician">Dr. Robert Vance</td>
+                <td data-label="Anesthesia">None</td>
+                <td data-label="Clinical Notes">Complete osseointegration confirmed radiographically. Soft tissue healthy.</td>
+                <td data-label="Status"><span class="badge-status badge-completed">Completed</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+<script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

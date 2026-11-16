@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="0; url=pages/index.html">
+  <title>BrightSmile Dental Care</title>
+  <meta name="description" content="Commercial HTML5 template for dental clinics, cosmetic dentistry, and dental practice dashboards.">
+  <link rel="canonical" href="https://demo.brightsmiledental.com/">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-black: #0A0A0A;
+      --color-white: #FFFFFF;
+      --color-primary: #0B6E75;
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: var(--font-body);
+      background-color: var(--color-white);
+      color: var(--color-black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    .redirect-card {
+      max-width: 540px;
+      width: 100%;
+      text-align: center;
+      border: 1px solid rgba(10, 10, 10, 0.12);
+      border-radius: 16px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 30px rgba(10, 10, 10, 0.05);
+    }
+    h1 {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      margin: 16px 0 8px;
+    }
+    p {
+      color: rgba(10, 10, 10, 0.65);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .portal-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: #FFFFFF;
+    }
+    .btn-outline {
+      border: 1px solid rgba(10, 10, 10, 0.2);
+      color: var(--color-black);
+    }
+    .btn-outline:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+  </style>
+
+  <script>
+    window.location.href = "pages/index.html";
+  </script>
+  <!-- FOUC Prevention Script -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('brightsmile_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var savedRtl = localStorage.getItem('brightsmile_dental_rtl') || localStorage.getItem('rtl');
+        var isRtl = (savedRtl === 'true' || savedRtl === 'rtl');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark-mode');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark-mode');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+        if (isRtl) {
+          document.documentElement.classList.add('rtl-mode');
+          document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+          document.documentElement.classList.remove('rtl-mode');
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div class="redirect-card">
+    <img src="assets/images/logo/logo.jpg" alt="BrightSmile Dental Care" width="180" height="42" style="margin-bottom: 12px;">
+    <h1>BrightSmile Dental Care</h1>
+    <p>Redirecting to the official Home 1 experience. If you are not redirected within 3 seconds, select a portal below:</p>
+    <div class="portal-links">
+      <a href="pages/index.html" class="btn btn-primary">Enter Home 1 — Family Clinic</a>
+      <a href="pages/index-2.html" class="btn btn-outline">Enter Home 2 — Modern High-Tech</a>
+      <a href="patient-dashboard/index.html" class="btn btn-outline">Patient Dashboard</a>
+      <a href="admin-dashboard/index.html" class="btn btn-outline">Admin Clinic Dashboard</a>
+      <a href="documentation/index.html" class="btn btn-outline">Template Documentation</a>
+    </div>
+  </div>
+</body>
+</html>

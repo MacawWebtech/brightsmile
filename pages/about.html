@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — BrightSmile Dental Care Boston</title>
+  <meta name="description" content="Learn about our compassionate clinical philosophy, modern 3D diagnostic facilities, and board-certified dental specialists in Boston.">
+  <link rel="canonical" href="https://demo.brightsmiledental.com/pages/about.html">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="About Us — BrightSmile Dental Care Boston">
+  <meta property="og:description" content="Learn about our compassionate clinical philosophy, modern 3D diagnostic facilities, and board-certified dental specialists in Boston.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://demo.brightsmiledental.com/pages/about.html">
+  <meta property="og:image" content="https://demo.brightsmiledental.com/assets/images/og-preview.jpg">
+
+  <!-- DentalClinic Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DentalClinic",
+    "name": "BrightSmile Dental Care",
+    "image": "https://demo.brightsmiledental.com/assets/images/clinic-exterior.jpg",
+    "@id": "https://demo.brightsmiledental.com",
+    "url": "https://demo.brightsmiledental.com",
+    "telephone": "+1-555-234-5678",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "450 Medical Boulevard, Suite 300",
+      "addressLocality": "Boston",
+      "addressRegion": "MA",
+      "postalCode": "02115",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 42.3584,
+      "longitude": -71.0636
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "16:00"
+      }
+    ],
+    "medicalSpecialty": [
+      "Dentistry",
+      "Orthodontics",
+      "Prosthodontics",
+      "Periodontics",
+      "OralSurgery"
+    ]
+  }
+  </script>
+
+  
+  
+
+  <!-- Open Graph Meta Tags -->
+  
+  
+  
+  
+  
+
+  <!-- DentalClinic Structured Data (JSON-LD) -->
+  
+
+  
+
+    <!-- FOUC Prevention Script -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('brightsmile_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var savedRtl = localStorage.getItem('brightsmile_dental_rtl') || localStorage.getItem('rtl');
+        var isRtl = (savedRtl === 'true' || savedRtl === 'rtl');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark-mode');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark-mode');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+        if (isRtl) {
+          document.documentElement.classList.add('rtl-mode');
+          document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+          document.documentElement.classList.remove('rtl-mode');
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts: Outfit (Headings) & Plus Jakarta Sans (Body & UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo" aria-label="BrightSmile Dental Care Home">
+        <img src="../assets/images/logo/logo.jpg" alt="BrightSmile Dental Care" class="logo-light" width="160" height="38">
+        <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" class="logo-dark" width="160" height="38">
+      </a>
+
+      <nav class="header-nav" aria-label="Main Navigation">
+        <div class="nav-item dropdown">
+          <a href="index.html" class="nav-link dropdown-toggle" role="button" aria-expanded="false">
+            <span>Home</span>
+            <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="index.html" class="dropdown-item">Home 1 — General Clinic</a>
+            <a href="index-2.html" class="dropdown-item">Home 2 — Modern Care</a>
+          </div>
+        </div>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="doctors.html" class="nav-link">Doctors</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn-icon desktop-only" data-action="toggle-theme" aria-label="Toggle Dark/Light Mode">
+          <span class="theme-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+        </button>
+
+        <button type="button" class="btn-icon desktop-only" data-action="toggle-rtl" aria-label="Toggle RTL/LTR Direction">
+          <span class="rtl-label" style="font-size: 0.8rem; font-weight: 700;">RTL</span>
+        </button>
+
+        <a href="../patient-dashboard/index.html" class="btn btn-outline desktop-only portal-btn">
+          <span class="icon-text">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Patient Portal</span>
+          </span>
+        </a>
+
+        <a href="login.html" class="btn btn-primary desktop-only header-login-btn">
+          <span class="icon-text">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+            <span>Login</span>
+          </span>
+        </a>
+
+        <button type="button" class="hamburger-btn" data-action="open-drawer" aria-label="Open Navigation Menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="header-logo" aria-label="BrightSmile Dental Care Home">
+        <img src="../assets/images/logo/logo.jpg" alt="BrightSmile Dental Care" class="logo-light" width="160" height="38">
+        <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" class="logo-dark" width="160" height="38">
+      </a>
+      <button type="button" class="btn-icon" data-action="close-drawer" aria-label="Close Navigation Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li class="mobile-dropdown">
+        <a href="index.html" class="nav-link">Home (General & Modern)</a>
+        <div class="mobile-sublinks" style="padding-left: 16px; display: flex; flex-direction: column; gap: 4px; margin-top: 4px; margin-bottom: 8px;">
+          <a href="index.html" class="nav-link" style="font-size: 0.92rem; padding: 6px 12px;">↳ Home 1 — General Clinic</a>
+          <a href="index-2.html" class="nav-link" style="font-size: 0.92rem; padding: 6px 12px;">↳ Home 2 — Modern Care</a>
+        </div>
+      </li>
+      <li><a href="services.html" class="nav-link">Dental Services</a></li>
+      <li><a href="doctors.html" class="nav-link">Our Dentists</a></li>
+      <li><a href="about.html" class="nav-link active">About Us</a></li>
+      <li><a href="pricing.html" class="nav-link">Pricing Plans</a></li>
+      <li><a href="contact.html" class="nav-link">Contact & Hours</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <div class="mobile-drawer-controls">
+        <button type="button" class="btn btn-outline" style="flex: 1;" data-action="toggle-theme">
+          <span class="icon-text">
+            <span class="theme-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </span>
+            <span class="theme-label">Dark Mode</span>
+          </span>
+        </button>
+        <button type="button" class="btn btn-outline" style="flex: 1;" data-action="toggle-rtl">
+          <span class="icon-text">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"></line><polyline points="10 6 4 12 10 18"></polyline></svg>
+            <span class="rtl-label">RTL Mode</span>
+          </span>
+        </button>
+      </div>
+      <a href="login.html" class="btn btn-primary" style="width: 100%;"><span class="icon-text" style="justify-content: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg><span>Login</span></span></a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+
+    <!-- ==========================================================================
+         PAGE BANNER & BREADCRUMBS
+         ========================================================================== -->
+    <section class="page-banner">
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-separator">/</li>
+          <li class="breadcrumb-item active" aria-current="page">About Our Clinic</li>
+        </ul>
+      </nav>
+      <h1>About BrightSmile Dental Care</h1>
+      <p class="lead" style="max-width: 820px; margin-bottom: 0;">
+        Eighteen years of clinical mastery, revolutionary anxiety-free patient care, and biomimetic dental medicine.
+      </p>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 1: CLINIC INTRODUCTION
+         ========================================================================== -->
+    <section class="section-full">
+      <div class="split-section-tablet-stack" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-8); align-items: center;">
+        <div>
+          <span class="section-tag">Clinical Heritage</span>
+          <h2>Setting the Gold Standard for Modern Dental Medicine</h2>
+          <p class="lead">
+            BrightSmile Dental Care was founded on a simple yet transformative principle: dental care should be an empowering, painless, and completely transparent health partnership.
+          </p>
+          <p>
+            Located in a serene 12-operatory clinical facility, we house fully integrated diagnostic CT radiography, in-house ceramic CAD/CAM milling, and specialized surgical operatories. Our multi-disciplinary team brings together board-certified general dentists, oral surgeons, periodontists, and orthodontists under one collaborative roof.
+          </p>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); margin-top: var(--space-4);">
+            <div style="padding: var(--space-3); background-color: var(--color-surface-alt); border-radius: var(--border-radius); border: 1px solid var(--color-border);">
+              <h4 style="color: var(--color-primary); margin-bottom: 4px;">18+ Years</h4>
+              <p style="font-size: 0.88rem; margin: 0; color: var(--color-text-muted);">Unbroken clinical excellence in private practice</p>
+            </div>
+            <div style="padding: var(--space-3); background-color: var(--color-surface-alt); border-radius: var(--border-radius); border: 1px solid var(--color-border);">
+              <h4 style="color: var(--color-primary); margin-bottom: 4px;">24,000+</h4>
+              <p style="font-size: 0.88rem; margin: 0; color: var(--color-text-muted);">Satisfied patients and healthy restored smiles</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img src="../assets/images/about/about-clinic-team.jpg" alt="BrightSmile Dental Care Multi-Disciplinary Team" width="640" height="400" style="width: 100%; border-radius: var(--border-radius-lg); object-fit: cover; border: 1px solid var(--color-border); margin-bottom: var(--space-4);">
+          <div style="background-color: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: var(--border-radius-lg); padding: var(--space-6); box-shadow: var(--shadow-md);">
+            <span class="doctor-spec-badge">Our Commitment</span>
+            <h3 style="margin-top: var(--space-2); margin-bottom: var(--space-3);">Radical Transparency in Care</h3>
+            <p class="text-muted" style="margin-bottom: var(--space-4);">
+              Before any treatment begins, you will see your high-definition intraoral 3D scans, understand your treatment options step by step, and receive an exact written quote with zero hidden fees.
+            </p>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2);">
+              <li class="icon-text">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" color="var(--color-primary)"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Conservative tooth-preserving interventions</span>
+              </li>
+              <li class="icon-text">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" color="var(--color-primary)"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>100% Biocompatible metal-free restorative materials</span>
+              </li>
+              <li class="icon-text">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" color="var(--color-primary)"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Comprehensive multi-year restoration warranties</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: OUR STORY AND HISTORY (TIMELINE)
+         ========================================================================== -->
+    <section class="section-full" style="background-color: var(--color-surface-alt); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="section-header text-center">
+        <span class="section-tag">Historical Timeline</span>
+        <h2>Our Journey of Clinical Innovation</h2>
+        <p class="text-muted">A timeline of clinical milestones that transformed our practice into an oral care center of excellence.</p>
+      </div>
+
+      <div class="timeline-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-4);">
+        <div class="timeline-card" style="background-color: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: var(--border-radius-lg); padding: var(--space-4);">
+          <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">2008</span>
+          <h4 style="margin: 8px 0;">Clinic Founded</h4>
+          <p class="text-muted" style="font-size: 0.88rem; margin: 0;">
+            Dr. Sarah Mitchell and Dr. Marcus Vance open a boutique 3-chair practice committed to painless family dentistry.
+          </p>
+        </div>
+
+        <div class="timeline-card" style="background-color: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: var(--border-radius-lg); padding: var(--space-4);">
+          <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">2013</span>
+          <h4 style="margin: 8px 0;">3D Diagnostic Wing</h4>
+          <p class="text-muted" style="font-size: 0.88rem; margin: 0;">
+            First regional clinic to install ultra-low-dose Cone Beam 3D CT imaging, pioneering sub-millimeter implant precision.
+          </p>
+        </div>
+
+        <div class="timeline-card" style="background-color: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: var(--border-radius-lg); padding: var(--space-4);">
+          <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">2018</span>
+          <h4 style="margin: 8px 0;">In-House CAD/CAM</h4>
+          <p class="text-muted" style="font-size: 0.88rem; margin: 0;">
+            Integrated German robotic diamond milling, providing single-visit custom ceramic crowns and eliminating messy putty impressions.
+          </p>
+        </div>
+
+        <div class="timeline-card" style="background-color: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: var(--border-radius-lg); padding: var(--space-4);">
+          <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">2023</span>
+          <h4 style="margin: 8px 0;">AI Diagnostic Center</h4>
+          <p class="text-muted" style="font-size: 0.88rem; margin: 0;">
+            Adopted FDA-cleared neural networks to scrutinize radiographic pathology, catching early decay at the reversible stage.
+          </p>
+        </div>
+
+        <div class="timeline-card" style="background-color: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: var(--border-radius-lg); padding: var(--space-4);">
+          <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">2026</span>
+          <h4 style="margin: 8px 0;">Oral Health Institute</h4>
+          <p class="text-muted" style="font-size: 0.88rem; margin: 0;">
+            Expanded to 12 state-of-the-art operatories with full sedation accreditation and recognized as a clinical training hub.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: MISSION AND VISION
+         ========================================================================== -->
+    <section class="section-full">
+      <div class="grid-cards-2" style="max-width: 1040px; margin: 0 auto;">
+        <div class="card-equal" style="border: 1px solid var(--color-primary-border); background-color: var(--color-card-bg); padding: var(--space-6);">
+          <div class="icon-box icon-box-lg" style="margin-bottom: var(--space-3);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          </div>
+          <h3>Our Clinical Mission</h3>
+          <p class="lead" style="font-size: 1.05rem;">
+            To deliver painless, minimally invasive dental healthcare of the highest scientific caliber in an atmosphere of warmth, dignity, and absolute clinical transparency.
+          </p>
+          <p class="text-muted">
+            We pledge to always treat the human being before the tooth, preserving healthy natural dental structure whenever possible and empowering patients with clear knowledge.
+          </p>
+        </div>
+
+        <div class="card-equal" style="border: 1px solid var(--color-border); background-color: var(--color-card-bg); padding: var(--space-6);">
+          <div class="icon-box icon-box-lg" style="margin-bottom: var(--space-3); background-color: var(--color-black); color: var(--color-white);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <h3>Our Strategic Vision</h3>
+          <p class="lead" style="font-size: 1.05rem;">
+            To eradicate dental anxiety from the healthcare journey and demonstrate that dentistry can be comfortable, restorative, and profoundly uplifting.
+          </p>
+          <p class="text-muted">
+            We envision a dental future driven by preventive saliva diagnostics, cellular tissue regeneration, and personalized smile architecture accessible to all families.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: DENTAL CARE PHILOSOPHY
+         ========================================================================== -->
+    <section class="section-full" style="background-color: var(--color-surface-alt); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="section-header text-center">
+        <span class="section-tag">Clinical Philosophy</span>
+        <h2>Three Pillars of Biomimetic Dentistry</h2>
+        <p class="text-muted">How our scientific philosophy directly benefits your teeth and long-term vitality.</p>
+      </div>
+
+      <div class="grid-cards-3">
+        <div class="card-equal">
+          <div class="card-body">
+            <div class="icon-box" style="margin-bottom: var(--space-3);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.5 2 6 4 6 7.5c0 3 1.5 5 2 7.5.5 2.5 1 5.5 2.5 6.5.9.6 1.8.2 2.2-.5.4-.7.8-2 1.3-2s.9 1.3 1.3 2c.4.7 1.3 1.1 2.2.5 1.5-1 2-4 2.5-6.5.5-2.5 2-4.5 2-7.5C20 4 17.5 2 12 2z"/></svg>
+            </div>
+            <h4 class="card-title">1. Enamel Conservation First</h4>
+            <p class="card-text">
+              Natural tooth enamel is irreplaceable. We use micro-bonding resins and feldspathic inlays that require removing less than 10% of natural tooth structure compared to 70% in traditional crowns.
+            </p>
+          </div>
+        </div>
+
+        <div class="card-equal">
+          <div class="card-body">
+            <div class="icon-box" style="margin-bottom: var(--space-3);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10"></path></svg>
+            </div>
+            <h4 class="card-title">2. Biocompatible Materials</h4>
+            <p class="card-text">
+              We exclusively place BPA-free composite resins, pure zirconia ceramics, and grade-4 titanium roots that seamlessly integrate with your biological oral tissues without allergic reactions.
+            </p>
+          </div>
+        </div>
+
+        <div class="card-equal">
+          <div class="card-body">
+            <div class="icon-box" style="margin-bottom: var(--space-3);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h4 class="card-title">3. Long-Term Prognosis Focus</h4>
+            <p class="card-text">
+              We engineer restorations designed to endure for 20+ years. Every case includes occlusal bite harmony analysis to ensure forces are distributed evenly, avoiding premature fractures.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: CLINIC FACILITIES AND STERILIZATION LAB
+         ========================================================================== -->
+    <section class="section-full">
+      <div class="section-header text-center">
+        <span class="section-tag">Facilities & Standards</span>
+        <h2>Hospital-Grade Clean-Room Operations</h2>
+        <p class="text-muted">A tour through our specialized surgical rooms, diagnostic suites, and sterilization hub.</p>
+      </div>
+
+      <div class="grid-cards-4">
+        <div class="card-equal">
+          <div class="card-body">
+            <span class="badge-outline" style="margin-bottom: var(--space-2); align-self: flex-start;">Lab Suite A</span>
+            <h4 class="card-title">Central Sterilization Hub</h4>
+            <p class="card-text">
+              Triple-vacuum autoclave sterilization autoclaves with biological spore testing daily. Instruments are sealed and opened exclusively in front of the patient.
+            </p>
+          </div>
+        </div>
+
+        <div class="card-equal">
+          <div class="card-body">
+            <span class="badge-outline" style="margin-bottom: var(--space-2); align-self: flex-start;">Imaging Wing</span>
+            <h4 class="card-title">3D Radiographic Suite</h4>
+            <p class="card-text">
+              Shielded imaging room with lead glass viewports and low-dose pulsed radiation sensors designed to safeguard thyroid and cranial tissues.
+            </p>
+          </div>
+        </div>
+
+        <div class="card-equal">
+          <div class="card-body">
+            <span class="badge-outline" style="margin-bottom: var(--space-2); align-self: flex-start;">Surgical Room</span>
+            <h4 class="card-title">Sedation Operatories</h4>
+            <p class="card-text">
+              Dedicated surgical suites outfitted with hospital vitals monitoring, oxygen supplementation, and certified crash equipment for conscious sedation.
+            </p>
+          </div>
+        </div>
+
+        <div class="card-equal">
+          <div class="card-body">
+            <span class="badge-outline" style="margin-bottom: var(--space-2); align-self: flex-start;">Design Studio</span>
+            <h4 class="card-title">3D Smile Studio</h4>
+            <p class="card-text">
+              Photogrammetry and facial scanning room where cosmetic mock-ups and provisional test smiles are calibrated to patient facial aesthetics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: OUR APPROACH TO PATIENT COMFORT
+         ========================================================================== -->
+    <section class="section-full" style="background-color: var(--color-surface-alt); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-8); align-items: center;">
+        <div>
+          <span class="section-tag">Anxiety Relief</span>
+          <h2>A Calming Haven for Gentle Dental Visits</h2>
+          <p class="lead">
+            We recognize that past negative experiences can cause genuine clinical apprehension. Our entire team is trained in gentle behavioral pacing and trauma-informed dentistry.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-3);">
+            <div class="icon-text">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="var(--color-primary)"><path d="M12 2C8.5 2 6 4 6 7.5c0 3 1.5 5 2 7.5.5 2.5 1 5.5 2.5 6.5.9.6 1.8.2 2.2-.5.4-.7.8-2 1.3-2s.9 1.3 1.3 2c.4.7 1.3 1.1 2.2.5 1.5-1 2-4 2.5-6.5.5-2.5 2-4.5 2-7.5C20 4 17.5 2 12 2z"/></svg>
+              <span><strong>The "Stop Sign" Rule:</strong> Raise your hand at any moment and we pause immediately. You are in total control.</span>
+            </div>
+            <div class="icon-text">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="var(--color-primary)"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              <span><strong>Gentle Numbing Gel:</strong> Topical anesthetic applied for 3 full minutes before computerized micro-flow delivery.</span>
+            </div>
+            <div class="icon-text">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="var(--color-primary)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span><strong>Tranquility Amenities:</strong> Warm lavender towels, ceiling entertainment screens, and anti-glare tinted eyewear.</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="background-color: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: var(--border-radius-lg); padding: var(--space-6); text-align: center;">
+          <div class="rating-stars" style="font-size: 1.5rem; margin-bottom: var(--space-2);">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <h3 style="margin-bottom: var(--space-2);">Voted Most Comforting Dental Practice</h3>
+          <p class="text-muted" style="margin-bottom: var(--space-4);">
+            Over 2,400 five-star reviews cite our gentle bed-side manner, empathetic listening, and pain-free treatment.
+          </p>
+          <a href="appointment.html" class="btn btn-primary">Experience the Difference</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 7: TEAM INTRODUCTION (CORE CLINICAL LEADERSHIP)
+         ========================================================================== -->
+    <section class="section-full">
+      <div class="section-header text-center">
+        <span class="section-tag">Clinical Leadership</span>
+        <h2>Meet Our Practice Directors</h2>
+        <p class="text-muted">The senior doctors guiding clinical protocols and patient care standards.</p>
+      </div>
+
+      <div class="grid-cards-4">
+        <!-- Lead 1 -->
+        <div class="card-equal">
+          <div class="card-body">
+            <div class="doctor-avatar-box">
+              <svg class="doctor-fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <span class="doctor-spec-badge">Clinic Co-Founder</span>
+            <h4 class="card-title">Dr. Sarah Mitchell</h4>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: var(--space-2);">DDS, Columbia • Cosmetic Director</p>
+            <p class="card-text" style="font-size: 0.9rem;">14 years leading aesthetic smile rehabilitation and biomimetic tooth preservation.</p>
+            <div class="card-footer">
+              <a href="doctor-details.html" class="btn btn-outline" style="width: 100%;">View Bio</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lead 2 -->
+        <div class="card-equal">
+          <div class="card-body">
+            <div class="doctor-avatar-box">
+              <svg class="doctor-fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <span class="doctor-spec-badge">Clinic Co-Founder</span>
+            <h4 class="card-title">Dr. Marcus Vance</h4>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: var(--space-2);">DDS, FICOI • Surgical Director</p>
+            <p class="card-text" style="font-size: 0.9rem;">18 years pioneering 3D computer guided implant placement and bone restoration.</p>
+            <div class="card-footer">
+              <a href="doctor-details.html" class="btn btn-outline" style="width: 100%;">View Bio</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lead 3 -->
+        <div class="card-equal">
+          <div class="card-body">
+            <div class="doctor-avatar-box">
+              <svg class="doctor-fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <span class="doctor-spec-badge">Orthodontic Head</span>
+            <h4 class="card-title">Dr. Elena Rostova</h4>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: var(--space-2);">DMD, UPenn • Aligners Specialist</p>
+            <p class="card-text" style="font-size: 0.9rem;">11 years crafting balanced teenage and adult bites using clear aligner technology.</p>
+            <div class="card-footer">
+              <a href="doctor-details.html" class="btn btn-outline" style="width: 100%;">View Bio</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lead 4 -->
+        <div class="card-equal">
+          <div class="card-body">
+            <div class="doctor-avatar-box">
+              <svg class="doctor-fallback" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <span class="doctor-spec-badge">Pediatric Head</span>
+            <h4 class="card-title">Dr. David Chen</h4>
+            <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: var(--space-2);">DDS, MS, UCLA • Pediatric Director</p>
+            <p class="card-text" style="font-size: 0.9rem;">10 years dedicated to nurturing positive, anxiety-free dental habits in young smiles.</p>
+            <div class="card-footer">
+              <a href="doctor-details.html" class="btn btn-outline" style="width: 100%;">View Bio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 8: ACHIEVEMENTS AND CERTIFICATIONS
+         ========================================================================== -->
+    <section class="section-full-compact" style="background-color: var(--color-surface-alt); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-4); text-align: center;">
+        <div style="padding: var(--space-4); background-color: var(--color-card-bg); border-radius: var(--border-radius); border: 1px solid var(--color-border);">
+          <div class="icon-box" style="margin: 0 auto var(--space-2) auto;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h4 style="margin-bottom: 4px;">ADA Accredited</h4>
+          <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">American Dental Association Gold Standing</p>
+        </div>
+
+        <div style="padding: var(--space-4); background-color: var(--color-card-bg); border-radius: var(--border-radius); border: 1px solid var(--color-border);">
+          <div class="icon-box" style="margin: 0 auto var(--space-2) auto;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          </div>
+          <h4 style="margin-bottom: 4px;">ISO 9001:2015</h4>
+          <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">Certified Sterilization Protocol</p>
+        </div>
+
+        <div style="padding: var(--space-4); background-color: var(--color-card-bg); border-radius: var(--border-radius); border: 1px solid var(--color-border);">
+          <div class="icon-box" style="margin: 0 auto var(--space-2) auto;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <h4 style="margin-bottom: 4px;">AACD Fellowship</h4>
+          <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">Cosmetic Dentistry Excellence Award</p>
+        </div>
+
+        <div style="padding: var(--space-4); background-color: var(--color-card-bg); border-radius: var(--border-radius); border: 1px solid var(--color-border);">
+          <div class="icon-box" style="margin: 0 auto var(--space-2) auto;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>
+          </div>
+          <h4 style="margin-bottom: 4px;">ICOI Diplomate</h4>
+          <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">International Implantology Board Certified</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 9: PATIENT TESTIMONIALS
+         ========================================================================== -->
+    <section class="section-full">
+      <div class="section-header text-center">
+        <span class="section-tag">Patient Reflections</span>
+        <h2>What Our Community Says</h2>
+        <p class="text-muted">Honest reviews from individuals whose confidence was renewed in our care.</p>
+      </div>
+
+      <div class="grid-cards-3">
+        <div class="card-equal">
+          <div class="card-body">
+            <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: var(--space-2);">"A clinic that truly listens"</h4>
+            <p class="card-text">
+              From the front desk team to Dr. Mitchell, everyone took time to answer my questions without rushing. The 3D scan revealed issues my old dentist missed. Best healthcare experience I've had.
+            </p>
+            <div class="card-footer">
+              <strong>Jonathan Reynolds</strong>
+              <span class="badge-outline">Patient Since 2020</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-equal">
+          <div class="card-body">
+            <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: var(--space-2);">"Seamless implant surgery"</h4>
+            <p class="card-text">
+              Dr. Marcus Vance placed two implants using a 3D guide. Zero swelling the next day and I was back at work on Monday. Transparent pricing from day one with zero surprises.
+            </p>
+            <div class="card-footer">
+              <strong>Catherine Moore</strong>
+              <span class="badge-outline">Patient Since 2022</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-equal">
+          <div class="card-body">
+            <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <h4 style="font-size: 1.15rem; margin-bottom: var(--space-2);">"My teenagers love their aligners"</h4>
+            <p class="card-text">
+              Dr. Rostova made orthodontic treatment exciting for both my teens. Digital check-ins reduced our office visits significantly. Outstanding practice!
+            </p>
+            <div class="card-footer">
+              <strong>Daniel Davies</strong>
+              <span class="badge-outline">Patient Since 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 10: APPOINTMENT CTA STRIP
+         ========================================================================== -->
+    <section class="section-full-compact" style="background-color: var(--color-black); color: var(--color-white);">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-4);">
+        <div>
+          <h3 style="color: var(--color-white); margin-bottom: 4px;">Ready to Experience Modern, Gentle Dentistry?</h3>
+          <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 0;">New patient consultations and second opinions available this week.</p>
+        </div>
+        <div style="display: flex; gap: var(--space-2); flex-wrap: wrap;">
+          <a href="appointment.html" class="btn btn-primary">Book an Appointment</a>
+          <a href="contact.html" class="btn btn-outline" style="border-color: rgba(255, 255, 255, 0.3); color: var(--color-white);">Contact Clinic</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Complete Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="index.html" class="footer-logo" aria-label="BrightSmile Dental Care Home">
+              <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" width="160" height="38">
+            </a>
+            <p class="footer-desc">
+              Boston's trusted comprehensive family dental clinic and surgical oral care center. Dedicated to painless dentistry and lifelong smile health.
+            </p>
+            <div style="font-size: 0.85rem; color: var(--color-dark-section-muted); margin-top: 12px;">
+              <strong>Emergency Triage:</strong> (555) 234-5678<br>
+              <strong>Email:</strong> care@brightsmiledental.com
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Clinical Treatments</h4>
+            <ul class="footer-links">
+              <li><a href="service-details.html">Preventive Checkups</a></li>
+              <li><a href="service-details.html">Ultrasonic Cleaning</a></li>
+              <li><a href="service-details.html">Laser Teeth Whitening</a></li>
+              <li><a href="service-details.html">3D Guided Implants</a></li>
+              <li><a href="service-details.html">Clear Aligners / Invisalign</a></li>
+              <li><a href="service-details.html">Microscopic Root Canal</a></li>
+              <li><a href="blog.html">Oral Health Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Patient Portals</h4>
+            <ul class="footer-links">
+              <li><a href="../patient-dashboard/index.html">Patient Dashboard</a></li>
+              <li><a href="../patient-dashboard/appointments.html">Manage Appointments</a></li>
+              <li><a href="../patient-dashboard/treatment-history.html">Tooth Health Chart</a></li>
+              <li><a href="../patient-dashboard/prescriptions.html">Digital Prescriptions</a></li>
+              <li><a href="../patient-dashboard/payments.html">Invoices & Receipts</a></li>
+              <li><a href="../admin-dashboard/index.html">Staff & Admin Login</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Clinic Hours</h4>
+            <ul class="footer-links" style="font-size: 0.9rem;">
+              <li style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span>Mon – Fri:</span>
+                <span style="color: var(--accent);">8:00 AM – 7:00 PM</span>
+              </li>
+              <li style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span>Saturday:</span>
+                <span style="color: var(--accent);">9:00 AM – 4:00 PM</span>
+              </li>
+              <li style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                <span>Sunday:</span>
+                <span style="color: rgba(255,255,255,0.5);">Emergency Only</span>
+              </li>
+            </ul>
+            <a href="appointment.html" class="btn btn-primary" style="width: 100%; text-align: center; font-size: 0.9rem; padding: 10px 16px;">
+              Schedule Online
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p class="footer-copy">
+            &copy; 2026 BrightSmile Dental Care. All rights reserved.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="contact.html">Privacy Policy</a>
+            <a href="contact.html">Terms of Clinical Service</a>
+            <a href="contact.html">HIPAA Compliance</a>
+            <a href="../documentation/index.html">Template Documentation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

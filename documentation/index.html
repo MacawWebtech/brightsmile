@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Documentation | BrightSmile Dental Care</title>
+  <meta name="description" content="Comprehensive 14-section developer and setup guide for the BrightSmile Dental Care template: CSS tokens, RTL, and dashboard architecture.">
+  <link rel="canonical" href="https://demo.brightsmiledental.com/documentation/index.html">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Developer Documentation | BrightSmile Dental Care">
+  <meta property="og:description" content="Comprehensive 14-section developer and setup guide for the BrightSmile Dental Care template: CSS tokens, RTL, and dashboard architecture.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://demo.brightsmiledental.com/documentation/index.html">
+  <meta property="og:image" content="https://demo.brightsmiledental.com/assets/images/og-preview.jpg">
+
+  <!-- DentalClinic Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DentalClinic",
+    "name": "BrightSmile Dental Care",
+    "image": "https://demo.brightsmiledental.com/assets/images/clinic-exterior.jpg",
+    "@id": "https://demo.brightsmiledental.com",
+    "url": "https://demo.brightsmiledental.com",
+    "telephone": "+1-555-234-5678",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "450 Medical Boulevard, Suite 300",
+      "addressLocality": "Boston",
+      "addressRegion": "MA",
+      "postalCode": "02115",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 42.3584,
+      "longitude": -71.0636
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "16:00"
+      }
+    ],
+    "medicalSpecialty": [
+      "Dentistry",
+      "Orthodontics",
+      "Prosthodontics",
+      "Periodontics",
+      "OralSurgery"
+    ]
+  }
+  </script>
+
+  
+  
+
+  <!-- Open Graph Meta Tags -->
+  
+  
+  
+  
+  
+
+  <!-- DentalClinic Structured Data (JSON-LD) -->
+  
+
+    <!-- FOUC Prevention Script -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('brightsmile_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var savedRtl = localStorage.getItem('brightsmile_dental_rtl') || localStorage.getItem('rtl');
+        var isRtl = (savedRtl === 'true' || savedRtl === 'rtl');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark-mode');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark-mode');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+        if (isRtl) {
+          document.documentElement.classList.add('rtl-mode');
+          document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+          document.documentElement.classList.remove('rtl-mode');
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+
+  <style>
+    .doc-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: var(--space-8);
+      align-items: start;
+    }
+    @media (max-width: 991px) {
+      .doc-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+    .doc-nav-sticky {
+      position: sticky;
+      top: 90px;
+      background-color: var(--color-card-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius-lg);
+      padding: var(--space-4);
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+    .code-block {
+      background-color: #0A0A0A;
+      color: #FFFFFF;
+      padding: var(--space-4);
+      border-radius: var(--border-radius);
+      font-family: monospace;
+      font-size: 0.88rem;
+      overflow-x: auto;
+      margin: var(--space-3) 0;
+      border: 1px solid var(--color-border);
+      line-height: 1.5;
+    }
+    .color-swatch-box {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: var(--space-4) 0;
+    }
+    .swatch-card {
+      flex: 1;
+      min-width: 140px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+      padding: 12px;
+      background: var(--color-surface-alt);
+    }
+    .swatch-color {
+      height: 48px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Header -->
+  <header class="site-header">
+    <div class="header-inner container-fluid">
+      <a href="../pages/index.html" class="header-logo" aria-label="BrightSmile Dental Care Home">
+        <img src="../assets/images/logo/logo.jpg" alt="BrightSmile Dental Care" class="logo-light" width="160" height="38">
+        <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" class="logo-dark" width="160" height="38">
+        <span class="badge badge-accent badge-sm">DOCS</span>
+      </a>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="desktop-theme-toggle" aria-label="Toggle Theme">
+          <span class="icon-sun"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line></svg></span>
+          <span class="icon-moon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+        </button>
+        <button class="rtl-toggle" id="desktop-rtl-toggle" aria-label="Toggle RTL Layout">
+          <span class="rtl-badge">RTL</span>
+        </button>
+        <a href="../pages/index.html" class="btn btn-outline btn-sm">Preview Site</a>
+        <a href="../pages/appointment.html" class="btn btn-primary btn-sm">Live Wizard</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Docs Banner -->
+  <section class="page-banner" style="padding: var(--space-6) 0 var(--space-4) 0; background-color: var(--color-surface-alt); border-bottom: 1px solid var(--color-border);">
+    <div class="container-fluid">
+      <span class="badge" style="background-color: var(--color-primary-tint); color: var(--color-primary); border: 1px solid var(--color-primary-border); margin-bottom: var(--space-2); display: inline-block;">Complete 14-Section Guide</span>
+      <h1 style="font-size: 2.4rem; margin-bottom: var(--space-2); color: var(--color-text-main);">
+        BrightSmile Dental Care Template Documentation
+      </h1>
+      <p style="font-size: 1.05rem; color: var(--color-text-muted); margin-bottom: 0;">
+        Architectural manual, CSS variables, design tokens, booking state machine, and dual-dashboard integration.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Layout -->
+  <main class="section-padding">
+    <div class="container-fluid">
+      <div class="doc-layout">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="doc-nav-sticky">
+          <h3 style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); margin-bottom: var(--space-3);">Documentation Index</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem;">
+            <li><a href="#sec-1" class="toc-link">1. Overview & Tech Stack</a></li>
+            <li><a href="#sec-2" class="toc-link">2. Package Structure</a></li>
+            <li><a href="#sec-3" class="toc-link">3. Three-Color System</a></li>
+            <li><a href="#sec-4" class="toc-link">4. Two Google Fonts</a></li>
+            <li><a href="#sec-5" class="toc-link">5. 30px Layout & 8px Scale</a></li>
+            <li><a href="#sec-6" class="toc-link">6. FOUC-Free Dark Mode</a></li>
+            <li><a href="#sec-7" class="toc-link">7. True Layout-Level RTL</a></li>
+            <li><a href="#sec-8" class="toc-link">8. Header & Mobile Drawer</a></li>
+            <li><a href="#sec-9" class="toc-link">9. 7-Step Booking Engine</a></li>
+            <li><a href="#sec-10" class="toc-link">10. Patient Portal</a></li>
+            <li><a href="#sec-11" class="toc-link">11. Admin Clinic Console</a></li>
+            <li><a href="#sec-12" class="toc-link">12. Backend Integration Hooks</a></li>
+            <li><a href="#sec-13" class="toc-link">13. SEO, Meta & Accessibility</a></li>
+            <li><a href="#sec-14" class="toc-link">14. Changelog & Credits</a></li>
+          </ul>
+        </aside>
+
+        <!-- Documentation Content -->
+        <article class="article-content" style="max-width: 920px;">
+          
+          <!-- Section 1 -->
+          <h2 id="sec-1" style="margin-top: 0;">1. Introduction & Template Overview</h2>
+          <p>
+            BrightSmile Dental Care is an ultra-premium, production-grade HTML5/CSS3/JavaScript website and clinical management template engineered for modern dental practices, oral surgeons, orthodontists, and dental hospital networks.
+          </p>
+          <div class="clinical-note">
+            <strong>Key Spec:</strong> Built with semantic HTML5, modern CSS3 custom properties (variables), zero heavy third-party framework dependencies, and pure modular ES6+ JavaScript.
+          </div>
+
+          <!-- Section 2 -->
+          <h2 id="sec-2">2. Package Directory & File Structure</h2>
+          <p>The template comprises 40 production files distributed across clean, isolated directories:</p>
+          <div class="code-block">
+dental-clinic/
+├── assets/
+│   ├── css/ (style.css, dashboard.css, dark-mode.css, rtl.css, responsive.css)
+│   ├── js/ (main.js, booking.js, dashboard.js)
+│   ├── images/
+│   └── fonts/
+├── pages/ (20 Public Website & Auth Pages)
+├── patient-dashboard/ (7 Patient Management Pages)
+├── admin-dashboard/ (11 Clinic Administration Pages)
+├── documentation/ (index.html developer guide)
+├── README.md, robots.txt, sitemap.xml, index.html
+          </div>
+
+          <!-- Section 3 -->
+          <h2 id="sec-3">3. The Strict Three-Color System</h2>
+          <p>
+            The template communicates surgical cleanliness and clinical trust by strictly enforcing three hues:
+          </p>
+          <div class="color-swatch-box">
+            <div class="swatch-card">
+              <div class="swatch-color" style="background-color: #0A0A0A;"></div>
+              <strong>Pure Black</strong><br>
+              <code>#0A0A0A</code><br>
+              <span style="font-size: 0.75rem; color: var(--color-text-muted);">Surfaces & Headings</span>
+            </div>
+            <div class="swatch-card">
+              <div class="swatch-color" style="background-color: #FFFFFF; border: 1px solid var(--color-border);"></div>
+              <strong>Pure White</strong><br>
+              <code>#FFFFFF</code><br>
+              <span style="font-size: 0.75rem; color: var(--color-text-muted);">Cards & Contrast</span>
+            </div>
+            <div class="swatch-card">
+              <div class="swatch-color" style="background-color: #0B6E75;"></div>
+              <strong>Medical Teal</strong><br>
+              <code>#0B6E75</code><br>
+              <span style="font-size: 0.75rem; color: var(--color-text-muted);">Light Mode Accent</span>
+            </div>
+            <div class="swatch-card">
+              <div class="swatch-color" style="background-color: #14B8A6;"></div>
+              <strong>Luminous Teal</strong><br>
+              <code>#14B8A6</code><br>
+              <span style="font-size: 0.75rem; color: var(--color-text-muted);">Dark Mode Accent</span>
+            </div>
+          </div>
+
+          <!-- Section 4 -->
+          <h2 id="sec-4">4. Two Google Fonts Typography System</h2>
+          <p>Strictly two Google Fonts are loaded throughout the entire project:</p>
+          <ul style="padding-left: 20px;">
+            <li><strong>Headings:</strong> <code>'Outfit', sans-serif</code> (Weights: 400, 500, 600, 700, 800)</li>
+            <li><strong>Body & UI:</strong> <code>'Plus Jakarta Sans', sans-serif</code> (Weights: 400, 500, 600, 700)</li>
+          </ul>
+          <div class="code-block">
+&lt;link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"&gt;
+          </div>
+
+          <!-- Section 5 -->
+          <h2 id="sec-5">5. Global Layout, 30px Padding & 8px Scale</h2>
+          <p>
+            All sections span 100% width with mandatory <code>30px</code> left and right padding on desktop & tablet screens (adapting to <code>16px</code> on mobile screens &lt;640px) via <code>var(--container-padding)</code>. Spacing variables strictly use the 8px scale:
+          </p>
+          <div class="code-block">
+--space-1: 4px;   --space-2: 8px;   --space-3: 16px;  --space-4: 24px;
+--space-5: 32px;  --space-6: 48px;  --space-7: 64px;  --space-8: 80px;
+          </div>
+
+          <!-- Section 6 -->
+          <h2 id="sec-6">6. FOUC-Free Dark/Light Mode Engine</h2>
+          <p>
+            Dark mode executes synchronously in the <code>&lt;head&gt;</code> before CSS rendering, preventing Flash of Unstyled Content (FOUC). Preferences persist in <code>localStorage</code>:
+          </p>
+          <div class="code-block">
+&lt;script&gt;
+  (function() {
+    var theme = localStorage.getItem('brightsmile_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var rtl = localStorage.getItem('brightsmile_dental_rtl') === 'true';
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark-mode');
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    if (rtl) {
+      document.documentElement.classList.add('rtl-mode');
+      document.documentElement.setAttribute('dir', 'rtl');
+    }
+  })();
+&lt;/script&gt;
+          </div>
+
+          <!-- Section 7 -->
+          <h2 id="sec-7">7. True Layout-Level RTL Engine</h2>
+          <p>
+            Full right-to-left mirroring is supported across public pages and dashboards. The brand logo remains anchored on the extreme left of the desktop header per design specification, while navigation, drawers, sidebars, and tables mirror seamlessly.
+          </p>
+
+          <!-- Section 8 -->
+          <h2 id="sec-8">8. Navigation, Headers & 44px Mobile Drawer</h2>
+          <p>
+            The navigation header features a left brand anchor, centered navigation links, right-aligned theme/RTL toggles, and direct appointment CTA. The mobile hamburger drawer provides comfortable <strong>44px minimum touch targets</strong>.
+          </p>
+
+          <!-- Section 9 -->
+          <h2 id="sec-9">9. 7-Step Interactive Appointment Booking Engine</h2>
+          <p>Located in <code>assets/js/booking.js</code>, the booking wizard manages:</p>
+          <ol style="padding-left: 20px;">
+            <li>Service Selection (with price and duration badges)</li>
+            <li>Dentist Specialist Selection</li>
+            <li>Interactive Calendar Date Picker</li>
+            <li>Morning & Afternoon Time Slot Selection</li>
+            <li>Patient Details with email & phone validation</li>
+            <li>Consolidated Booking Summary Verification</li>
+            <li>Instant Confirmation Ticket & Session Storage Persistence</li>
+          </ol>
+
+          <!-- Section 10 -->
+          <h2 id="sec-10">10. Patient Portal Architecture (7 Pages)</h2>
+          <p>
+            Provides patients with an intuitive medical management interface:
+          </p>
+          <ul style="padding-left: 20px;">
+            <li><code>index.html</code>: Overview with 4 stat cards & upcoming visit alerts.</li>
+            <li><code>appointments.html</code>: Working Reschedule and Cancel modals.</li>
+            <li><code>treatment-history.html</code>: Interactive Universal Dental Arch (Teeth 1–32) with dynamic diagnostic notes.</li>
+            <li><code>prescriptions.html</code>: Medication list & Printable Rx Modal.</li>
+            <li><code>payments.html</code>: Itemized dental statements & Printable Receipt Modal.</li>
+            <li><code>profile.html</code>: Personal medical info & Delta Dental insurance card.</li>
+            <li><code>settings.html</code>: Password change, 2FA toggle & SMS reminders.</li>
+          </ul>
+
+          <!-- Section 11 -->
+          <h2 id="sec-11">11. Admin Practice Management Console (11 Pages)</h2>
+          <p>
+            Delivers comprehensive clinical practice operations:
+          </p>
+          <ul style="padding-left: 20px;">
+            <li><code>index.html</code>: Practice KPI cards & zero-dependency SVG charts.</li>
+            <li><code>patients.html</code>: EDR directory & Add Patient Modal.</li>
+            <li><code>doctors.html</code>: Specialist roster, shifts & Add Doctor Modal.</li>
+            <li><code>services.html</code>: CDT procedure codes & Add Service Modal.</li>
+            <li><code>appointments.html</code>: Operations manager & Assign Doctor Modal.</li>
+            <li><code>treatments.html</code>: Multi-stage procedure progress tracking.</li>
+            <li><code>prescriptions.html</code>: e-Prescribing & Issue Rx Modal.</li>
+            <li><code>payments.html</code>: Practice billing & insurance claims (ERA 835).</li>
+            <li><code>messages.html</code>: Emergency triage communications center.</li>
+            <li><code>reports.html</code>: Procedure distribution progress bars & CSV export.</li>
+            <li><code>settings.html</code>: Clinic profile, Tax ID, NPI, and operatory buffers.</li>
+          </ul>
+
+          <!-- Section 12 -->
+          <h2 id="sec-12">12. Forms & Backend Integration Placeholders</h2>
+          <p>
+            All forms include client-side validation and clear backend endpoints:
+          </p>
+          <div class="code-block">
+&lt;!-- Formspree / Netlify Forms Integration --&gt;
+&lt;form method="POST" action="https://formspree.io/f/placeholder-brightsmile-dental"&gt;
+  &lt;input type="text" name="first_name" required&gt;
+  ...
+&lt;/form&gt;
+          </div>
+
+          <!-- Section 13 -->
+          <h2 id="sec-13">13. SEO, Social Meta & Accessibility Compliance</h2>
+          <ul style="padding-left: 20px;">
+            <li><strong>Titles:</strong> Strictly under 60 characters across all pages.</li>
+            <li><strong>Meta Descriptions:</strong> Curated 140–160 character descriptions.</li>
+            <li><strong>Open Graph:</strong> Complete <code>og:title</code>, <code>og:image</code>, and <code>og:url</code> tags.</li>
+            <li><strong>Structured Data:</strong> <code>DentalClinic</code> JSON-LD schema on all pages.</li>
+            <li><strong>Single H1:</strong> Exactly one semantic <code>&lt;h1&gt;</code> per page.</li>
+            <li><strong>Accessibility:</strong> WCAG 2.1 AA compliant, ARIA labels, and high contrast.</li>
+          </ul>
+
+          <!-- Section 14 -->
+          <h2 id="sec-14">14. Changelog, Credits & Support Information</h2>
+          <p>
+            <strong>Version 1.0.0 (November 2026):</strong> Production release with 40 HTML files, strict 3-color design tokens, 2 Google Fonts, 7-step booking engine, and dual dashboards.
+          </p>
+          <p>
+            For support or customization requests, consult the included source files or contact our engineering team via the marketplace portal.
+          </p>
+
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="../pages/index.html" class="footer-logo" aria-label="BrightSmile Dental Care Home">
+              <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" width="160" height="38">
+            </a>
+            <p class="footer-desc">
+              Boston's trusted comprehensive family dental clinic and surgical oral care center. Dedicated to painless dentistry and lifelong smile health.
+            </p>
+            <div style="font-size: 0.85rem; color: var(--color-dark-section-muted); margin-top: 12px;">
+              <strong>Emergency Triage:</strong> (555) 234-5678<br>
+              <strong>Email:</strong> care@brightsmiledental.com
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Clinical Treatments</h4>
+            <ul class="footer-links">
+              <li><a href="../pages/service-details.html">Preventive Checkups</a></li>
+              <li><a href="../pages/service-details.html">Ultrasonic Cleaning</a></li>
+              <li><a href="../pages/service-details.html">Laser Teeth Whitening</a></li>
+              <li><a href="../pages/service-details.html">3D Guided Implants</a></li>
+              <li><a href="../pages/service-details.html">Clear Aligners / Invisalign</a></li>
+              <li><a href="../pages/service-details.html">Microscopic Root Canal</a></li>
+              <li><a href="../pages/blog.html">Oral Health Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Patient Portals</h4>
+            <ul class="footer-links">
+              <li><a href="../patient-dashboard/index.html">Patient Dashboard</a></li>
+              <li><a href="../patient-dashboard/appointments.html">Manage Appointments</a></li>
+              <li><a href="../patient-dashboard/treatment-history.html">Tooth Health Chart</a></li>
+              <li><a href="../patient-dashboard/prescriptions.html">Digital Prescriptions</a></li>
+              <li><a href="../patient-dashboard/payments.html">Invoices & Receipts</a></li>
+              <li><a href="../admin-dashboard/index.html">Staff & Admin Login</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Clinic Hours</h4>
+            <ul class="footer-links" style="font-size: 0.9rem;">
+              <li style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span>Mon – Fri:</span>
+                <span style="color: var(--accent);">8:00 AM – 7:00 PM</span>
+              </li>
+              <li style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span>Saturday:</span>
+                <span style="color: var(--accent);">9:00 AM – 4:00 PM</span>
+              </li>
+              <li style="display: flex; justify-content: space-between; margin-bottom: 12px;">
+                <span>Sunday:</span>
+                <span style="color: rgba(255,255,255,0.5);">Emergency Only</span>
+              </li>
+            </ul>
+            <a href="../pages/appointment.html" class="btn btn-primary" style="width: 100%; text-align: center; font-size: 0.9rem; padding: 10px 16px;">
+              Schedule Online
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p class="footer-copy">
+            &copy; 2026 BrightSmile Dental Care. All rights reserved.
+          </p>
+          <div class="footer-bottom-links">
+            <a href="../pages/contact.html">Privacy Policy</a>
+            <a href="../pages/contact.html">Terms of Clinical Service</a>
+            <a href="../pages/contact.html">HIPAA Compliance</a>
+            <a href="../documentation/index.html">Template Documentation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

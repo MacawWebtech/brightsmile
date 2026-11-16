@@ -1,0 +1,159 @@
+/* ==========================================================================
+   BRIGHTSMILE DENTAL CARE — COMPLETE LAYOUT-LEVEL RTL STYLESHEET
+   Supports Arabic, Hebrew, and RTL Layout Mirroring
+   Preserves Header Anchor (Logo Left, Controls Right) per Specification
+   Mirrors Drawers, Sidebars, Cards, Tables, Forms, and Directional Icons
+   ========================================================================== */
+
+html[dir="rtl"],
+html.rtl-mode {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Header Specification:
+   "The logo must always remain at the extreme left of the header.
+    On desktop, keep the logo on the left, navigation in the middle, 
+    and theme controls, RTL control, and contextual CTA on the right." */
+html[dir="rtl"] .header-inner,
+html.rtl-mode .header-inner {
+  direction: ltr !important; /* Preserves Logo on Left, Actions on Right */
+}
+
+html[dir="rtl"] .header-logo,
+html.rtl-mode .header-logo {
+  direction: ltr !important;
+}
+
+html[dir="rtl"] .header-nav,
+html.rtl-mode .header-nav {
+  direction: rtl !important; /* Nav links order mirrored cleanly */
+}
+
+html[dir="rtl"] .header-actions,
+html.rtl-mode .header-actions {
+  direction: ltr !important;
+}
+
+/* Mobile Drawer (Slides in from Left in RTL) */
+html[dir="rtl"] .mobile-drawer,
+html.rtl-mode .mobile-drawer {
+  direction: rtl;
+  right: auto;
+  left: -320px;
+  border-left: none;
+  border-right: 1px solid var(--color-border);
+  box-shadow: 8px 0 30px rgba(10, 10, 10, 0.15);
+  transition: left 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html[dir="rtl"] .mobile-drawer.open,
+html.rtl-mode .mobile-drawer.open {
+  left: 0;
+  right: auto;
+}
+
+/* Typography & Text Alignments */
+html[dir="rtl"] .text-start,
+html.rtl-mode .text-start {
+  text-align: right !important;
+}
+
+html[dir="rtl"] .text-end,
+html.rtl-mode .text-end {
+  text-align: left !important;
+}
+
+/* Icon & Chevron Mirroring */
+html[dir="rtl"] .icon-chevron-right,
+html[dir="rtl"] .icon-arrow-right,
+html.rtl-mode .icon-chevron-right,
+html.rtl-mode .icon-arrow-right {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .icon-chevron-left,
+html[dir="rtl"] .icon-arrow-left,
+html.rtl-mode .icon-chevron-left,
+html.rtl-mode .icon-arrow-left {
+  transform: scaleX(-1);
+}
+
+/* Form Controls */
+html[dir="rtl"] input,
+html[dir="rtl"] select,
+html[dir="rtl"] textarea,
+html.rtl-mode input,
+html.rtl-mode select,
+html.rtl-mode textarea {
+  text-align: right;
+}
+
+html[dir="rtl"] .search-box-input,
+html.rtl-mode .search-box-input {
+  padding: 10px 42px 10px 16px;
+}
+
+html[dir="rtl"] .search-box-icon,
+html.rtl-mode .search-box-icon {
+  right: 14px;
+  left: auto;
+}
+
+html[dir="rtl"] .form-icon-left,
+html.rtl-mode .form-icon-left {
+  right: 14px;
+  left: auto;
+}
+
+html[dir="rtl"] .form-input-with-icon,
+html.rtl-mode .form-input-with-icon {
+  padding-right: 44px;
+  padding-left: 14px;
+}
+
+/* Data Tables */
+html[dir="rtl"] th,
+html[dir="rtl"] td,
+html.rtl-mode th,
+html.rtl-mode td {
+  text-align: right;
+}
+
+/* Cards & Modals */
+html[dir="rtl"] .card-equal .card-footer,
+html.rtl-mode .card-equal .card-footer {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .pricing-badge-pill,
+html.rtl-mode .pricing-badge-pill {
+  right: auto;
+  left: 24px;
+}
+
+/* Accordion in RTL */
+html[dir="rtl"] .accordion-btn,
+html.rtl-mode .accordion-btn {
+  text-align: right;
+}
+
+/* Dashboard Sidebars (Sidebar on the Right in RTL) */
+html[dir="rtl"] .dashboard-sidebar,
+html.rtl-mode .dashboard-sidebar {
+  border-right: none;
+  border-left: 1px solid var(--color-border);
+}
+
+html[dir="rtl"] .dashboard-main,
+html.rtl-mode .dashboard-main {
+  margin-right: var(--sidebar-width, 270px);
+  margin-left: 0;
+}
+
+/* Breadcrumbs */
+html[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before,
+html.rtl-mode .breadcrumb-item + .breadcrumb-item::before {
+  content: "\\";
+  padding: 0 var(--space-1);
+}

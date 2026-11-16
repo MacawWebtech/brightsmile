@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Allow: /pages/
+Allow: /assets/
+Disallow: /admin-dashboard/
+Disallow: /patient-dashboard/
+
+Sitemap: https://demo.brightsmiledental.com/sitemap.xml

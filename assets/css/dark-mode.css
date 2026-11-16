@@ -1,0 +1,275 @@
+/* ==========================================================================
+   BRIGHTSMILE DENTAL CARE — DARK MODE STYLESHEET
+   Strict Three-Color Rule in Dark Mode:
+   - Pure Black Base: #0A0A0A / #121212 / #161616
+   - Pure White Text & High Contrast: #FFFFFF / opacities
+   - Clinical Medical Teal Accent: #14B8A6 (Luminous contrast-safe for dark surfaces)
+   ========================================================================== */
+
+html.dark-mode,
+[data-theme="dark"] {
+  /* Semantic Design Tokens (Dark Mode) */
+  --accent: #2DD4BF;
+  --accent-hover: #14B8A6;
+  --accent-rgb: 45, 212, 191;
+  --accent-tint: rgba(45, 212, 191, 0.12);
+  --accent-tint-hover: rgba(45, 212, 191, 0.20);
+  --accent-border: rgba(45, 212, 191, 0.32);
+  --accent-glow: rgba(45, 212, 191, 0.32);
+  --text-on-accent: #0A0A0A;
+
+  --bg-page: #0A0A0A;
+  --bg-surface: #121212;
+  --bg-surface-alt: #181818;
+  --bg-elevated: #1E1E1E;
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.72);
+  --border-color: rgba(255, 255, 255, 0.12);
+
+  /* Surface Remapping */
+  --color-bg: #0A0A0A;
+  --color-surface: #121212;
+  --color-surface-alt: #181818;
+  --color-card-bg: #141414;
+
+  /* Text Roles */
+  --color-text-main: #FFFFFF;
+  --color-text-soft: rgba(255, 255, 255, 0.85);
+  --color-text-muted: rgba(255, 255, 255, 0.55);
+
+  /* Primary Accent: Luminous Medical Teal for AAA Contrast on Black */
+  --color-primary: #2DD4BF;
+  --color-primary-dark: #14B8A6;
+  --color-primary-rgb: 45, 212, 191;
+  --color-primary-tint: rgba(45, 212, 191, 0.14);
+  --color-primary-tint-hover: rgba(45, 212, 191, 0.22);
+  --color-primary-border: rgba(45, 212, 191, 0.35);
+  --color-primary-glow: rgba(45, 212, 191, 0.35);
+
+  /* High Contrast Borders */
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+
+  /* Elevation Shadows */
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* Base Body & Surfaces in Dark Mode */
+html.dark-mode body,
+[data-theme="dark"] body {
+  background-color: var(--color-bg);
+  color: var(--color-text-soft);
+}
+
+/* Header & Drawers */
+html.dark-mode .site-header,
+[data-theme="dark"] .site-header {
+  background-color: rgba(18, 18, 18, 0.88);
+  border-bottom-color: var(--color-border);
+}
+
+html.dark-mode .mobile-drawer,
+[data-theme="dark"] .mobile-drawer {
+  background-color: var(--bg-surface-alt);
+  border-left-color: var(--color-border);
+}
+
+/* Card Elements */
+html.dark-mode .card-equal,
+[data-theme="dark"] .card-equal {
+  background-color: var(--color-card-bg);
+  border-color: var(--color-border);
+}
+
+html.dark-mode .card-equal:hover,
+[data-theme="dark"] .card-equal:hover {
+  border-color: var(--color-primary-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Buttons in Dark Mode */
+html.dark-mode .btn-outline,
+[data-theme="dark"] .btn-outline {
+  border-color: var(--color-border);
+  color: var(--color-text-main);
+}
+
+html.dark-mode .btn-outline:hover,
+[data-theme="dark"] .btn-outline:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-tint);
+  color: var(--color-primary);
+}
+
+html.dark-mode .btn-black,
+[data-theme="dark"] .btn-black {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-color: var(--color-white);
+}
+
+html.dark-mode .btn-black:hover,
+[data-theme="dark"] .btn-black:hover {
+  background-color: var(--color-primary);
+  color: var(--text-on-accent);
+  border-color: var(--color-primary);
+}
+
+html.dark-mode .btn-icon,
+[data-theme="dark"] .btn-icon {
+  border-color: var(--color-border);
+  color: var(--color-text-main);
+}
+
+/* Form Inputs in Dark Mode */
+html.dark-mode input,
+html.dark-mode select,
+html.dark-mode textarea,
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background-color: var(--bg-surface-alt);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-main);
+}
+
+html.dark-mode input:focus,
+html.dark-mode select:focus,
+html.dark-mode textarea:focus,
+[data-theme="dark"] input:focus,
+[data-theme="dark"] select:focus,
+[data-theme="dark"] textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-primary-tint);
+}
+
+/* Data Tables in Dark Mode */
+html.dark-mode table,
+[data-theme="dark"] table {
+  color: var(--color-text-soft);
+}
+
+html.dark-mode th,
+[data-theme="dark"] th {
+  background-color: var(--bg-surface-alt);
+  color: var(--color-text-main);
+  border-bottom: 1px solid var(--color-border);
+}
+
+html.dark-mode td,
+[data-theme="dark"] td {
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+/* Code & Pre in Dark Mode */
+html.dark-mode code,
+[data-theme="dark"] code {
+  background-color: var(--bg-surface-alt);
+  color: var(--color-primary);
+  border-color: var(--color-border);
+}
+
+
+/* High Contrast Dark Mode Primary Buttons (WCAG AAA 12.8:1) */
+html.dark-mode .btn-primary,
+[data-theme="dark"] .btn-primary,
+html.dark-mode .btn-action-primary,
+[data-theme="dark"] .btn-action-primary {
+  background-color: var(--accent);
+  color: var(--text-on-accent) !important;
+  font-weight: 600;
+  border-color: var(--accent);
+}
+
+html.dark-mode .btn-primary:hover,
+[data-theme="dark"] .btn-primary:hover,
+html.dark-mode .btn-action-primary:hover,
+[data-theme="dark"] .btn-action-primary:hover {
+  background-color: var(--accent-hover);
+  color: var(--text-on-accent) !important;
+  border-color: var(--accent-hover);
+}
+
+
+/* ==========================================================================
+   DARK MODE DROPDOWN & TEXT CONTRAST ENHANCEMENTS
+   ========================================================================== */
+html.dark-mode .nav-item.dropdown .dropdown-menu,
+[data-theme="dark"] .nav-item.dropdown .dropdown-menu {
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.65);
+}
+
+html.dark-mode .dropdown-menu .dropdown-item,
+[data-theme="dark"] .dropdown-menu .dropdown-item {
+  color: var(--color-text-main) !important;
+}
+
+html.dark-mode .dropdown-menu .dropdown-item:hover,
+html.dark-mode .dropdown-menu .dropdown-item.active,
+[data-theme="dark"] .dropdown-menu .dropdown-item:hover,
+[data-theme="dark"] .dropdown-menu .dropdown-item.active {
+  background-color: var(--color-surface-alt) !important;
+  color: var(--color-primary) !important;
+}
+
+/* Input Placeholders in Dark Mode */
+html.dark-mode input::placeholder,
+html.dark-mode textarea::placeholder,
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+/* Heading, Paragraph & Nav Text Contrast in Dark Mode */
+html.dark-mode h1,
+html.dark-mode h2,
+html.dark-mode h3,
+html.dark-mode h4,
+html.dark-mode h5,
+html.dark-mode h6,
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: var(--color-text-main) !important;
+}
+
+html.dark-mode p,
+[data-theme="dark"] p {
+  color: var(--color-text-soft) !important;
+}
+
+html.dark-mode label,
+[data-theme="dark"] label {
+  color: var(--color-text-main) !important;
+}
+
+html.dark-mode .nav-link,
+[data-theme="dark"] .nav-link {
+  color: var(--color-text-soft) !important;
+}
+
+html.dark-mode .nav-link:hover,
+html.dark-mode .nav-link.active,
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+  color: var(--color-primary) !important;
+}
+
+html.dark-mode .card-title,
+[data-theme="dark"] .card-title {
+  color: var(--color-text-main) !important;
+}
+
+html.dark-mode .card-text,
+[data-theme="dark"] .card-text {
+  color: var(--color-text-soft) !important;
+}

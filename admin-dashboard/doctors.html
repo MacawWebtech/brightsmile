@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dentists & Specialists Roster | BrightSmile Admin</title>
+  <meta name="description" content="Manage specialist clinical credentials, daily patient capacity, operative suite allocations, and weekly shift schedules.">
+  <link rel="canonical" href="https://demo.brightsmiledental.com/admin-dashboard/doctors.html">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Dentists & Specialists Roster | BrightSmile Admin">
+  <meta property="og:description" content="Manage specialist clinical credentials, daily patient capacity, operative suite allocations, and weekly shift schedules.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://demo.brightsmiledental.com/admin-dashboard/doctors.html">
+  <meta property="og:image" content="https://demo.brightsmiledental.com/assets/images/og-preview.jpg">
+
+  <!-- DentalClinic Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DentalClinic",
+    "name": "BrightSmile Dental Care",
+    "image": "https://demo.brightsmiledental.com/assets/images/clinic-exterior.jpg",
+    "@id": "https://demo.brightsmiledental.com",
+    "url": "https://demo.brightsmiledental.com",
+    "telephone": "+1-555-234-5678",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "450 Medical Boulevard, Suite 300",
+      "addressLocality": "Boston",
+      "addressRegion": "MA",
+      "postalCode": "02115",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 42.3584,
+      "longitude": -71.0636
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "16:00"
+      }
+    ],
+    "medicalSpecialty": [
+      "Dentistry",
+      "Orthodontics",
+      "Prosthodontics",
+      "Periodontics",
+      "OralSurgery"
+    ]
+  }
+  </script>
+
+  
+  
+
+  <!-- Open Graph Meta Tags -->
+  
+  
+  
+  
+  
+
+  <!-- DentalClinic Structured Data (JSON-LD) -->
+  
+
+  
+    <!-- FOUC Prevention Script -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('brightsmile_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var savedRtl = localStorage.getItem('brightsmile_dental_rtl') || localStorage.getItem('rtl');
+        var isRtl = (savedRtl === 'true' || savedRtl === 'rtl');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark-mode');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark-mode');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+        if (isRtl) {
+          document.documentElement.classList.add('rtl-mode');
+          document.documentElement.setAttribute('dir', 'rtl');
+        } else {
+          document.documentElement.classList.remove('rtl-mode');
+          document.documentElement.setAttribute('dir', 'ltr');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+  <!-- Mobile Overlay -->
+  <div class="drawer-overlay dashboard-overlay"></div>
+
+  <!-- Admin Clinic Sidebar -->
+  <aside class="dashboard-sidebar" aria-label="Admin Navigation">
+    <div class="sidebar-header">
+      <a href="../pages/index.html" class="sidebar-brand" aria-label="BrightSmile Dental Care Home">
+        <img src="../assets/images/logo/logo.jpg" alt="BrightSmile Dental Care" class="logo-light" width="136" height="32">
+        <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" class="logo-dark" width="136" height="32">
+        <span class="badge badge-accent badge-sm">ADMIN</span>
+      </a>
+      <button class="action-btn-sm" data-action="toggle-sidebar" aria-label="Toggle Sidebar" title="Collapse Sidebar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+    </div>
+
+    <div class="sidebar-nav-wrap">
+      <div class="sidebar-group-title">Clinic Practice</div>
+      
+      <a href="index.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        <span>Dashboard</span>
+      </a>
+
+      <a href="appointments.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        <span>Appointments</span>
+        <span class="badge-count">8</span>
+      </a>
+
+      <a href="patients.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        <span>Patients Directory</span>
+      </a>
+
+      <a href="doctors.html" class="sidebar-link active">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
+        <span>Doctors & Specialists</span>
+      </a>
+
+      <a href="services.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 4.5 5 8c0 3.5 2 6.5 3 9.5 1 3 2 4.5 4 4.5s3-1.5 4-4.5c1-3 3-6 3-9.5 0-3.5-3-6-7-6z"/></svg>
+        <span>Services & Pricing</span>
+      </a>
+
+      <a href="treatments.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+        <span>Active Procedures</span>
+      </a>
+
+      <div class="sidebar-group-title">Records & Financials</div>
+
+      <a href="prescriptions.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+        <span>Prescriptions</span>
+      </a>
+
+      <a href="payments.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+        <span>Billing & Invoices</span>
+      </a>
+
+      <a href="messages.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <span>Inquiries & Triage</span>
+        <span class="badge-count">3</span>
+      </a>
+
+      <a href="reports.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+        <span>Clinic Reports</span>
+      </a>
+
+      <div class="sidebar-group-title">Administration</div>
+
+      <a href="settings.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        <span>Clinic Settings</span>
+      </a>
+
+      <div class="sidebar-group-title">Portals</div>
+
+      <a href="../patient-dashboard/index.html" class="sidebar-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        <span>Patient Portal &rarr;</span>
+      </a>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="user-snippet">
+        <img src="../assets/images/logo/admin-avatar.jpg" alt="Dr. Marcus Sterling avatar" width="32" height="32" style="border-radius: 50%; object-fit: cover; border: 1px solid var(--color-border); vertical-align: middle;">
+        <div class="user-snippet-details" style="min-width: 0;">
+          <div style="font-weight: 600; font-size: 0.9rem; color: var(--color-text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Dr. Marcus Sterling</div>
+          <div style="font-size: 0.78rem; color: var(--color-primary); font-weight: 600;">Chief Medical Officer</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="dashboard-main">
+    <!-- Admin Topbar -->
+    <header class="dashboard-topbar">
+      <div class="topbar-left">
+        <button class="topbar-toggle-btn" data-action="toggle-sidebar" aria-label="Toggle Navigation Drawer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+
+        <div class="topbar-search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="topbar-search-icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" class="form-control" placeholder="Search patient ID, doctor, CDT code..." aria-label="Search clinic records">
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <!-- Theme Mode Toggle -->
+        <button class="action-btn-sm" data-action="toggle-theme" aria-label="Toggle Theme" title="Toggle Dark/Light Mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <!-- RTL Layout Toggle -->
+        <button class="action-btn-sm" data-action="toggle-rtl" aria-label="Toggle RTL Mirroring" title="Toggle RTL">
+          <span style="font-size: 0.75rem; font-weight: 700;">RTL</span>
+        </button>
+
+        <!-- Clinic Notifications Popover -->
+        <div class="topbar-dropdown">
+          <button class="dropdown-trigger" data-dropdown-trigger="admin-notif-menu" aria-label="View clinic alerts">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--color-primary); display: inline-block;"></span>
+          </button>
+          
+          <div class="dropdown-menu-custom" id="admin-notif-menu">
+            <div style="padding: 10px 16px; border-bottom: 1px solid var(--color-border); font-weight: 700; font-size: 0.9rem;">
+              Practice Alerts (3)
+            </div>
+            <div style="max-height: 240px; overflow-y: auto;">
+              <a href="appointments.html" class="dropdown-item-custom" style="display: block; border-bottom: 1px solid var(--color-border-subtle);">
+                <div style="font-weight: 600; font-size: 0.85rem; color: var(--color-primary);">Urgent Triage Booking</div>
+                <div style="font-size: 0.78rem; color: var(--color-text-muted);">Acute dental pain consultation request from Michael Chang.</div>
+              </a>
+              <a href="doctors.html" class="dropdown-item-custom" style="display: block; border-bottom: 1px solid var(--color-border-subtle);">
+                <div style="font-weight: 600; font-size: 0.85rem; color: var(--color-text-main);">Staff Schedule Update</div>
+                <div style="font-size: 0.78rem; color: var(--color-text-muted);">Dr. Robert Vance in surgery Suite 1 (10:00 - 13:00).</div>
+              </a>
+              <a href="payments.html" class="dropdown-item-custom" style="display: block;">
+                <div style="font-weight: 600; font-size: 0.85rem; color: var(--color-text-main);">Insurance Remittance Received</div>
+                <div style="font-size: 0.78rem; color: var(--color-text-muted);">Delta Dental batch No. 8492 cleared: $14,250.00.</div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Administrator Profile Dropdown -->
+        <div class="topbar-dropdown">
+          <button class="dropdown-trigger" data-dropdown-trigger="admin-profile-menu">
+            <img src="../assets/images/logo/admin-avatar.jpg" alt="Dr. Marcus Sterling avatar" width="32" height="32" style="border-radius: 50%; object-fit: cover; border: 1px solid var(--color-border); vertical-align: middle;">
+            <span style="font-size: 0.88rem; font-weight: 600;">Dr. Sterling</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+
+          <div class="dropdown-menu-custom" id="admin-profile-menu">
+            <div style="padding: 10px 16px; border-bottom: 1px solid var(--color-border);">
+              <div style="font-weight: 600; font-size: 0.9rem;">Dr. Marcus Sterling</div>
+              <div style="font-size: 0.78rem; color: var(--color-text-muted);">admin@brightsmiledental.com</div>
+            </div>
+            <a href="settings.html" class="dropdown-item-custom">Practice Settings</a>
+            <a href="reports.html" class="dropdown-item-custom">Financial Reports</a>
+            <a href="../patient-dashboard/index.html" class="dropdown-item-custom">Patient Portal View</a>
+            <a href="../pages/index.html" class="dropdown-item-custom">Main Website</a>
+            <div style="border-top: 1px solid var(--color-border); margin-top: 4px;"></div>
+            <a href="../pages/login.html" class="dropdown-item-custom" style="color: var(--color-primary);">Log Out</a>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <main class="dashboard-body">
+      <!-- Fictional Practice Demo Data Notice -->
+      <div class="demo-disclaimer-banner">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        <span><strong>Clinical Demo Notice:</strong> This administrative console displays illustrative mock clinic operations data for template preview. HIPAA compliant mock environment.</span>
+      </div>
+
+      <div class="dashboard-page-header">
+        <div>
+          <ul class="breadcrumbs-list">
+            <li><a href="../pages/index.html">Home</a></li>
+            <li>/</li>
+            <li><a href="index.html">Admin</a></li>
+            <li>/</li>
+            <li style="color: var(--color-primary); font-weight: 600;">Doctors</li>
+          </ul>
+          <h1>Dentists & Medical Specialists Roster</h1>
+          <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 0;">
+            Manage credentials, daily patient capacity, operative suite allocations, and working shifts.
+          </p>
+        </div>
+
+        <button class="btn btn-primary btn-sm" data-modal-open="modal-add-doctor">+ Add Specialist</button>
+      </div>
+
+      <div class="table-card">
+        <div class="table-card-header">
+          <h2 style="font-size: 1.15rem; margin-bottom: 0;">Active Clinical Staff (8 Specialists)</h2>
+          <span style="font-size: 0.85rem; color: var(--color-text-muted);">All clinicians board certified & licensed in Massachusetts</span>
+        </div>
+
+        <div class="dental-table-responsive">
+          <table class="dental-table dental-table-stack">
+            <thead>
+              <tr>
+                <th>Doctor Name</th>
+                <th>Specialization</th>
+                <th>License / NPI</th>
+                <th>Weekly Schedule</th>
+                <th>Capacity</th>
+                <th>Today's Status</th>
+                <th style="text-align: right;">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Doctor Name">
+                  <div style="display: flex; align-items: center;"><img src="../assets/images/doctors/doctor-mitchell.jpg" alt="Dr. Sarah Mitchell, DDS" width="32" height="32" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 1px solid var(--color-border); margin-right: 8px; vertical-align: middle;"><div><div style="font-weight: 600; color: var(--color-text-main);">Dr. Sarah Mitchell, DDS</div>
+                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">FICOI • 14 Yrs Exp</span>
+                </div></div></td>
+                <td data-label="Specialization">Prosthodontics & Oral Rehab</td>
+                <td data-label="License / NPI">MA-DENT-39421</td>
+                <td data-label="Weekly Schedule">Mon – Thu (8am – 4pm)</td>
+                <td data-label="Capacity">8 / 8 Visits</td>
+                <td data-label="Today's Status"><span class="badge-status badge-active">In Clinic (Suite 2)</span></td>
+                <td data-label="Action" class="td-actions" style="text-align: right;"><button class="btn btn-outline btn-sm">Edit Schedule</button></td>
+              </tr>
+              <tr>
+                <td data-label="Doctor Name">
+                  <div style="font-weight: 600; color: var(--color-text-main);">Dr. David Chen, DMD</div>
+                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">AAOMS • 12 Yrs Exp</span>
+                </td>
+                <td data-label="Specialization">Oral & Maxillofacial Surgery</td>
+                <td data-label="License / NPI">MA-DENT-42091</td>
+                <td data-label="Weekly Schedule">Tue – Fri (9am – 5pm)</td>
+                <td data-label="Capacity">4 / 6 Surgeries</td>
+                <td data-label="Today's Status"><span class="badge-status badge-active">In Surgery (Suite 1)</span></td>
+                <td data-label="Action" class="td-actions" style="text-align: right;"><button class="btn btn-outline btn-sm">Edit Schedule</button></td>
+              </tr>
+              <tr>
+                <td data-label="Doctor Name">
+                  <div style="font-weight: 600; color: var(--color-text-main);">Dr. Emily Watson, DDS</div>
+                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">AAO • 10 Yrs Exp</span>
+                </td>
+                <td data-label="Specialization">Orthodontics & Clear Aligners</td>
+                <td data-label="License / NPI">MA-DENT-51820</td>
+                <td data-label="Weekly Schedule">Mon – Fri (8am – 5pm)</td>
+                <td data-label="Capacity">12 / 14 Visits</td>
+                <td data-label="Today's Status"><span class="badge-status badge-active">In Clinic (Suite 4)</span></td>
+                <td data-label="Action" class="td-actions" style="text-align: right;"><button class="btn btn-outline btn-sm">Edit Schedule</button></td>
+              </tr>
+              <tr>
+                <td data-label="Doctor Name">
+                  <div style="font-weight: 600; color: var(--color-text-main);">Dr. Robert Vance, DDS</div>
+                  <span style="font-size: 0.78rem; color: var(--color-text-muted);">AAE • 16 Yrs Exp</span>
+                </td>
+                <td data-label="Specialization">Endodontics (Micro-Root Canal)</td>
+                <td data-label="License / NPI">MA-DENT-28491</td>
+                <td data-label="Weekly Schedule">Mon – Wed (8am – 3pm)</td>
+                <td data-label="Capacity">5 / 6 Visits</td>
+                <td data-label="Today's Status"><span class="badge-status badge-confirmed">Available (Suite 3)</span></td>
+                <td data-label="Action" class="td-actions" style="text-align: right;"><button class="btn btn-outline btn-sm">Edit Schedule</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+<!-- Add Doctor Modal -->
+<div class="modal-overlay-custom" id="modal-add-doctor">
+  <div class="modal-card-custom">
+    <div class="modal-header-custom">
+      <h3 style="font-size: 1.15rem; margin: 0;">Add Specialist to Staff Roster</h3>
+      <button class="action-btn-sm" data-modal-close aria-label="Close modal">&times;</button>
+    </div>
+    <div class="modal-body-custom">
+      <form onsubmit="event.preventDefault(); alert('Specialist added to clinical roster!'); document.getElementById('modal-add-doctor').classList.remove('open');">
+        <div class="form-group" style="margin-bottom: var(--space-4);">
+          <label class="form-label">Doctor Name & Credentials *</label>
+          <input type="text" class="form-control" placeholder="Dr. Arthur Vance, DDS" required>
+        </div>
+        <div class="form-group" style="margin-bottom: var(--space-4);">
+          <label class="form-label">Clinical Specialization *</label>
+          <select class="form-control" required>
+            <option>Oral & Maxillofacial Surgery</option>
+            <option>Orthodontics & Dentofacial Orthopedics</option>
+            <option>Prosthodontics & Implantology</option>
+            <option>Periodontics & Gum Regeneration</option>
+            <option>Endodontics (Root Canal Therapy)</option>
+            <option>Pediatric Oral Health</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-bottom: var(--space-4);">
+          <label class="form-label">State Medical License / NPI Number</label>
+          <input type="text" class="form-control" placeholder="MA-DENT-849201" required>
+        </div>
+        <div style="display: flex; justify-content: flex-end; gap: var(--space-2); margin-top: var(--space-4);">
+          <button type="button" class="btn btn-outline" data-modal-close>Cancel</button>
+          <button type="submit" class="btn btn-primary">Add Doctor</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

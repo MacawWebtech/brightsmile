@@ -3,26 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Practice Admin Console | BrightSmile Dental Care</title>
+  <title>Practice Admin Console | Stackly Dental</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/logo/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo/apple-touch-icon.png">
   <meta name="description" content="Real-time clinical practice management dashboard: daily appointments, revenue analytics, operatory utilization, and triage queue.">
-  <link rel="canonical" href="https://demo.brightsmiledental.com/admin-dashboard/index.html">
+  <link rel="canonical" href="https://demo.stacklydental.com/admin-dashboard/index.html">
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Practice Admin Console | BrightSmile Dental Care">
+  <meta property="og:title" content="Practice Admin Console | Stackly Dental">
   <meta property="og:description" content="Real-time clinical practice management dashboard: daily appointments, revenue analytics, operatory utilization, and triage queue.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://demo.brightsmiledental.com/admin-dashboard/index.html">
-  <meta property="og:image" content="https://demo.brightsmiledental.com/assets/images/og-preview.jpg">
+  <meta property="og:url" content="https://demo.stacklydental.com/admin-dashboard/index.html">
+  <meta property="og:image" content="https://demo.stacklydental.com/assets/images/og-preview.jpg">
 
   <!-- DentalClinic Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "DentalClinic",
-    "name": "BrightSmile Dental Care",
-    "image": "https://demo.brightsmiledental.com/assets/images/clinic-exterior.jpg",
-    "@id": "https://demo.brightsmiledental.com",
-    "url": "https://demo.brightsmiledental.com",
+    "name": "Stackly Dental Clinic & Oral Care Center",
+    "image": "https://demo.stacklydental.com/assets/images/clinic-exterior.jpg",
+    "@id": "https://demo.stacklydental.com",
+    "url": "https://demo.stacklydental.com",
     "telephone": "+1-555-234-5678",
     "priceRange": "$$",
     "address": {
@@ -80,8 +84,8 @@
   <script>
     (function() {
       try {
-        var theme = localStorage.getItem('brightsmile_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        var savedRtl = localStorage.getItem('brightsmile_dental_rtl') || localStorage.getItem('rtl');
+        var theme = localStorage.getItem('stackly_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var savedRtl = localStorage.getItem('stackly_dental_rtl') || localStorage.getItem('rtl');
         var isRtl = (savedRtl === 'true' || savedRtl === 'rtl');
         if (theme === 'dark') {
           document.documentElement.classList.add('dark-mode');
@@ -112,6 +116,22 @@
   <link rel="stylesheet" href="../assets/css/dark-mode.css">
   <link rel="stylesheet" href="../assets/css/rtl.css">
   <link rel="stylesheet" href="../assets/css/responsive.css">
+  <!-- Auth guard: dashboards open only after signing in -->
+  <script>
+    (function () {
+      try {
+        if (!sessionStorage.getItem('bsdc_auth')) {
+          var p = location.pathname.split('/');
+          var next = p[p.length - 2] + '/' + p[p.length - 1];
+          location.replace('../pages/login.html?next=' + encodeURIComponent(next));
+        }
+        document.addEventListener('click', function (e) {
+          var a = e.target.closest && e.target.closest('a[href*="login.html"]');
+          if (a) sessionStorage.removeItem('bsdc_auth');
+        });
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -122,9 +142,9 @@
   <!-- Admin Clinic Sidebar -->
   <aside class="dashboard-sidebar" aria-label="Admin Navigation">
     <div class="sidebar-header">
-      <a href="../pages/index.html" class="sidebar-brand" aria-label="BrightSmile Dental Care Home">
-        <img src="../assets/images/logo/logo.jpg" alt="BrightSmile Dental Care" class="logo-light" width="136" height="32">
-        <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" class="logo-dark" width="136" height="32">
+      <a href="../pages/index.html" class="sidebar-brand" aria-label="Stackly Dental Home">
+        <img src="../assets/images/logo/logo.jpg" alt="Stackly Dental Clinic" class="logo-light" width="136" height="32">
+        <img src="../assets/images/logo/logo-white.jpg" alt="Stackly Dental Clinic" class="logo-dark" width="136" height="32">
         <span class="badge badge-accent badge-sm">ADMIN</span>
       </a>
       <button class="action-btn-sm" data-action="toggle-sidebar" aria-label="Toggle Sidebar" title="Collapse Sidebar">
@@ -279,7 +299,7 @@
           <div class="dropdown-menu-custom" id="admin-profile-menu">
             <div style="padding: 10px 16px; border-bottom: 1px solid var(--color-border);">
               <div style="font-weight: 600; font-size: 0.9rem;">Dr. Marcus Sterling</div>
-              <div style="font-size: 0.78rem; color: var(--color-text-muted);">admin@brightsmiledental.com</div>
+              <div style="font-size: 0.78rem; color: var(--color-text-muted);">admin@stacklydental.com</div>
             </div>
             <a href="settings.html" class="dropdown-item-custom">Practice Settings</a>
             <a href="reports.html" class="dropdown-item-custom">Financial Reports</a>
@@ -302,13 +322,6 @@
 
       <div class="dashboard-page-header">
         <div>
-          <ul class="breadcrumbs-list">
-            <li><a href="../pages/index.html">Home</a></li>
-            <li>/</li>
-            <li><a href="index.html">Admin Practice Console</a></li>
-            <li>/</li>
-            <li style="color: var(--color-primary); font-weight: 600;">Dashboard</li>
-          </ul>
           <h1>Practice Overview & Operations</h1>
           <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 0;">
             Real-time analytics across operatory utilization, daily appointment throughput, and gross billing.
@@ -486,7 +499,7 @@
         </div>
 
         <div class="dental-table-responsive">
-          <table class="dental-table dental-table-stack">
+          <table class="dental-table">
             <thead>
               <tr>
                 <th>Time</th>
@@ -500,7 +513,7 @@
             </thead>
             <tbody>
               <tr>
-                <td data-label="Time" style="font-weight: 700;">09:00 AM</td>
+                <td style="font-weight: 700;" data-label="Time">09:00 AM</td>
                 <td data-label="Patient">
                   <div style="font-weight: 600; color: var(--color-text-main);">David Miller</div>
                   <span style="font-size: 0.78rem; color: var(--color-text-muted);">#PAT-78192 • MetLife</span>
@@ -509,12 +522,12 @@
                 <td data-label="Procedure">Crown Preparation #19</td>
                 <td data-label="Operatory">Operatory 1</td>
                 <td data-label="Status"><span class="badge-status badge-completed">Completed</span></td>
-                <td data-label="Actions" class="td-actions" style="text-align: right;">
+                <td style="text-align: right;" data-label="Actions">
                   <button class="btn btn-outline btn-sm" data-modal-open="modal-assign-doctor">Reassign</button>
                 </td>
               </tr>
               <tr>
-                <td data-label="Time" style="font-weight: 700; color: var(--color-primary);">10:30 AM</td>
+                <td style="font-weight: 700; color: var(--color-primary);" data-label="Time">10:30 AM</td>
                 <td data-label="Patient">
                   <div style="font-weight: 600; color: var(--color-text-main);">Eleanor Vance</div>
                   <span style="font-size: 0.78rem; color: var(--color-text-muted);">#PAT-84920 • Delta</span>
@@ -523,12 +536,12 @@
                 <td data-label="Procedure">Prophylaxis & Scaling</td>
                 <td data-label="Operatory">Hygiene Suite 2</td>
                 <td data-label="Status"><span class="badge-status badge-active">In Chair</span></td>
-                <td data-label="Actions" class="td-actions" style="text-align: right;">
+                <td style="text-align: right;" data-label="Actions">
                   <button class="btn btn-outline btn-sm" data-modal-open="modal-assign-doctor">Reassign</button>
                 </td>
               </tr>
               <tr>
-                <td data-label="Time" style="font-weight: 700;">11:45 AM</td>
+                <td style="font-weight: 700;" data-label="Time">11:45 AM</td>
                 <td data-label="Patient">
                   <div style="font-weight: 600; color: var(--color-text-main);">Michael Chang</div>
                   <span style="font-size: 0.78rem; color: var(--color-primary);">Emergency • Acute Pulpitis</span>
@@ -537,12 +550,12 @@
                 <td data-label="Procedure">Endodontic Triage</td>
                 <td data-label="Operatory">Surgical Suite 1</td>
                 <td data-label="Status"><span class="badge-status badge-confirmed">Confirmed</span></td>
-                <td data-label="Actions" class="td-actions" style="text-align: right;">
+                <td style="text-align: right;" data-label="Actions">
                   <button class="btn btn-outline btn-sm" data-modal-open="modal-assign-doctor">Reassign</button>
                 </td>
               </tr>
               <tr>
-                <td data-label="Time" style="font-weight: 700;">02:00 PM</td>
+                <td style="font-weight: 700;" data-label="Time">02:00 PM</td>
                 <td data-label="Patient">
                   <div style="font-weight: 600; color: var(--color-text-main);">Sophia Rodriguez</div>
                   <span style="font-size: 0.78rem; color: var(--color-text-muted);">#PAT-64902 • Cigna</span>
@@ -551,7 +564,7 @@
                 <td data-label="Procedure">Aligner Attachment Bond</td>
                 <td data-label="Operatory">Ortho Suite 3</td>
                 <td data-label="Status"><span class="badge-status badge-confirmed">Confirmed</span></td>
-                <td data-label="Actions" class="td-actions" style="text-align: right;">
+                <td style="text-align: right;" data-label="Actions">
                   <button class="btn btn-outline btn-sm" data-modal-open="modal-assign-doctor">Reassign</button>
                 </td>
               </tr>

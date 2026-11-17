@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BRIGHTSMILE DENTAL CARE — COMPLETE DASHBOARD STYLESHEET
+   STACKLY DENTAL CLINIC — COMPLETE DASHBOARD STYLESHEET
    Strict Three-Color System:
    - Pure Black Base (#0A0A0A)
    - Pure White (#FFFFFF)
@@ -863,8 +863,14 @@ html.rtl-mode .sidebar-link .badge-count {
   object-fit: contain;
   vertical-align: middle;
 }
-
-
+html.dark-mode .sidebar-brand .logo-light,
+[data-theme="dark"] .sidebar-brand .logo-light {
+  display: none !important;
+}
+html.dark-mode .sidebar-brand .logo-dark,
+[data-theme="dark"] .sidebar-brand .logo-dark {
+  display: inline-block !important;
+}
 .dashboard-sidebar.collapsed .sidebar-brand .logo-light,
 .dashboard-sidebar.collapsed .sidebar-brand .logo-dark {
   max-width: 36px;
@@ -883,319 +889,348 @@ html.rtl-mode .sidebar-link .badge-count {
   white-space: nowrap;
 }
 
-/* ==========================================================================
-   PATIENT/ADMIN PORTAL NAV BAR — MOBILE & TABLET ALIGNMENT (< 1024px)
-   Desktop (>= 1024px) is not affected.
-   ========================================================================== */
-@media (max-width: 1023.98px) {
-  /* Drawer header: logo, badge and close button on one aligned row */
-  .sidebar-header {
-    gap: 8px;
-    padding: 0 24px;
-  }
-  .dashboard-sidebar {
-    width: 300px;
-    max-width: 85vw;
-  }
-  .sidebar-brand {
-    gap: 8px;
-    min-width: 0;
-    flex: 1 1 auto;
-  }
-  .sidebar-brand img {
-    flex-shrink: 0;
-    height: 28px;
-    width: auto;
-  }
-  .sidebar-brand .badge {
-    flex-shrink: 0;
-    white-space: nowrap;
-  }
-  .sidebar-header .action-btn-sm {
-    flex-shrink: 0;
-  }
-
-  /* Top bar: keep every control a fixed size and vertically centred */
-  .topbar-left {
-    flex: 1 1 auto;
-    min-width: 0;
-  }
-  .topbar-toggle-btn,
-  .topbar-right > *,
-  .topbar-right .action-btn-sm,
-  .dropdown-trigger {
-    flex-shrink: 0;
-  }
-  .topbar-right .action-btn-sm {
-    width: 40px;
-    height: 40px;
-  }
-  .topbar-search {
-    min-width: 0;
-  }
-  .dropdown-trigger span {
-    white-space: nowrap;
-  }
-}
-
-/* Tablet (640px – 1023px) */
-@media (min-width: 640px) and (max-width: 1023.98px) {
-  .topbar-right {
-    gap: var(--space-2);
-  }
-}
-
-/* Small tablet / large phone: avatar only so the bar never crowds */
-@media (max-width: 767.98px) {
-  .dropdown-trigger > span:not([style*="border-radius: 50%"]):not(:only-child),
-  .dropdown-trigger > img + span,
-  .dropdown-trigger > img ~ svg {
-    display: none;
-  }
-}
-
-/* Mobile (< 640px): row 1 = menu button + actions, row 2 = full-width search */
-@media (max-width: 639.98px) {
-  .dashboard-topbar {
-    height: auto;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 10px 16px;
-    row-gap: 10px;
-  }
-  .topbar-left {
-    display: contents;
-  }
-  .topbar-toggle-btn {
-    order: 1;
-  }
-  .topbar-right {
-    order: 2;
-    margin-left: auto;
-    gap: 6px;
-  }
-  .topbar-search {
-    order: 3;
-    flex: 0 0 100%;
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-  .dropdown-menu-custom {
-    width: min(280px, calc(100vw - 32px));
-  }
-}
-
-html[dir="rtl"] .topbar-right,
-html.rtl-mode .topbar-right {
-  margin-left: 0;
-  margin-right: auto;
-}
 
 /* ==========================================================================
-   PATIENT PORTAL TABLES — ONE-BY-ONE CARDS ON TABLET + MOBILE (< 1024px)
-   Applies to every .dental-table-stack (dashboard, appointments, billing,
-   prescriptions, treatment history). Desktop keeps the normal table.
-   Each <td> needs data-label; action cells get .td-actions.
+   COLLAPSED SIDEBAR & TOPBAR OVERFLOW GUARDS
+   Prevents badge/text/button spillage in collapsed mode and eliminates overlap
+   ========================================================================== */
+.dashboard-sidebar.collapsed {
+  width: 72px !important;
+  overflow: hidden !important;
+}
+
+.dashboard-sidebar.collapsed .sidebar-header {
+  padding: 0 var(--space-2) !important;
+  justify-content: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.dashboard-sidebar.collapsed .sidebar-brand {
+  gap: 0 !important;
+  justify-content: center !important;
+  width: 100% !important;
+  overflow: hidden !important;
+}
+
+.dashboard-sidebar.collapsed .sidebar-brand .badge,
+.dashboard-sidebar.collapsed .sidebar-brand span.badge,
+.dashboard-sidebar.collapsed .sidebar-brand .logo-text,
+.dashboard-sidebar.collapsed .sidebar-group-title,
+.dashboard-sidebar.collapsed .sidebar-link span,
+.dashboard-sidebar.collapsed .sidebar-link .badge-count,
+.dashboard-sidebar.collapsed .user-snippet-details,
+.dashboard-sidebar.collapsed .sidebar-header .action-btn-sm {
+  display: none !important;
+}
+
+.dashboard-sidebar.collapsed .sidebar-brand .logo-light {
+  content: url("../images/logo/logo-icon.jpg") !important;
+  width: 36px !important;
+  height: 36px !important;
+  max-width: 36px !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.dashboard-sidebar.collapsed .sidebar-brand .logo-dark {
+  content: url("../images/logo/logo-icon-white.jpg") !important;
+  width: 36px !important;
+  height: 36px !important;
+  max-width: 36px !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.dashboard-topbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+}
+
+.dashboard-topbar .topbar-left {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  min-width: 0 !important;
+  flex: 1 1 auto !important;
+}
+
+.dashboard-topbar .topbar-search {
+  flex: 1 1 auto !important;
+  max-width: 460px !important;
+  min-width: 0 !important;
+}
+
+.dashboard-topbar .topbar-search .form-control {
+  width: 100% !important;
+}
+
+
+/* ==========================================================================
+   SIDEBAR HEADER FIX: logo + role badge + collapse arrow fit on one row
+   (the arrow used to sit on top of the "PATIENT"/"ADMIN" badge)
+   ========================================================================== */
+.sidebar-header {
+  padding: 0 var(--space-3);
+  gap: 8px;
+}
+.sidebar-header .sidebar-brand {
+  flex: 1 1 auto;
+  min-width: 0;
+  gap: 8px;
+}
+.sidebar-header .sidebar-brand .logo-light,
+.sidebar-header .sidebar-brand .logo-dark {
+  height: 28px;
+  width: auto;
+  max-width: 100%;
+  flex-shrink: 1;
+  min-width: 0;
+}
+.sidebar-header .sidebar-brand .badge {
+  flex-shrink: 0;
+  font-size: 0.62rem;
+  line-height: 1;
+  padding: 4px 8px;
+  letter-spacing: 0.04em;
+}
+.sidebar-header .action-btn-sm {
+  flex-shrink: 0;
+  margin-left: 4px;
+}
+
+/* Stat cards in a row share one height (no staggered cards) */
+.grid-4,
+.grid-3 {
+  align-items: stretch;
+}
+
+/* A closed (off-screen) mobile/tablet sidebar must not leak its shadow onto the page edge */
+@media (max-width: 1023.98px) {
+  .dashboard-sidebar:not(.mobile-open) {
+    box-shadow: none !important;
+    visibility: hidden;
+    transition: transform var(--transition-normal), visibility 0s linear 0.3s;
+  }
+  .dashboard-sidebar.mobile-open {
+    visibility: visible;
+    transition: transform var(--transition-normal), visibility 0s;
+  }
+}
+
+/* Role badge (PATIENT / ADMIN) in the sidebar header: proper pill */
+.sidebar-header .sidebar-brand .badge {
+  background-color: var(--color-primary-tint, rgba(11, 110, 117, 0.1));
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary-border, rgba(11, 110, 117, 0.25));
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+
+/* ==========================================================================
+   MOBILE + TABLET: every dashboard table becomes one-by-one stacked cards
+   (patient + admin). Labels come from each cell's data-label attribute.
    ========================================================================== */
 @media (max-width: 1023.98px) {
-  .dental-table-stack {
-    --stack-label-w: 130px;
-  }
   .dental-table-responsive {
-    overflow-x: visible;
+    overflow: visible;
+    padding: var(--space-3);
   }
-  .dental-table-stack,
-  .dental-table-stack tbody,
-  .dental-table-stack tr,
-  .dental-table-stack td {
+  .dental-table,
+  .dental-table tbody {
     display: block;
     width: 100%;
   }
-  .dental-table-stack thead {
-    display: none;
+  .dental-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
   }
-  .dental-table-stack tbody {
-    padding: var(--space-4);
-  }
-  .dental-table-stack tbody tr {
+  .dental-table tbody tr {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 var(--space-4);
+    background-color: var(--color-card-bg);
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-lg);
-    background-color: var(--color-card-bg);
     box-shadow: var(--shadow-sm);
-    padding: 4px var(--space-4);
+    padding: var(--space-2) var(--space-4);
     margin-bottom: var(--space-4);
   }
-  .dental-table-stack tbody tr:last-child {
+  .dental-table tbody tr:last-child {
     margin-bottom: 0;
   }
-  .dental-table-stack td {
-    display: grid;
-    grid-template-columns: var(--stack-label-w) minmax(0, 1fr);
-    column-gap: 12px;
-    align-items: start;
-    padding: 11px 0;
-    min-height: 44px;
-    text-align: left !important;
-    border-bottom: 1px solid var(--color-border-subtle);
-    overflow-wrap: anywhere;
-  }
-  .dental-table-stack td > * {
-    grid-column: 2;
-    justify-self: start;
-  }
-  .dental-table-stack td > div {
-    justify-self: stretch;
-  }
-  .dental-table-stack td img {
-    flex-shrink: 0;
-  }
-  .dental-table-stack td::before {
-    content: attr(data-label);
-    grid-column: 1;
-    grid-row: 1 / span 3;
-    padding-top: 2px;
-    overflow-wrap: normal;
-    word-break: normal;
-    hyphens: none;
-    font-size: 0.74rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--color-text-muted);
-  }
-  .dental-table-stack tbody tr > td:last-child {
-    border-bottom: none;
-  }
-  /* Action / receipt / document cell: full-width button row */
-  .dental-table-stack td.td-actions {
-    padding: 12px 0 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-2);
-    align-items: center;
-  }
-  .dental-table-stack td.td-actions::before {
-    display: none;
-  }
-  .dental-table-stack td.td-actions .action-btn-sm,
-  .dental-table-stack td.td-actions .btn {
-    margin-left: 0 !important;
-  }
-  .dental-table-stack tbody tr:hover {
+  .dental-table tbody tr:hover {
     background-color: var(--color-card-bg);
   }
-  html[dir="rtl"] .dental-table-stack td,
-  html.rtl-mode .dental-table-stack td {
-    direction: rtl;
-    text-align: right !important;
+  .dental-table td {
+    display: block;
+    min-width: 0;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--color-border-subtle);
+    text-align: left !important;
+    overflow-wrap: anywhere;
   }
-  html[dir="rtl"] .dental-table-stack td.td-actions,
-  html.rtl-mode .dental-table-stack td.td-actions {
-    padding: 12px 0 10px;
+  .dental-table td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 3px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+  .dental-table tbody tr > td:last-child {
+    border-bottom: 0;
+  }
+  /* first field (ID / date / time) = card title row */
+  .dental-table td:first-child {
+    grid-column: 1 / -1;
+    border-bottom: 1px solid var(--color-border);
+  }
+  /* action cell = full-width button row at the bottom of the card */
+  .dental-table td[data-label="Action"],
+  .dental-table td[data-label="Actions"],
+  .dental-table td[data-label="Receipt"],
+  .dental-table td[data-label="Document"] {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+    border-bottom: 0;
+    padding-top: var(--space-3);
+  }
+  .dental-table td[data-label="Action"]::before,
+  .dental-table td[data-label="Actions"]::before,
+  .dental-table td[data-label="Receipt"]::before,
+  .dental-table td[data-label="Document"]::before {
+    display: none;
+  }
+  .dental-table td .btn,
+  .dental-table td .action-btn-sm {
+    margin-left: 0 !important;
+  }
+  .dental-table td .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+  /* long text fields use the whole card width */
+  .dental-table td[data-label="Clinical Notes"],
+  .dental-table td[data-label="Directions / Dosage"],
+  .dental-table td[data-label="Procedure"],
+  .dental-table td[data-label="Procedure Diagnosis"] {
+    grid-column: 1 / -1;
+  }
+
+  /* general tablet/mobile guards for the dashboard shell */
+  .dashboard-main,
+  .dashboard-content {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .dashboard-content {
+    overflow-x: hidden;
+  }
+  .table-card-header > * {
+    max-width: 100%;
   }
 }
 
 @media (max-width: 639.98px) {
-  .dental-table-stack {
-    --stack-label-w: 118px;
+  .dental-table-responsive {
+    padding: var(--space-2);
   }
-  .dental-table-stack tbody {
-    padding: var(--space-3);
+  .dental-table tbody tr {
+    grid-template-columns: minmax(0, 1fr);
+    padding: var(--space-1) var(--space-3);
   }
-  .dental-table-stack tbody tr {
-    padding: 4px var(--space-3);
-    margin-bottom: var(--space-3);
+  .dental-table td[data-label="Clinical Notes"],
+  .dental-table td[data-label="Directions / Dosage"],
+  .dental-table td[data-label="Procedure"],
+  .dental-table td[data-label="Procedure Diagnosis"] {
+    grid-column: auto;
   }
 }
 
+
+/* ==========================================================================
+   MOBILE TOP BAR FIX (patient + admin dashboards)
+   Row 1: menu button + theme / RTL / bell / avatar. Row 2: full-width search.
+   ========================================================================== */
 @media (max-width: 639.98px) {
-  .table-card-header > div,
-  .table-card-header .form-control {
-    width: 100%;
+  .dashboard-topbar {
+    height: auto !important;
+    min-height: 60px;
+    flex-wrap: wrap !important;
+    align-content: center;
+    gap: 8px !important;
+    padding: 8px 12px !important;
+  }
+  /* let the menu button and the search become direct flex items of the bar */
+  .dashboard-topbar .topbar-left {
+    display: contents !important;
+  }
+  .dashboard-topbar .topbar-toggle-btn {
+    order: 1;
+    flex: 0 0 40px;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+  }
+  .dashboard-topbar .topbar-right {
+    order: 2;
+    flex: 0 0 auto;
+    gap: 6px;
+  }
+  .dashboard-topbar .topbar-search {
+    order: 3;
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
     min-width: 0 !important;
   }
-  .table-card-header > div > div {
-    flex: 1 1 100%;
+  /* icon buttons keep their size instead of being squeezed */
+  .dashboard-topbar .topbar-right .action-btn-sm {
+    flex: 0 0 auto;
+    min-width: 40px;
+    width: auto;
+    height: 40px;
+    padding: 0 8px;
   }
-}
-
-/* ==========================================================================
-   PATIENT BILLING — THREE STAT BOXES: SAME SIZE, HEIGHT & ALIGNMENT
-   ========================================================================== */
-.billing-stat-grid {
-  align-items: stretch;
-}
-.billing-stat-grid > .stat-card,
-.billing-stat-grid > .stat-card:last-child:nth-child(odd) {
-  width: 100% !important;
-  max-width: none !important;
-  height: 100%;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  justify-self: stretch !important;
-  grid-column: auto !important;
-}
-/* Bottom line of every box shares one row height so the boxes line up */
-.billing-stat-grid > .stat-card > :last-child {
-  min-height: 30px;
-  display: inline-flex;
-  align-items: center;
-  margin-top: auto;
-}
-.billing-stat-grid > .stat-card > .stat-val {
-  margin-bottom: 6px;
-}
-
-/* ==========================================================================
-   FIXED MENUBAR — PATIENT & ADMIN DASHBOARDS (DESKTOP ONLY, >= 1024px)
-   Sidebar is already fixed; the top bar is pinned beside it so both menus
-   stay in place while the page content scrolls. Tablet/mobile are unchanged
-   in layout (top bar scrolls with the page, drawer sidebar as before).
-   ========================================================================== */
-@media (min-width: 1024px) {
-  .dashboard-main {
-    padding-top: 72px; /* reserve space for the fixed top bar */
+  .dashboard-topbar .dropdown-trigger {
+    flex: 0 0 auto;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 10px;
+    justify-content: center;
+    gap: 6px;
   }
-
-  .dashboard-topbar {
-    position: fixed;
-    top: 0;
-    left: 270px;
-    right: 0;
-    z-index: 900;
-    transition: left var(--transition-normal), right var(--transition-normal);
+  /* profile button = avatar only (no wrapped name / chevron) */
+  .dashboard-topbar .topbar-right .topbar-dropdown:last-child .dropdown-trigger {
+    padding: 0 4px;
+    width: 40px;
   }
-
-  .dashboard-sidebar.collapsed ~ .dashboard-main .dashboard-topbar {
-    left: 72px;
+  .dashboard-topbar .topbar-right .topbar-dropdown:last-child .dropdown-trigger > span,
+  .dashboard-topbar .topbar-right .topbar-dropdown:last-child .dropdown-trigger > svg {
+    display: none;
   }
-
-  html[dir="rtl"] .dashboard-topbar,
-  html.rtl-mode .dashboard-topbar {
-    left: 0;
-    right: 270px;
-  }
-
-  html[dir="rtl"] .dashboard-sidebar.collapsed ~ .dashboard-main .dashboard-topbar,
-  html.rtl-mode .dashboard-sidebar.collapsed ~ .dashboard-main .dashboard-topbar {
-    left: 0;
-    right: 72px;
-  }
-}
-
-@media (max-width: 1023.98px) {
-  .dashboard-topbar {
+  /* dropdown panels open full-width under the bar so they never get cut off */
+  .dashboard-topbar .topbar-dropdown {
     position: static;
   }
-}
-
-/* Dark mode: sidebar logo */
-html.dark-mode .sidebar-brand .logo-light,
-[data-theme="dark"] .sidebar-brand .logo-light {
-  display: none !important;
-}
-html.dark-mode .sidebar-brand .logo-dark,
-[data-theme="dark"] .sidebar-brand .logo-dark {
-  display: inline-block !important;
+  .dashboard-topbar .dropdown-menu-custom {
+    left: 12px !important;
+    right: 12px !important;
+    width: auto !important;
+    max-width: none;
+    top: calc(100% + 4px);
+  }
 }

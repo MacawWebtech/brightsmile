@@ -3,26 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meet Our Board-Certified Dentists | BrightSmile</title>
+  <title>Meet Our Board-Certified Dentists | Stackly</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/logo/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo/apple-touch-icon.png">
   <meta name="description" content="Discover our team of oral surgeons, prosthodontists, periodontists, and orthodontists committed to patient comfort and clinical excellence.">
-  <link rel="canonical" href="https://demo.brightsmiledental.com/pages/doctors.html">
+  <link rel="canonical" href="https://demo.stacklydental.com/pages/doctors.html">
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Meet Our Board-Certified Dentists | BrightSmile">
+  <meta property="og:title" content="Meet Our Board-Certified Dentists | Stackly">
   <meta property="og:description" content="Discover our team of oral surgeons, prosthodontists, periodontists, and orthodontists committed to patient comfort and clinical excellence.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://demo.brightsmiledental.com/pages/doctors.html">
-  <meta property="og:image" content="https://demo.brightsmiledental.com/assets/images/og-preview.jpg">
+  <meta property="og:url" content="https://demo.stacklydental.com/pages/doctors.html">
+  <meta property="og:image" content="https://demo.stacklydental.com/assets/images/og-preview.jpg">
 
   <!-- DentalClinic Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "DentalClinic",
-    "name": "BrightSmile Dental Care",
-    "image": "https://demo.brightsmiledental.com/assets/images/clinic-exterior.jpg",
-    "@id": "https://demo.brightsmiledental.com",
-    "url": "https://demo.brightsmiledental.com",
+    "name": "Stackly Dental Clinic & Oral Care Center",
+    "image": "https://demo.stacklydental.com/assets/images/clinic-exterior.jpg",
+    "@id": "https://demo.stacklydental.com",
+    "url": "https://demo.stacklydental.com",
     "telephone": "+1-555-234-5678",
     "priceRange": "$$",
     "address": {
@@ -81,8 +85,8 @@
   <script>
     (function() {
       try {
-        var theme = localStorage.getItem('brightsmile_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        var savedRtl = localStorage.getItem('brightsmile_dental_rtl') || localStorage.getItem('rtl');
+        var theme = localStorage.getItem('stackly_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var savedRtl = localStorage.getItem('stackly_dental_rtl') || localStorage.getItem('rtl');
         var isRtl = (savedRtl === 'true' || savedRtl === 'rtl');
         if (theme === 'dark') {
           document.documentElement.classList.add('dark-mode');
@@ -118,9 +122,9 @@
   <!-- Site Header -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="index.html" class="header-logo" aria-label="BrightSmile Dental Care Home">
-        <img src="../assets/images/logo/logo.jpg" alt="BrightSmile Dental Care" class="logo-light" width="160" height="38">
-        <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" class="logo-dark" width="160" height="38">
+      <a href="index.html" class="header-logo" aria-label="Stackly Dental Home">
+        <img src="../assets/images/logo/logo.jpg" alt="Stackly Dental Clinic" class="logo-light" width="160" height="38">
+        <img src="../assets/images/logo/logo-white.jpg" alt="Stackly Dental Clinic" class="logo-dark" width="160" height="38">
       </a>
 
       <nav class="header-nav" aria-label="Main Navigation">
@@ -152,17 +156,17 @@
           <span class="rtl-label" style="font-size: 0.8rem; font-weight: 700;">RTL</span>
         </button>
 
-        <a href="../patient-dashboard/index.html" class="btn btn-outline desktop-only portal-btn">
+        <a href="login.html?next=patient-dashboard/index.html" class="btn btn-outline desktop-only portal-btn">
           <span class="icon-text">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
             <span>Patient Portal</span>
           </span>
         </a>
 
-        <a href="login.html" class="btn btn-primary desktop-only header-login-btn">
+        <a href="appointment.html" class="btn btn-primary desktop-only">
           <span class="icon-text">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
-            <span>Login</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Book Appointment</span>
           </span>
         </a>
 
@@ -181,9 +185,9 @@
   <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
   <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
     <div class="mobile-drawer-header">
-      <a href="index.html" class="header-logo" aria-label="BrightSmile Dental Care Home">
-        <img src="../assets/images/logo/logo.jpg" alt="BrightSmile Dental Care" class="logo-light" width="160" height="38">
-        <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" class="logo-dark" width="160" height="38">
+      <a href="index.html" class="header-logo" aria-label="Stackly Dental Home">
+        <img src="../assets/images/logo/logo.jpg" alt="Stackly Dental Clinic" class="logo-light" width="160" height="38">
+        <img src="../assets/images/logo/logo-white.jpg" alt="Stackly Dental Clinic" class="logo-dark" width="160" height="38">
       </a>
       <button type="button" class="btn-icon" data-action="close-drawer" aria-label="Close Navigation Menu">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -220,21 +224,19 @@
           </span>
         </button>
       </div>
-      <a href="login.html" class="btn btn-primary" style="width: 100%;"><span class="icon-text" style="justify-content: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg><span>Login</span></span></a>
+      <a href="appointment.html" class="btn btn-primary" style="width: 100%;">
+        <span class="icon-text" style="justify-content: center;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <span>Book Appointment</span>
+        </span>
+      </a>
     </div>
   </aside>
 
   <main id="main-content">
 
     <!-- PAGE BANNER & BREADCRUMBS -->
-    <section class="page-banner">
-      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-        <ul class="breadcrumb-list">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-separator">/</li>
-          <li class="breadcrumb-item active" aria-current="page">Our Dentists</li>
-        </ul>
-      </nav>
+    <section class="page-banner" style="background-image: linear-gradient(rgba(10, 10, 10, 0.72), rgba(10, 10, 10, 0.80)), url('../assets/images/page-banners/banner-doctors.jpg');">
       <h1>Meet Our Board-Certified Dentists & Specialists</h1>
       <p class="lead" style="max-width: 820px; margin-bottom: 0;">
         World-class clinicians trained at premier dental universities, united by a dedication to painless precision and compassionate patient care.
@@ -243,7 +245,7 @@
 
     <!-- SEARCH & SPECIALIZATION FILTER TOOLBAR -->
     <section class="section-full-compact" style="border-bottom: 1px solid var(--color-border); background-color: var(--color-surface-alt);">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-3);">
+      <div class="services-toolbar">
         <nav class="filter-nav" data-filter-nav="doctors-grid" style="margin-bottom: 0;">
           <button type="button" class="filter-btn active" data-filter="all">All Dentists (8)</button>
           <button type="button" class="filter-btn" data-filter="cosmetic">Cosmetic Dentistry</button>
@@ -468,15 +470,15 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <a href="index.html" class="footer-logo" aria-label="BrightSmile Dental Care Home">
-              <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" width="160" height="38">
+            <a href="index.html" class="footer-logo" aria-label="Stackly Dental Home">
+              <img src="../assets/images/logo/logo-white.jpg" alt="Stackly Dental Clinic" width="160" height="38">
             </a>
             <p class="footer-desc">
               Boston's trusted comprehensive family dental clinic and surgical oral care center. Dedicated to painless dentistry and lifelong smile health.
             </p>
             <div style="font-size: 0.85rem; color: var(--color-dark-section-muted); margin-top: 12px;">
               <strong>Emergency Triage:</strong> (555) 234-5678<br>
-              <strong>Email:</strong> care@brightsmiledental.com
+              <strong>Email:</strong> care@stacklydental.com
             </div>
           </div>
 
@@ -496,12 +498,12 @@
           <div class="footer-col">
             <h4 class="footer-heading">Patient Portals</h4>
             <ul class="footer-links">
-              <li><a href="../patient-dashboard/index.html">Patient Dashboard</a></li>
-              <li><a href="../patient-dashboard/appointments.html">Manage Appointments</a></li>
-              <li><a href="../patient-dashboard/treatment-history.html">Tooth Health Chart</a></li>
-              <li><a href="../patient-dashboard/prescriptions.html">Digital Prescriptions</a></li>
-              <li><a href="../patient-dashboard/payments.html">Invoices & Receipts</a></li>
-              <li><a href="../admin-dashboard/index.html">Staff & Admin Login</a></li>
+              <li><a href="login.html?next=patient-dashboard/index.html">Patient Dashboard</a></li>
+              <li><a href="login.html?next=patient-dashboard/appointments.html">Manage Appointments</a></li>
+              <li><a href="login.html?next=patient-dashboard/treatment-history.html">Tooth Health Chart</a></li>
+              <li><a href="login.html?next=patient-dashboard/prescriptions.html">Digital Prescriptions</a></li>
+              <li><a href="login.html?next=patient-dashboard/payments.html">Invoices & Receipts</a></li>
+              <li><a href="login.html?next=admin-dashboard/index.html">Staff & Admin Login</a></li>
             </ul>
           </div>
 
@@ -533,7 +535,7 @@
       <div class="container">
         <div class="footer-bottom-inner">
           <p class="footer-copy">
-            &copy; 2026 BrightSmile Dental Care. All rights reserved.
+            &copy; 2026 Stackly Dental Clinic & Oral Care Center. All rights reserved.
           </p>
           <div class="footer-bottom-links">
             <a href="contact.html">Privacy Policy</a>

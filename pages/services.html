@@ -3,26 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dental Services & Treatments | BrightSmile Dental Care</title>
+  <title>Dental Services & Treatments | Stackly Dental</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/logo/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo/apple-touch-icon.png">
   <meta name="description" content="Explore comprehensive oral health services: teeth cleaning, dental implants, Invisalign aligners, root canals, and cosmetic whitening.">
-  <link rel="canonical" href="https://demo.brightsmiledental.com/pages/services.html">
+  <link rel="canonical" href="https://demo.stacklydental.com/pages/services.html">
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Dental Services & Treatments | BrightSmile Dental Care">
+  <meta property="og:title" content="Dental Services & Treatments | Stackly Dental">
   <meta property="og:description" content="Explore comprehensive oral health services: teeth cleaning, dental implants, Invisalign aligners, root canals, and cosmetic whitening.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://demo.brightsmiledental.com/pages/services.html">
-  <meta property="og:image" content="https://demo.brightsmiledental.com/assets/images/og-preview.jpg">
+  <meta property="og:url" content="https://demo.stacklydental.com/pages/services.html">
+  <meta property="og:image" content="https://demo.stacklydental.com/assets/images/og-preview.jpg">
 
   <!-- DentalClinic Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "DentalClinic",
-    "name": "BrightSmile Dental Care",
-    "image": "https://demo.brightsmiledental.com/assets/images/clinic-exterior.jpg",
-    "@id": "https://demo.brightsmiledental.com",
-    "url": "https://demo.brightsmiledental.com",
+    "name": "Stackly Dental Clinic & Oral Care Center",
+    "image": "https://demo.stacklydental.com/assets/images/clinic-exterior.jpg",
+    "@id": "https://demo.stacklydental.com",
+    "url": "https://demo.stacklydental.com",
     "telephone": "+1-555-234-5678",
     "priceRange": "$$",
     "address": {
@@ -81,8 +85,8 @@
   <script>
     (function() {
       try {
-        var theme = localStorage.getItem('brightsmile_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        var savedRtl = localStorage.getItem('brightsmile_dental_rtl') || localStorage.getItem('rtl');
+        var theme = localStorage.getItem('stackly_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var savedRtl = localStorage.getItem('stackly_dental_rtl') || localStorage.getItem('rtl');
         var isRtl = (savedRtl === 'true' || savedRtl === 'rtl');
         if (theme === 'dark') {
           document.documentElement.classList.add('dark-mode');
@@ -118,9 +122,9 @@
   <!-- Site Header -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="index.html" class="header-logo" aria-label="BrightSmile Dental Care Home">
-        <img src="../assets/images/logo/logo.jpg" alt="BrightSmile Dental Care" class="logo-light" width="160" height="38">
-        <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" class="logo-dark" width="160" height="38">
+      <a href="index.html" class="header-logo" aria-label="Stackly Dental Home">
+        <img src="../assets/images/logo/logo.jpg" alt="Stackly Dental Clinic" class="logo-light" width="160" height="38">
+        <img src="../assets/images/logo/logo-white.jpg" alt="Stackly Dental Clinic" class="logo-dark" width="160" height="38">
       </a>
 
       <nav class="header-nav" aria-label="Main Navigation">
@@ -152,17 +156,17 @@
           <span class="rtl-label" style="font-size: 0.8rem; font-weight: 700;">RTL</span>
         </button>
 
-        <a href="../patient-dashboard/index.html" class="btn btn-outline desktop-only portal-btn">
+        <a href="login.html?next=patient-dashboard/index.html" class="btn btn-outline desktop-only portal-btn">
           <span class="icon-text">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
             <span>Patient Portal</span>
           </span>
         </a>
 
-        <a href="login.html" class="btn btn-primary desktop-only header-login-btn">
+        <a href="appointment.html" class="btn btn-primary desktop-only">
           <span class="icon-text">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
-            <span>Login</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Book Appointment</span>
           </span>
         </a>
 
@@ -181,9 +185,9 @@
   <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
   <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
     <div class="mobile-drawer-header">
-      <a href="index.html" class="header-logo" aria-label="BrightSmile Dental Care Home">
-        <img src="../assets/images/logo/logo.jpg" alt="BrightSmile Dental Care" class="logo-light" width="160" height="38">
-        <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" class="logo-dark" width="160" height="38">
+      <a href="index.html" class="header-logo" aria-label="Stackly Dental Home">
+        <img src="../assets/images/logo/logo.jpg" alt="Stackly Dental Clinic" class="logo-light" width="160" height="38">
+        <img src="../assets/images/logo/logo-white.jpg" alt="Stackly Dental Clinic" class="logo-dark" width="160" height="38">
       </a>
       <button type="button" class="btn-icon" data-action="close-drawer" aria-label="Close Navigation Menu">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -220,21 +224,19 @@
           </span>
         </button>
       </div>
-      <a href="login.html" class="btn btn-primary" style="width: 100%;"><span class="icon-text" style="justify-content: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg><span>Login</span></span></a>
+      <a href="appointment.html" class="btn btn-primary" style="width: 100%;">
+        <span class="icon-text" style="justify-content: center;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <span>Book Appointment</span>
+        </span>
+      </a>
     </div>
   </aside>
 
   <main id="main-content">
 
     <!-- PAGE BANNER & BREADCRUMBS -->
-    <section class="page-banner">
-      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-        <ul class="breadcrumb-list">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-separator">/</li>
-          <li class="breadcrumb-item active" aria-current="page">Dental Services</li>
-        </ul>
-      </nav>
+    <section class="page-banner" style="background-image: linear-gradient(rgba(10, 10, 10, 0.72), rgba(10, 10, 10, 0.80)), url('../assets/images/page-banners/banner-services.jpg');">
       <h1>Comprehensive Dental Services & Treatments</h1>
       <p class="lead" style="max-width: 820px; margin-bottom: 0;">
         From preventive hygiene and invisible orthodontics to advanced implant reconstructive surgery, explore our 12 specialized dental offerings.
@@ -243,8 +245,8 @@
 
     <!-- SEARCH & FILTER TOOLBAR -->
     <section class="section-full-compact" style="border-bottom: 1px solid var(--color-border); background-color: var(--color-surface-alt);">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-3);">
-        <nav class="filter-nav" data-filter-nav="services-grid" style="margin-bottom: 0;">
+      <div class="services-toolbar">
+        <nav class="filter-nav" data-filter-nav="services-grid">
           <button type="button" class="filter-btn active" data-filter="all">All Services (12)</button>
           <button type="button" class="filter-btn" data-filter="preventive">Preventive & Hygiene</button>
           <button type="button" class="filter-btn" data-filter="restorative">Restorative & Implants</button>
@@ -257,7 +259,7 @@
           <span class="search-box-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           </span>
-          <input type="text" class="search-box-input" data-search-target="services-grid" placeholder="Search treatments (e.g. implants, cleaning, braces)..." aria-label="Search dental treatments">
+          <input type="text" class="search-box-input" data-search-target="services-grid" placeholder="Search treatments..." aria-label="Search dental treatments">
         </div>
       </div>
     </section>
@@ -268,8 +270,10 @@
 
         <!-- 1. General Dental Check-up -->
         <div class="card-equal" data-category="preventive" data-search-text="general dental check-up exam diagnostics oral cancer screening digital x-rays">
+          <div class="card-media">
+            <img src="../assets/images/services/service-01-checkup.jpg" alt="1. General Dental Check-up procedure" width="1200" height="750" loading="lazy" decoding="async">
+          </div>
           <div class="card-body">
-            <img src="../assets/images/services/service-checkup.jpg" alt="1. General Dental Check-up procedure" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3); border: 1px solid var(--color-border);">
             <span class="doctor-spec-badge">Preventive Care</span>
             <h4 class="card-title">1. General Dental Check-up</h4>
             <p class="card-text">
@@ -287,8 +291,10 @@
 
         <!-- 2. Teeth Cleaning and Polishing -->
         <div class="card-equal" data-category="preventive" data-search-text="teeth cleaning polishing ultrasonic scaling prophylaxis stain removal hygiene">
+          <div class="card-media">
+            <img src="../assets/images/services/service-02-cleaning.jpg" alt="2. Teeth Cleaning & Polishing procedure" width="1200" height="750" loading="lazy" decoding="async">
+          </div>
           <div class="card-body">
-            <img src="../assets/images/services/service-cleaning.jpg" alt="2. Teeth Cleaning & Polishing procedure" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3); border: 1px solid var(--color-border);">
             <span class="doctor-spec-badge">Preventive Care</span>
             <h4 class="card-title">2. Teeth Cleaning & Polishing</h4>
             <p class="card-text">
@@ -306,8 +312,10 @@
 
         <!-- 3. Tooth Fillings -->
         <div class="card-equal" data-category="restorative" data-search-text="tooth fillings composite resin biomimetic cavity restoration silver amalgam replacement">
+          <div class="card-media">
+            <img src="../assets/images/services/service-03-fillings.jpg" alt="3. Biomimetic Tooth Fillings procedure" width="1200" height="750" loading="lazy" decoding="async">
+          </div>
           <div class="card-body">
-            <img src="../assets/images/services/service-cosmetic.jpg" alt="3. Biomimetic Tooth Fillings procedure" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3); border: 1px solid var(--color-border);">
             <span class="doctor-spec-badge">Restorative</span>
             <h4 class="card-title">3. Biomimetic Tooth Fillings</h4>
             <p class="card-text">
@@ -325,8 +333,10 @@
 
         <!-- 4. Root Canal Treatment -->
         <div class="card-equal" data-category="restorative surgical" data-search-text="root canal treatment endodontics nerve infection pain relief tooth preservation">
+          <div class="card-media">
+            <img src="../assets/images/services/service-04-root-canal.jpg" alt="4. Painless Root Canal Therapy procedure" width="1200" height="750" loading="lazy" decoding="async">
+          </div>
           <div class="card-body">
-            <img src="../assets/images/services/service-rootcanal.jpg" alt="4. Painless Root Canal Therapy procedure" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3); border: 1px solid var(--color-border);">
             <span class="doctor-spec-badge">Endodontics</span>
             <h4 class="card-title">4. Painless Root Canal Therapy</h4>
             <p class="card-text">
@@ -344,8 +354,10 @@
 
         <!-- 5. Braces and Orthodontics -->
         <div class="card-equal" data-category="orthodontics" data-search-text="braces orthodontics clear aligners invisalign bite correction crooked teeth spacing">
+          <div class="card-media">
+            <img src="../assets/images/services/service-05-orthodontics.jpg" alt="5. Braces & Clear Orthodontics procedure" width="1200" height="750" loading="lazy" decoding="async">
+          </div>
           <div class="card-body">
-            <img src="../assets/images/services/service-orthodontics.jpg" alt="5. Braces & Clear Orthodontics procedure" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3); border: 1px solid var(--color-border);">
             <span class="doctor-spec-badge">Orthodontics</span>
             <h4 class="card-title">5. Braces & Clear Orthodontics</h4>
             <p class="card-text">
@@ -363,8 +375,10 @@
 
         <!-- 6. In-Office Laser Teeth Whitening -->
         <div class="card-equal" data-category="cosmetic" data-search-text="teeth whitening laser bleaching smile brightening yellow stain removal">
+          <div class="card-media">
+            <img src="../assets/images/services/service-06-whitening.jpg" alt="6. In-Office Laser Teeth Whitening procedure" width="1200" height="750" loading="lazy" decoding="async">
+          </div>
           <div class="card-body">
-            <img src="../assets/images/services/service-whitening.jpg" alt="6. In-Office Laser Teeth Whitening procedure" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3); border: 1px solid var(--color-border);">
             <span class="doctor-spec-badge">Cosmetic</span>
             <h4 class="card-title">6. In-Office Laser Teeth Whitening</h4>
             <p class="card-text">
@@ -382,8 +396,10 @@
 
         <!-- 7. 3D Guided Dental Implants -->
         <div class="card-equal" data-category="restorative surgical" data-search-text="dental implants tooth replacement titanium artificial root missing teeth all-on-4">
+          <div class="card-media">
+            <img src="../assets/images/services/service-07-implants.jpg" alt="7. 3D Guided Dental Implants procedure" width="1200" height="750" loading="lazy" decoding="async">
+          </div>
           <div class="card-body">
-            <img src="../assets/images/services/service-implants.jpg" alt="7. 3D Guided Dental Implants procedure" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3); border: 1px solid var(--color-border);">
             <span class="doctor-spec-badge">Implantology</span>
             <h4 class="card-title">7. 3D Guided Dental Implants</h4>
             <p class="card-text">
@@ -401,8 +417,10 @@
 
         <!-- 8. Tooth Extraction -->
         <div class="card-equal" data-category="surgical" data-search-text="tooth extraction wisdom teeth surgical removal impacted tooth painless anesthesia">
+          <div class="card-media">
+            <img src="../assets/images/services/service-08-extraction.jpg" alt="8. Atraumatic Tooth Extraction procedure" width="1200" height="750" loading="lazy" decoding="async">
+          </div>
           <div class="card-body">
-            <img src="../assets/images/services/service-extraction.jpg" alt="8. Atraumatic Tooth Extraction procedure" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3); border: 1px solid var(--color-border);">
             <span class="doctor-spec-badge">Oral Surgery</span>
             <h4 class="card-title">8. Atraumatic Tooth Extraction</h4>
             <p class="card-text">
@@ -420,8 +438,10 @@
 
         <!-- 9. Gum Treatment (Periodontics) -->
         <div class="card-equal" data-category="surgical preventive" data-search-text="gum treatment periodontics gingivitis deep cleaning laser gum therapy periodontitis">
+          <div class="card-media">
+            <img src="../assets/images/services/service-09-gum-therapy.jpg" alt="9. Periodontal Gum Therapy procedure" width="1200" height="750" loading="lazy" decoding="async">
+          </div>
           <div class="card-body">
-            <img src="../assets/images/services/service-periodontics.jpg" alt="9. Periodontal Gum Therapy procedure" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3); border: 1px solid var(--color-border);">
             <span class="doctor-spec-badge">Periodontics</span>
             <h4 class="card-title">9. Periodontal Gum Therapy</h4>
             <p class="card-text">
@@ -439,8 +459,10 @@
 
         <!-- 10. Pediatric Dentistry -->
         <div class="card-equal" data-category="preventive" data-search-text="pediatric dentistry children kids dental sealants fluoride first dental visit gentle">
+          <div class="card-media">
+            <img src="../assets/images/services/service-10-pediatric.jpg" alt="10. Pediatric Dental Medicine procedure" width="1200" height="750" loading="lazy" decoding="async">
+          </div>
           <div class="card-body">
-            <img src="../assets/images/services/service-pediatric.jpg" alt="10. Pediatric Dental Medicine procedure" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3); border: 1px solid var(--color-border);">
             <span class="doctor-spec-badge">Pediatric Care</span>
             <h4 class="card-title">10. Pediatric Dental Medicine</h4>
             <p class="card-text">
@@ -458,8 +480,10 @@
 
         <!-- 11. Cosmetic Dentistry -->
         <div class="card-equal" data-category="cosmetic" data-search-text="cosmetic dentistry porcelain veneers smile makeover bonding digital smile design">
+          <div class="card-media">
+            <img src="../assets/images/services/service-11-veneers.jpg" alt="11. Cosmetic Smile Design & Veneers procedure" width="1200" height="750" loading="lazy" decoding="async">
+          </div>
           <div class="card-body">
-            <img src="../assets/images/services/service-cosmetic.jpg" alt="11. Cosmetic Smile Design & Veneers procedure" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3); border: 1px solid var(--color-border);">
             <span class="doctor-spec-badge">Cosmetic</span>
             <h4 class="card-title">11. Cosmetic Smile Design & Veneers</h4>
             <p class="card-text">
@@ -477,8 +501,10 @@
 
         <!-- 12. Dental Crowns and Bridges -->
         <div class="card-equal" data-category="restorative" data-search-text="dental crowns bridges zirconia cerec same-day ceramic tooth cap fixed partial denture">
+          <div class="card-media">
+            <img src="../assets/images/services/service-12-crowns-bridges.jpg" alt="12. Zirconia Crowns & Bridges procedure" width="1200" height="750" loading="lazy" decoding="async">
+          </div>
           <div class="card-body">
-            <img src="../assets/images/services/service-crowns.jpg" alt="12. Zirconia Crowns & Bridges procedure" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3); border: 1px solid var(--color-border);">
             <span class="doctor-spec-badge">Restorative</span>
             <h4 class="card-title">12. Zirconia Crowns & Bridges</h4>
             <p class="card-text">
@@ -525,15 +551,15 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <a href="index.html" class="footer-logo" aria-label="BrightSmile Dental Care Home">
-              <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" width="160" height="38">
+            <a href="index.html" class="footer-logo" aria-label="Stackly Dental Home">
+              <img src="../assets/images/logo/logo-white.jpg" alt="Stackly Dental Clinic" width="160" height="38">
             </a>
             <p class="footer-desc">
               Boston's trusted comprehensive family dental clinic and surgical oral care center. Dedicated to painless dentistry and lifelong smile health.
             </p>
             <div style="font-size: 0.85rem; color: var(--color-dark-section-muted); margin-top: 12px;">
               <strong>Emergency Triage:</strong> (555) 234-5678<br>
-              <strong>Email:</strong> care@brightsmiledental.com
+              <strong>Email:</strong> care@stacklydental.com
             </div>
           </div>
 
@@ -553,12 +579,12 @@
           <div class="footer-col">
             <h4 class="footer-heading">Patient Portals</h4>
             <ul class="footer-links">
-              <li><a href="../patient-dashboard/index.html">Patient Dashboard</a></li>
-              <li><a href="../patient-dashboard/appointments.html">Manage Appointments</a></li>
-              <li><a href="../patient-dashboard/treatment-history.html">Tooth Health Chart</a></li>
-              <li><a href="../patient-dashboard/prescriptions.html">Digital Prescriptions</a></li>
-              <li><a href="../patient-dashboard/payments.html">Invoices & Receipts</a></li>
-              <li><a href="../admin-dashboard/index.html">Staff & Admin Login</a></li>
+              <li><a href="login.html?next=patient-dashboard/index.html">Patient Dashboard</a></li>
+              <li><a href="login.html?next=patient-dashboard/appointments.html">Manage Appointments</a></li>
+              <li><a href="login.html?next=patient-dashboard/treatment-history.html">Tooth Health Chart</a></li>
+              <li><a href="login.html?next=patient-dashboard/prescriptions.html">Digital Prescriptions</a></li>
+              <li><a href="login.html?next=patient-dashboard/payments.html">Invoices & Receipts</a></li>
+              <li><a href="login.html?next=admin-dashboard/index.html">Staff & Admin Login</a></li>
             </ul>
           </div>
 
@@ -590,7 +616,7 @@
       <div class="container">
         <div class="footer-bottom-inner">
           <p class="footer-copy">
-            &copy; 2026 BrightSmile Dental Care. All rights reserved.
+            &copy; 2026 Stackly Dental Clinic & Oral Care Center. All rights reserved.
           </p>
           <div class="footer-bottom-links">
             <a href="contact.html">Privacy Policy</a>

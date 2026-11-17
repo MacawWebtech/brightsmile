@@ -1,16 +1,16 @@
 /* ==========================================================================
-   BRIGHTSMILE DENTAL CARE — RESPONSIVE STYLESHEET
+   STACKLY DENTAL CLINIC — COMPLETE RESPONSIVE STYLESHEET
    Mobile-First Architecture & Breakpoint Definitions:
-   - Mobile: Below 640px (Padding reduces to 16px, 44px touch targets)
-   - Tablet: 640px – 1023px (Mandatory 30px padding preserved)
-   - Desktop: 1024px – 1280px (Mandatory 30px padding preserved)
-   - Large Desktop: Above 1280px
+   - Mobile: Below 640px (16px horizontal padding, 44px touch targets, 1-col stack)
+   - Tablet: 640px – 1023.98px (Portal button + Menu bar, 2-col grids, centered odd cards)
+   - Desktop: 1024px – 1280px (Standard 4-col footer, side-by-side desktop grids)
+   - Large Desktop: Above 1280px (Max container width 1680px)
    ========================================================================== */
 
 /* ==========================================================================
-   TABLET & BELOW (< 1024px)
+   TABLET & BELOW (<= 1024px)
    ========================================================================== */
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   /* Hide desktop navigation */
   .header-nav {
     display: none;
@@ -29,30 +29,89 @@
     display: inline-flex !important;
   }
 
-  /* Grids */
-  .grid-cards-4 {
-    grid-template-columns: repeat(2, 1fr);
+  /* Universal One-by-One Stacking for ALL 2-column split sections */
+  .split-section-tablet-stack,
+  .hero-split-grid,
+  .split-section,
+  .split-grid,
+  .contact-grid,
+  .hero-section [style*="grid-template-columns"],
+  [style*="1.15fr 0.85fr"],
+  [style*="1.2fr 0.8fr"],
+  [style*="minmax(320px, 1fr)"],
+  [style*="minmax(320px,1fr)"],
+  [style*="minmax(300px, 1fr)"],
+  [style*="minmax(300px,1fr)"],
+  [style*="repeat(auto-fit, minmax(320px, 1fr))"],
+  [style*="repeat(auto-fit, minmax(300px, 1fr))"],
+  [style*="repeat(auto-fit,minmax(320px,1fr))"],
+  [style*="repeat(auto-fit,minmax(300px,1fr))"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: var(--space-6) !important;
+    width: 100% !important;
   }
 
-  .grid-cards-3 {
-    grid-template-columns: repeat(2, 1fr);
+  /* Center the image/media container in split sections */
+  .split-section-tablet-stack img,
+  .hero-split-grid img,
+  .split-section img,
+  .split-grid img,
+  .hero-section [style*="grid-template-columns"] img,
+  [style*="1.15fr 0.85fr"] img,
+  [style*="1.2fr 0.8fr"] img,
+  [style*="minmax(320px, 1fr)"] img,
+  [style*="minmax(320px,1fr)"] img,
+  [style*="minmax(300px, 1fr)"] img,
+  [style*="minmax(300px,1fr)"] img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 580px !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  .split-section-tablet-stack > div:last-child,
+  .hero-split-grid > div:last-child {
+    text-align: center;
+    width: 100%;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Stats grid stacks one-by-one */
+  .stats-grid-tablet-stack {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Hero Trust Indicator Strip - Full Width on Tablet */
+  .hero-trust-indicator-strip {
+    width: 100% !important;
+  }
+
+  .hero-trust-indicator-strip .trust-stats-grid,
+  .hero-section .hero-trust-indicator-strip [style*="grid-template-columns"] {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    width: 100% !important;
+    gap: var(--space-3) !important;
   }
 }
 
 /* ==========================================================================
-   MOBILE SCREEN BREAKPOINT (< 640px)
-   Strict Requirement: Mandatory reduction to 16px horizontal padding
+   TABLET-ONLY VIEW (640px – 1023.98px)
    ========================================================================== */
-/* ==========================================================================
-   TABLET-ONLY CENTERED ALIGNMENT (640px – 1023.98px)
-   Strictly applies ONLY on Tablet View:
-   Does NOT modify Desktop (>=1024px) or Mobile (<640px)
-   ========================================================================== */
-@media (min-width: 640px) and (max-width: 1023.98px) {
-  /* 0. Tablet Header Actions: show ONLY the Login button and the Hamburger Menu Bar (Patient Portal is hidden on tablet) */
+@media (min-width: 640px) and (max-width: 1024px) {
+  /* Tablet Header Actions: Show ONLY the Patient Portal button and the Hamburger Menu Bar */
   .site-header .header-actions .portal-btn,
   .site-header .header-actions a[href*="patient-dashboard"] {
-    display: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 8px 16px !important;
+    font-size: 0.88rem !important;
   }
 
   /* Strictly hide all other action buttons & toggles on tablet navbar */
@@ -63,19 +122,11 @@
     display: none !important;
   }
 
-  /* Login button stays visible on tablet */
-  .site-header .header-actions a.btn.desktop-only.header-login-btn {
-    display: inline-flex !important;
-    align-items: center !important;
-    padding: 8px 16px !important;
-    font-size: 0.88rem !important;
-  }
-
   .site-header .header-actions .hamburger-btn {
     display: inline-flex !important;
   }
 
-  /* 1. Ensure 2-column tablet layout for multi-column grids */
+  /* 2-column tablet layout for multi-column grids */
   .grid-cards-3,
   .grid-cards-4,
   .card-grid,
@@ -89,25 +140,7 @@
     grid-template-columns: repeat(2, 1fr) !important;
   }
 
-  /* 2. Split text+image sections stack one-by-one on tablet */
-  .split-section-tablet-stack {
-    grid-template-columns: 1fr !important;
-    gap: var(--space-6) !important;
-  }
-
-  .split-section-tablet-stack img {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    max-width: 540px !important;
-    display: block !important;
-  }
-
-  /* 3. Stats grid stacks one-by-one on tablet */
-  .stats-grid-tablet-stack {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* 2. Center any odd/lone card on the last row of a 2-column tablet grid */
+  /* Center any odd/lone card on the last row of a 2-column tablet grid */
   .grid-cards > :last-child:nth-child(odd),
   .grid-cards-2 > :last-child:nth-child(odd),
   .grid-cards-3 > :last-child:nth-child(odd),
@@ -142,20 +175,7 @@
     width: 100% !important;
   }
 
-  /* 3. Support inline grids where a card-equal or card is odd last-child */
-  [style*="display: grid"] > .card-equal:last-child:nth-child(odd),
-  [style*="display: grid"] > .pricing-card-dental:last-child:nth-child(odd),
-  [style*="display: grid"] > .card:last-child:nth-child(odd),
-  [style*="display: grid"] > .contact-card:last-child:nth-child(odd) {
-    grid-column: 1 / -1 !important;
-    justify-self: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    max-width: 500px !important;
-    width: 100% !important;
-  }
-
-  /* 4. Center image boxes, media wrappers, doctor avatars & facility visuals in tablet view */
+  /* Center image boxes, media wrappers & facility visuals in tablet view */
   .card-media,
   .doctor-avatar-box,
   .facility-card,
@@ -177,7 +197,7 @@
     margin-right: auto !important;
   }
 
-  /* 5. Tablet Footer Layout — Full Width Brand + 3-Column Balanced Navigation (No Empty Space) */
+  /* Tablet Footer: Full Width Brand + 3 Balanced Navigation Columns */
   .site-footer .footer-grid,
   .footer-grid {
     grid-template-columns: repeat(3, 1fr) !important;
@@ -196,6 +216,10 @@
   }
 }
 
+/* ==========================================================================
+   MOBILE SCREEN BREAKPOINT (< 640px)
+   Strict Requirement: Mandatory reduction to 16px horizontal padding
+   ========================================================================== */
 @media (max-width: 639.98px) {
   :root {
     --container-padding: 16px; /* Strict 16px horizontal padding on mobile */
@@ -210,7 +234,7 @@
     padding-right: 16px;
   }
 
-  /* Mobile Header Navbar: Strictly remove any buttons; ONLY display the menu bar (hamburger-btn) */
+  /* Mobile Header Navbar: Strictly remove all buttons; ONLY display the menu bar (hamburger-btn) */
   .site-header .header-actions .btn,
   .site-header .header-actions a.btn,
   .site-header .header-actions button.btn,
@@ -241,12 +265,62 @@
     padding-right: 16px;
   }
 
-  /* Grids collapse to single column */
+  /* Grids collapse to single 1 column */
   .grid-cards,
   .grid-cards-4,
   .grid-cards-3,
-  .grid-cards-2 {
-    grid-template-columns: 1fr;
+  .grid-cards-2,
+  .card-grid,
+  .pricing-grid,
+  .services-grid,
+  .doctors-grid,
+  .blog-grid,
+  .timeline-grid,
+  .feature-grid,
+  .test-grid,
+  [style*="grid-template-columns: repeat(auto-fit"] {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-4) !important;
+    width: 100% !important;
+  }
+
+  /* Ensure cards take full container width on mobile (no awkward gaps or empty spaces) */
+  .grid-cards > *,
+  .grid-cards-4 > *,
+  .grid-cards-3 > *,
+  .grid-cards-2 > *,
+  .card-grid > *,
+  .pricing-grid > *,
+  .services-grid > *,
+  .doctors-grid > *,
+  .blog-grid > *,
+  .feature-grid > *,
+  .card-equal,
+  .feature-card,
+  .pricing-card-dental {
+    max-width: 100% !important;
+    width: 100% !important;
+    justify-self: stretch !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    grid-column: auto !important;
+  }
+
+  /* Split sections stack one-by-one on mobile */
+  .split-section-tablet-stack,
+  .hero-split-grid,
+  .split-section,
+  .split-grid,
+  .contact-grid,
+  .hero-section [style*="grid-template-columns"],
+  [style*="1.15fr"],
+  [style*="1.2fr"],
+  [style*="minmax(320px"],
+  [style*="minmax(300px"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: var(--space-5) !important;
+    width: 100% !important;
   }
 
   .footer-grid {
@@ -305,7 +379,7 @@
 /* ==========================================================================
    DESKTOP (1024px – 1280px)
    ========================================================================== */
-@media (min-width: 1024px) {
+@media (min-width: 1024.02px) {
   .hamburger-btn {
     display: none;
   }
@@ -328,851 +402,285 @@
 }
 
 /* ==========================================================================
-   MOBILE FINISHING PASS — SITE-WIDE ALIGNMENT & OVERFLOW GUARDS
-   These overrides intentionally affect mobile layouts only. The existing
-   HTML, JavaScript, desktop styling and tablet layout remain unchanged.
+   ALIGNMENT FIXES (all devices)
    ========================================================================== */
-@media (max-width: 639.98px) {
-  :root {
-    --container-padding: 16px;
-    --space-10: 48px;
-    --space-8: 40px;
-    --space-6: 28px;
-    --space-5: 24px;
-    --space-4: 20px;
-    --space-3: 16px;
-  }
 
-  html,
-  body {
-    width: 100%;
-    max-width: 100%;
-  }
+/* Grid children may shrink: stops long text / wide children pushing columns past the screen */
+.contact-grid > *,
+.blog-layout-grid > *,
+.hero-split-grid > *,
+.split-grid > *,
+.split-section > *,
+[class*="grid-cards"] > * {
+  min-width: 0;
+}
 
-  body {
-    overflow-x: hidden;
-  }
+.contact-card,
+.sidebar-widget {
+  overflow-wrap: anywhere;
+}
 
-  /* Let nested grid/flex children shrink instead of widening the viewport. */
-  main,
-  section,
-  article,
-  aside,
-  .dashboard-layout,
-  .dashboard-main,
-  .dashboard-body,
-  .container,
-  .container-fluid,
-  .container-max,
-  .section-full,
-  .section-full-compact,
-  .page-banner,
-  .site-footer,
-  .footer-grid,
-  .card-equal,
-  .card-body,
-  .card-content,
-  .form-group,
-  .form-row,
-  .table-card,
-  .table-card-header,
-  .dashboard-card,
-  .stat-card {
-    min-width: 0;
-    max-width: 100%;
-  }
-
-  img,
-  video,
-  iframe,
-  canvas,
-  svg {
-    max-width: 100%;
-  }
-
-  h1 {
-    font-size: clamp(1.9rem, 8vw, 2.35rem);
-    line-height: 1.14;
-    overflow-wrap: break-word;
-  }
-
-  h2 {
-    font-size: clamp(1.55rem, 6.5vw, 1.95rem);
-    line-height: 1.2;
-    overflow-wrap: break-word;
-  }
-
-  h3 {
-    font-size: clamp(1.28rem, 5.2vw, 1.55rem);
-    line-height: 1.25;
-  }
-
-  p,
-  li,
-  label,
-  .card-text,
-  .lead {
-    overflow-wrap: anywhere;
-  }
-
-  /* Keep every multi-column content area inside the viewport. */
-  .grid-cards,
-  .grid-cards-2,
-  .grid-cards-3,
-  .grid-cards-4,
-  .card-grid,
-  .services-grid,
-  .doctors-grid,
-  .pricing-grid,
-  .blog-grid,
-  .grid-2,
-  .grid-3,
-  .grid-4,
-  .dashboard-stat-grid,
-  .timeline-grid,
-  .feature-grid,
-  .test-grid,
-  .select-card-grid,
-  .contact-grid,
-  .blog-layout-grid,
-  .hero-split-grid,
-  .split-section-tablet-stack,
-  .stats-grid-tablet-stack,
-  .form-row,
-  .timeline-grid,
-  [style*="display: grid"],
-  [style*="display:grid"] {
+/* Blog list + blog details: sidebar drops under the posts on tablet & mobile */
+@media (max-width: 1024px) {
+  .blog-layout-grid {
     grid-template-columns: minmax(0, 1fr) !important;
-    width: 100%;
+    gap: var(--space-6) !important;
+  }
+}
+
+@media (max-width: 639.98px) {
+  /* Contact page: single column that really fits the screen */
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  /* Home hero trust stats: 3 equal columns that fit inside 16px page padding */
+  .hero-trust-indicator-strip .trust-stats-grid {
+    gap: var(--space-1) !important;
+  }
+  .hero-trust-indicator-strip .trust-stats-grid > div {
+    padding: var(--space-2) 4px !important;
     min-width: 0;
   }
-
-  .grid-cards,
-  .grid-cards-2,
-  .grid-cards-3,
-  .grid-cards-4,
-  .card-grid,
-  .services-grid,
-  .doctors-grid,
-  .pricing-grid,
-  .blog-grid,
-  .timeline-grid,
-  .feature-grid,
-  .test-grid,
-  .select-card-grid,
-  .contact-grid,
-  .blog-layout-grid,
-  .hero-split-grid,
-  .split-section-tablet-stack,
-  .stats-grid-tablet-stack {
-    gap: 20px;
+  .hero-trust-indicator-strip .trust-stats-grid span {
+    font-size: 1.15rem !important;
   }
-
-  /* Inline flex rows (newsletter forms, action groups and page CTAs) may wrap. */
-  [style*="display: flex"],
-  [style*="display:flex"],
-  .header-actions,
-  .dashboard-page-header,
-  .table-card-header,
-  .filter-nav,
-  .share-bar,
-  .footer-bottom-inner,
-  .footer-bottom-links,
-  .contact-info-list,
-  .modal-footer-custom {
-    min-width: 0;
-    max-width: 100%;
-  }
-
-  [style*="display: flex"],
-  [style*="display:flex"] {
-    flex-wrap: wrap;
-  }
-
-  [style*="min-width: 180px"],
-  [style*="min-width: 220px"],
-  [style*="min-width: 240px"],
-  [style*="min-width: 260px"],
-  [style*="min-width: 280px"] {
-    min-width: 0 !important;
-    max-width: 100%;
-  }
-
-  /* Header and primary navigation. */
-  .site-header {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-
-  .header-inner {
-    min-width: 0;
-    gap: 12px;
-  }
-
-  .header-logo {
-    flex: 0 1 auto;
-    min-width: 0;
-    max-width: calc(100% - 56px);
-  }
-
-  .header-logo img {
-    width: auto;
-    max-width: 100%;
-    height: 34px;
-    object-fit: contain;
-  }
-
-  .header-actions {
-    flex: 0 0 auto;
-    margin-left: auto;
-  }
-
-  .hamburger-btn {
-    flex: 0 0 44px;
-    width: 44px;
-    min-width: 44px;
-    height: 44px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .mobile-drawer {
-    width: min(320px, calc(100vw - 24px));
-    max-width: calc(100vw - 24px);
-  }
-
-  .mobile-drawer-header,
-  .mobile-drawer-footer {
-    min-width: 0;
-  }
-
-  .mobile-nav-links,
-  .mobile-sublinks {
-    min-width: 0;
-    max-width: 100%;
-  }
-
-  /* Consistent page spacing and centered media within stacked sections. */
-  .section-full,
-  .section-full-compact {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-
-  .page-banner {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-
-  .section-header {
-    margin-bottom: 24px;
-  }
-
-  .section-header.text-center {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .page-banner .breadcrumb-list,
-  .breadcrumb-list,
-  .breadcrumbs-list {
-    flex-wrap: wrap;
-    row-gap: 6px;
+  .hero-trust-indicator-strip .trust-stats-grid p {
+    font-size: 0.74rem !important;
+    line-height: 1.3;
     overflow-wrap: anywhere;
   }
 
-  .hero-split-grid > *,
-  .split-section-tablet-stack > *,
-  [style*="display: grid"] > *,
-  [style*="display:grid"] > * {
+  /* Appointment wizard: 6 equal steps, small wrapped labels, connector line centred on the circles */
+  .wizard-nav {
+    padding: 0;
+    align-items: flex-start;
+  }
+  .wizard-nav::before {
+    left: calc(100% / 12);
+    right: calc(100% / 12);
+  }
+  .wizard-step-item {
+    flex: 1 1 0;
     min-width: 0;
-    max-width: 100%;
   }
-
-  .hero-split-grid img,
-  .split-section-tablet-stack img,
-  .card-media img,
-  .doctor-avatar-box img,
-  .facility-card img,
-  .equipment-card img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .card-equal .card-body {
-    padding: 20px;
-  }
-
-  .contact-card,
-  .utility-box,
-  .auth-wrapper {
-    padding: 20px !important;
-  }
-
-  .map-container {
-    width: 100%;
-    max-width: 100%;
-    height: 300px;
-  }
-
-  .map-container iframe {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  /* Forms and buttons remain comfortable without forcing a wider layout. */
-  .form-row {
-    gap: 14px;
-  }
-
-  .form-control,
-  .form-select,
-  .form-textarea,
-  input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
-  select,
-  textarea {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0 !important;
-  }
-
-  .btn,
-  .btn-primary,
-  .btn-outline,
-  .btn-black,
-  .btn-white {
-    max-width: 100%;
+  .wizard-step-title {
+    font-size: 0.64rem;
+    line-height: 1.25;
     white-space: normal;
     text-align: center;
+  }
+}
+
+/* Auth / coming-soon / maintenance top bars: keep logo + actions inside the screen on phones */
+@media (max-width: 479.98px) {
+  header .container-fluid {
+    gap: var(--space-1);
+  }
+  header .container-fluid .header-logo img {
+    width: 112px;
+    height: auto;
+  }
+  header .container-fluid > div {
+    gap: 8px !important;
+    flex-shrink: 0;
+    min-width: 0;
+  }
+  header .container-fluid .theme-toggle,
+  header .container-fluid .rtl-toggle {
+    flex-shrink: 0;
+  }
+  header .container-fluid a.btn.btn-sm {
+    padding: 6px 10px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    min-height: 36px;
+  }
+}
+
+/* Cards that already carry their own inline padding must not get a second padding from .card-body (text was indented vs. image) */
+.card-equal[style*="padding"] > .card-body {
+  padding: 0;
+}
+
+/* Hero call-to-action buttons: equal full-width stack on phones */
+@media (max-width: 639.98px) {
+  .hero-section div[style*="flex-wrap: wrap"] > .btn {
+    flex: 1 1 100%;
+    width: 100%;
     justify-content: center;
   }
+}
 
-  .filter-nav {
-    gap: 8px;
+/* Icon + text list rows: icon never shrinks, text stays left-aligned even inside centred sections */
+li[style*="display: flex"] > svg {
+  flex-shrink: 0;
+}
+li[style*="display: flex"] > span {
+  text-align: left;
+}
+
+/* Tablet: hero trust stats stay 3-in-a-row (the "centre the lone odd card" rule must not apply to them) */
+.hero-trust-indicator-strip .trust-stats-grid > :last-child:nth-child(odd) {
+  grid-column: auto !important;
+  justify-self: stretch !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Tablet: card grids built with inline auto-fit show as a tidy 2-column grid instead of one stretched column or 3 + 1 orphan */
+@media (min-width: 640px) and (max-width: 1024px) {
+  [style*="repeat(auto-fit"]:has(> .card-equal),
+  [style*="repeat(auto-fit"]:has(> .card),
+  [style*="repeat(auto-fit"]:has(> .feature-card),
+  [style*="repeat(auto-fit"]:has(> .pricing-card-dental),
+  [style*="repeat(auto-fit"]:has(> .stat-card),
+  [style*="repeat(auto-fit"]:has(> .contact-card) {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: var(--space-4) !important;
+    width: 100% !important;
   }
+}
 
-  .filter-btn {
-    max-width: 100%;
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-
-  .wizard-nav {
-    justify-content: flex-start;
-    gap: 18px;
-    padding: 0 0 8px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .wizard-step-item {
-    flex: 0 0 68px;
-    min-width: 68px;
-  }
-
-  .wizard-step-title {
-    white-space: normal;
-    font-size: 0.72rem;
-    line-height: 1.25;
-  }
-
-  .wizard-nav::before {
-    left: 34px;
-    right: auto;
-    width: calc(100% - 68px);
-  }
-
-  .slot-pill-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-  }
-
-  .slot-pill {
-    min-width: 0;
-    padding: 10px 8px;
-    overflow-wrap: anywhere;
-  }
-
-  .countdown-grid {
+/* Services filter pills: tidy two-column grid on phones (first pill spans the row) */
+@media (max-width: 639.98px) {
+  .services-toolbar .filter-nav {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    gap: 8px;
+    width: 100%;
   }
-
-  .countdown-box {
-    min-width: 0;
-    padding: 16px 10px;
-  }
-
-  .countdown-val {
-    font-size: 2rem;
-  }
-
-  .author-card {
-    align-items: flex-start;
-    gap: 14px;
-    padding: 16px;
-  }
-
-  .article-content {
-    font-size: 1rem;
-  }
-
-  .clinical-note,
-  .article-blockquote {
-    padding: 16px;
-    overflow-wrap: anywhere;
-  }
-
-  .footer-grid {
-    grid-template-columns: minmax(0, 1fr) !important;
-    gap: 24px;
-  }
-
-  .site-footer {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-
-  .footer-bottom,
-  .footer-bottom-inner {
-    flex-direction: column !important;
-    align-items: center;
-    text-align: center;
-    gap: 12px;
-  }
-
-  .footer-bottom-links {
+  .services-toolbar .filter-nav .filter-btn {
     justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  /* Tables scroll inside their own wrapper, never across the whole page. */
-  .table-responsive,
-  .dental-table-responsive {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .table-responsive table:not(.dental-table-stack),
-  .dental-table-responsive table:not(.dental-table-stack) {
-    min-width: 620px;
-  }
-
-  .action-btn-group {
-    flex-wrap: wrap;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
     white-space: normal;
+    line-height: 1.25;
   }
+  .services-toolbar .filter-nav .filter-btn:first-child {
+    grid-column: 1 / -1;
+  }
+}
 
-  .pagination-nav {
-    flex-wrap: wrap;
-    gap: 6px;
+/* Small round avatars (testimonials, authors) keep their own size - the "centre big split-section images" rules must not enlarge them */
+@media (max-width: 1024px) {
+  [style] img[style*="border-radius: 50%"] {
+    width: 48px !important;
+    height: 48px !important;
+    max-width: 48px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: block !important;
   }
+}
 
-  .dropdown-menu,
-  .dropdown-menu-custom {
-    max-width: calc(100vw - 32px);
+/* Tablet: any auto-fit grid holding exactly 4 items becomes a balanced 2 x 2 (no 3 + 1 orphan) */
+@media (min-width: 640px) and (max-width: 1024px) {
+  [style*="repeat(auto-fit"]:has(> :nth-child(4):last-child) {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
+}
 
-  .modal-overlay-custom {
-    padding: 12px;
-    align-items: center;
-  }
+/* Blog cards (Home "Knowledge Center"): every article image gets the identical fixed height on all devices */
+.blog-grid .card-equal > img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 200px !important;
+  object-fit: cover;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
 
-  .modal-card-custom {
-    width: 100%;
-    max-width: 100%;
-    max-height: calc(100vh - 24px);
-  }
-
-  .modal-header-custom,
-  .modal-body-custom,
-  .modal-footer-custom {
-    padding: 16px;
-  }
-
-  .modal-header-custom {
-    gap: 12px;
-  }
-
-  .modal-footer-custom {
-    flex-wrap: wrap;
-  }
-
-  .modal-footer-custom .btn {
-    flex: 1 1 100%;
-  }
+/* Card footers that start with an avatar: avatar + name sit together on the left */
+.card-equal .card-footer:has(> img) {
+  justify-content: flex-start;
+}
+.card-equal .card-footer:has(> img) > div {
+  text-align: left;
 }
 
 /* ==========================================================================
-   DASHBOARD MOBILE LAYOUT — PATIENT AND ADMIN PORTALS
+   TABLET: a lone last card (3rd testimonial, 3rd/5th card, etc.) is centred
+   and is EXACTLY the same width as the cards above it.
+   The grid becomes 4 equal tracks; every card spans 2, the odd one spans the
+   middle 2 - so widths always match, whatever the grid gap is.
+   ========================================================================== */
+@media (min-width: 640px) and (max-width: 1024px) {
+  :is(.grid-cards-3, .grid-cards-4, .card-grid, .services-grid, .doctors-grid, .blog-grid, .pricing-grid, .feature-grid, .test-grid, [style*="repeat(auto-fit"]):has(> :last-child:nth-child(odd)):not(.trust-stats-grid) {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+
+  :is(.grid-cards-3, .grid-cards-4, .card-grid, .services-grid, .doctors-grid, .blog-grid, .pricing-grid, .feature-grid, .test-grid, [style*="repeat(auto-fit"]):has(> :last-child:nth-child(odd)):not(.trust-stats-grid) > * {
+    grid-column: span 2 !important;
+    max-width: none !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    justify-self: stretch !important;
+  }
+
+  :is(.grid-cards-3, .grid-cards-4, .card-grid, .services-grid, .doctors-grid, .blog-grid, .pricing-grid, .feature-grid, .test-grid, [style*="repeat(auto-fit"]):has(> :last-child:nth-child(odd)):not(.trust-stats-grid) > :last-child:nth-child(odd) {
+    grid-column: 2 / span 2 !important;
+  }
+}
+
+/* JPG logos have a solid background: blend it into the page so no box shows behind the logo (light + dark mode) */
+.logo-light { mix-blend-mode: multiply; }
+.logo-dark  { mix-blend-mode: lighten; }
+
+
+/* ==========================================================================
+   MOBILE HEADER: Patient Portal button beside the menu (logo | portal | menu)
    ========================================================================== */
 @media (max-width: 639.98px) {
-  .dashboard-layout,
-  .dashboard-main {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  .dashboard-sidebar {
-    width: min(300px, calc(100vw - 32px));
-    max-width: calc(100vw - 32px);
-  }
-
-  .sidebar-header {
-    padding-left: 16px;
-    padding-right: 16px;
+  .site-header .header-actions {
+    display: flex;
+    align-items: center;
     gap: 8px;
+    flex: 0 0 auto;
   }
-
-  .sidebar-brand {
-    min-width: 0;
-    max-width: calc(100% - 42px);
+  .site-header .header-actions .portal-btn,
+  .site-header .header-actions a[href*="patient-dashboard"] {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    height: 40px;
+    padding: 0 12px !important;
+    font-size: 0.8rem !important;
+    line-height: 1;
+    white-space: nowrap;
   }
-
-  .sidebar-brand .badge {
-    max-width: 100%;
-    overflow-wrap: anywhere;
-  }
-
-  .dashboard-topbar {
-    width: 100%;
-    max-width: 100%;
-    padding: 10px 16px;
-    gap: 10px;
-  }
-
-  .topbar-left {
-    min-width: 0;
-  }
-
-  .topbar-search {
-    min-width: 0 !important;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .topbar-search input {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .topbar-right {
-    min-width: 0;
-    max-width: calc(100% - 54px);
-    flex-wrap: nowrap;
+  .site-header .header-actions .portal-btn .icon-text {
     gap: 6px;
   }
-
-  .topbar-right > *,
-  .topbar-right .action-btn-sm,
-  .topbar-toggle-btn,
-  .dropdown-trigger {
+  .site-header .header-actions .portal-btn svg {
+    width: 16px;
+    height: 16px;
     flex-shrink: 0;
   }
-
-  .dropdown-trigger {
-    max-width: 48px;
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-
-  .dropdown-menu-custom {
-    width: min(280px, calc(100vw - 32px));
-    max-width: calc(100vw - 32px);
-  }
-
-  .dashboard-body {
-    padding: 24px 16px 40px;
-    width: 100%;
-    min-width: 0;
-  }
-
-  .dashboard-page-header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 24px;
-  }
-
-  .dashboard-page-header h1 {
-    font-size: clamp(1.55rem, 7vw, 1.9rem);
-    line-height: 1.2;
-    overflow-wrap: anywhere;
-  }
-
-  .breadcrumbs-list {
-    flex-wrap: wrap;
-    row-gap: 5px;
-  }
-
-  .grid-2,
-  .grid-3,
-  .grid-4,
-  .dashboard-stat-grid,
-  .billing-stat-grid {
-    grid-template-columns: minmax(0, 1fr) !important;
-    width: 100%;
-    min-width: 0;
-    gap: 16px;
-  }
-
-  .stat-card,
-  .dashboard-card,
-  .card,
-  .table-card,
-  .tooth-chart-card {
-    min-width: 0;
-    max-width: 100%;
-  }
-
-  .stat-card {
-    padding: 20px;
-  }
-
-  .stat-val {
-    font-size: 1.9rem;
-    overflow-wrap: anywhere;
-  }
-
-  .table-card-header {
-    align-items: stretch;
-    flex-direction: column;
-    gap: 12px;
-    padding: 16px;
-  }
-
-  .table-card-header > *,
-  .table-card-header > div,
-  .table-card-header .form-control,
-  .table-card-header .form-select {
-    width: 100%;
-    min-width: 0 !important;
-    max-width: 100%;
-  }
-
-  .table-card-header > div > div {
-    width: 100%;
-    min-width: 0;
-    flex: 1 1 100%;
-  }
-
-  .dental-table-responsive {
-    overflow-x: auto;
-    overflow-y: hidden;
-    max-width: 100%;
-  }
-
-  .dental-table-stack {
-    --stack-label-w: clamp(88px, 34vw, 118px);
-    min-width: 0 !important;
-  }
-
-  .dental-table-stack tbody {
-    padding: 10px;
-  }
-
-  .dental-table-stack tbody tr {
-    padding: 4px 12px;
-    min-width: 0;
-  }
-
-  .dental-table-stack td {
-    grid-template-columns: var(--stack-label-w) minmax(0, 1fr);
-    column-gap: 10px;
-    min-width: 0;
-    overflow-wrap: anywhere;
-  }
-
-  .dental-table-stack td > *,
-  .dental-table-stack td > div {
-    min-width: 0;
-    max-width: 100%;
-  }
-
-  .dental-table-stack td.td-actions {
-    flex-wrap: wrap;
-  }
-
-  .action-btn-group {
-    display: flex;
-    flex-wrap: wrap;
-    white-space: normal;
-    gap: 6px;
-  }
-
-  .tooth-chart-card {
-    padding: 16px;
-    overflow: hidden;
-  }
-
-  .jaw-arch {
-    justify-content: center;
-    gap: 4px;
-  }
-
-  .tooth-box {
-    width: 34px;
-    height: 50px;
-    flex: 0 0 34px;
-  }
-
-  .tooth-icon {
-    width: 18px;
-    height: 18px;
-  }
-
-  .svg-chart-container {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-  }
-
-  .printable-document {
-    padding: 16px;
-    max-width: 100%;
-    overflow-wrap: anywhere;
-  }
-
-  .modal-card-custom {
-    max-width: calc(100vw - 24px);
-  }
-
-  .modal-footer-custom {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .modal-footer-custom .btn,
-  .modal-footer-custom button {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-/* Center the High-Tech Art Banner image on every screen size.
-   The global img rule sets display:block, so text-align on its wrapper
-   cannot center this image; auto side margins provide true centering. */
-main#main-content img[src*="hero-modern.jpg"] {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* ========================================================================== 
-   MOBILE DRAWER HEADER — PREVENT PATIENT/ADMIN BADGE & ARROW OVERLAP
-   Keeps the sidebar close/collapse control fully inside the drawer on narrow
-   phones while preserving the original HTML and JavaScript behavior.
-   ========================================================================== */
-@media (max-width: 639.98px) {
-  .dashboard-sidebar .sidebar-header {
-    box-sizing: border-box;
-    gap: 8px;
-    padding-left: 18px;
-    padding-right: 18px;
-    min-width: 0;
-  }
-
-  .dashboard-sidebar .sidebar-brand {
-    flex: 1 1 0;
-    min-width: 0;
-    gap: 6px;
-    overflow: hidden;
-  }
-
-  .dashboard-sidebar .sidebar-brand img {
+  .site-header .header-logo {
     flex: 0 1 auto;
-    width: clamp(104px, 36vw, 120px);
-    max-width: 120px;
+    min-width: 0;
+  }
+  .site-header .header-logo img {
+    max-width: 100%;
     height: auto;
-    min-width: 0;
-    object-fit: contain;
-  }
-
-  .dashboard-sidebar .sidebar-brand .badge {
-    flex: 0 1 auto;
-    min-width: 0;
-    max-width: 54px;
-    padding: 3px 5px;
-    font-size: 0.58rem;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .dashboard-sidebar .sidebar-header > .action-btn-sm {
-    flex: 0 0 32px;
-    width: 32px;
-    min-width: 32px;
-    height: 32px;
-    margin-left: auto;
-    position: relative;
-    z-index: 1;
   }
 }
 
-/* ========================================================================== 
-   DESKTOP DASHBOARD SIDEBAR HEADER — KEEP COLLAPSE ARROW INSIDE THE RAIL
-   Applies only to full desktop layouts (1024px and wider). The brand is
-   allowed to use a controlled width so the portal badge cannot sit beneath
-   the collapse button. Tablet and mobile drawer styling remains unchanged.
-   ========================================================================== */
-@media (min-width: 1024px) {
-  .dashboard-sidebar:not(.collapsed) .sidebar-header {
-    box-sizing: border-box;
-    width: 100%;
-    min-width: 0;
-    gap: 8px;
-    padding: 0 16px;
-    justify-content: space-between;
+/* very small phones: icon-only portal button so nothing is squeezed */
+@media (max-width: 359.98px) {
+  .site-header .header-actions .portal-btn span.icon-text > span {
+    display: none;
   }
-
-  .dashboard-sidebar:not(.collapsed) .sidebar-brand {
-    flex: 1 1 0;
-    width: auto;
-    min-width: 0;
-    max-width: calc(100% - 40px);
-    gap: 8px;
-    overflow: visible;
-  }
-
-  .dashboard-sidebar:not(.collapsed) .sidebar-brand > img {
-    flex: 0 1 120px;
-    width: 120px;
-    max-width: 120px;
-    min-width: 0;
-    height: 32px;
-    object-fit: contain;
-  }
-
-  .dashboard-sidebar:not(.collapsed) .sidebar-brand .badge {
-    flex: 0 0 auto;
-    max-width: 64px;
-    white-space: nowrap;
-    margin: 0;
-  }
-
-  .dashboard-sidebar:not(.collapsed) .sidebar-header > .action-btn-sm {
-    box-sizing: border-box;
-    flex: 0 0 32px;
-    width: 32px;
-    min-width: 32px;
-    height: 32px;
-    margin: 0;
-    position: relative;
-    z-index: 2;
+  .site-header .header-actions .portal-btn {
+    width: 40px;
+    padding: 0 !important;
   }
 }
-

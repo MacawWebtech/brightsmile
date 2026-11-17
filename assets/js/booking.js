@@ -1,6 +1,6 @@
 /**
  * ==========================================================================
- * BRIGHTSMILE DENTAL CARE — 7-STEP INTERACTIVE BOOKING ENGINE
+ * STACKLY DENTAL CLINIC — 7-STEP INTERACTIVE BOOKING ENGINE
  * 
  * Flow Architecture:
  * Step 1: Select Dental Service
@@ -340,8 +340,8 @@ const DentalBookingEngine = (() => {
 
     // Store state in sessionStorage so confirmation page can render it immediately
     try {
-      sessionStorage.setItem('brightsmile_dental_booking_data', JSON.stringify(state));
-      localStorage.setItem('brightsmile_dental_latest_booking', JSON.stringify({
+      sessionStorage.setItem('stackly_dental_booking_data', JSON.stringify(state));
+      localStorage.setItem('stackly_dental_latest_booking', JSON.stringify({
         code: state.referenceCode,
         date: state.date,
         time: state.time,

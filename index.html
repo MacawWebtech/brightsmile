@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="refresh" content="0; url=pages/index.html">
-  <title>BrightSmile Dental Care</title>
+  <title>Stackly Dental Clinic & Oral Care Center</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/images/logo/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo/apple-touch-icon.png">
   <meta name="description" content="Commercial HTML5 template for dental clinics, cosmetic dentistry, and dental practice dashboards.">
-  <link rel="canonical" href="https://demo.brightsmiledental.com/">
+  <link rel="canonical" href="https://demo.stacklydental.com/">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -88,8 +92,8 @@
   <script>
     (function() {
       try {
-        var theme = localStorage.getItem('brightsmile_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        var savedRtl = localStorage.getItem('brightsmile_dental_rtl') || localStorage.getItem('rtl');
+        var theme = localStorage.getItem('stackly_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var savedRtl = localStorage.getItem('stackly_dental_rtl') || localStorage.getItem('rtl');
         var isRtl = (savedRtl === 'true' || savedRtl === 'rtl');
         if (theme === 'dark') {
           document.documentElement.classList.add('dark-mode');
@@ -111,14 +115,14 @@
 </head>
 <body>
   <div class="redirect-card">
-    <img src="assets/images/logo/logo.jpg" alt="BrightSmile Dental Care" width="180" height="42" style="margin-bottom: 12px;">
-    <h1>BrightSmile Dental Care</h1>
+    <img src="assets/images/logo/logo.jpg" alt="Stackly Dental Clinic" width="180" height="42" style="margin-bottom: 12px;">
+    <h1>Stackly Dental Clinic</h1>
     <p>Redirecting to the official Home 1 experience. If you are not redirected within 3 seconds, select a portal below:</p>
     <div class="portal-links">
       <a href="pages/index.html" class="btn btn-primary">Enter Home 1 — Family Clinic</a>
       <a href="pages/index-2.html" class="btn btn-outline">Enter Home 2 — Modern High-Tech</a>
-      <a href="patient-dashboard/index.html" class="btn btn-outline">Patient Dashboard</a>
-      <a href="admin-dashboard/index.html" class="btn btn-outline">Admin Clinic Dashboard</a>
+      <a href="pages/login.html?next=patient-dashboard/index.html" class="btn btn-outline">Patient Dashboard</a>
+      <a href="pages/login.html?next=admin-dashboard/index.html" class="btn btn-outline">Admin Clinic Dashboard</a>
       <a href="documentation/index.html" class="btn btn-outline">Template Documentation</a>
     </div>
   </div>

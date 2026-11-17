@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BRIGHTSMILE DENTAL CARE — COMPLETE LAYOUT-LEVEL RTL STYLESHEET
+   STACKLY DENTAL CLINIC — COMPLETE LAYOUT-LEVEL RTL STYLESHEET
    Supports Arabic, Hebrew, and RTL Layout Mirroring
    Preserves Header Anchor (Logo Left, Controls Right) per Specification
    Mirrors Drawers, Sidebars, Cards, Tables, Forms, and Directional Icons
@@ -40,17 +40,18 @@ html[dir="rtl"] .mobile-drawer,
 html.rtl-mode .mobile-drawer {
   direction: rtl;
   right: auto;
-  left: -320px;
+  left: -420px;
   border-left: none;
   border-right: 1px solid var(--color-border);
-  box-shadow: 8px 0 30px rgba(10, 10, 10, 0.15);
-  transition: left 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: none;
+  transition: left 0.32s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.32s ease;
 }
 
 html[dir="rtl"] .mobile-drawer.open,
 html.rtl-mode .mobile-drawer.open {
   left: 0;
   right: auto;
+  box-shadow: 8px 0 30px rgba(10, 10, 10, 0.15);
 }
 
 /* Typography & Text Alignments */
@@ -147,7 +148,7 @@ html.rtl-mode .dashboard-sidebar {
 
 html[dir="rtl"] .dashboard-main,
 html.rtl-mode .dashboard-main {
-  margin-right: var(--sidebar-width, 270px);
+  margin-right: var(--sidebar-width, 260px);
   margin-left: 0;
 }
 
@@ -156,4 +157,12 @@ html[dir="rtl"] .breadcrumb-item + .breadcrumb-item::before,
 html.rtl-mode .breadcrumb-item + .breadcrumb-item::before {
   content: "\\";
   padding: 0 var(--space-1);
+}
+
+
+/* Membership "Best Value" tag in RTL */
+html[dir="rtl"] .card-body > .pricing-badge-pill,
+html.rtl-mode .card-body > .pricing-badge-pill {
+  right: auto !important;
+  left: 24px !important;
 }

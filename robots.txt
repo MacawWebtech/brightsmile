@@ -5,4 +5,4 @@ Allow: /assets/
 Disallow: /admin-dashboard/
 Disallow: /patient-dashboard/
 
-Sitemap: https://demo.brightsmiledental.com/sitemap.xml
+Sitemap: https://demo.stacklydental.com/sitemap.xml

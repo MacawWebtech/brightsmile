@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BRIGHTSMILE DENTAL CARE — CORE STYLESHEET
+   STACKLY DENTAL CLINIC & ORAL CARE CENTER — CORE STYLESHEET
    Strict Three-Color Rule: Pure Black (#0A0A0A), Pure White (#FFFFFF), Medical Teal (#0B6E75)
    Strict Two-Font Rule: Outfit (Headings), Plus Jakarta Sans (Body & UI)
    ========================================================================== */
@@ -330,6 +330,37 @@ p.lead {
   align-items: stretch;
 }
 
+/* Hero Trust Indicator Strip (Full Width on Desktop & Tablet) */
+.hero-trust-indicator-strip {
+  width: 100%;
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-8);
+  padding-top: var(--space-4);
+}
+
+.hero-trust-indicator-strip .trust-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-trust-indicator-strip .stat-divider {
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: var(--color-border);
+}
+
+@media (max-width: 578px) {
+  .hero-trust-indicator-strip .stat-divider {
+    display: none;
+  }
+}
+
 .card-equal {
   display: flex;
   flex-direction: column;
@@ -604,7 +635,7 @@ p.lead {
 .mobile-drawer {
   position: fixed;
   top: 0;
-  right: -320px;
+  right: -420px;
   width: 320px;
   max-width: 85vw;
   height: 100vh;
@@ -614,13 +645,14 @@ p.lead {
   display: flex;
   flex-direction: column;
   padding: var(--space-4);
-  transition: right 0.32s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: -8px 0 30px rgba(10, 10, 10, 0.15);
+  transition: right 0.32s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.32s ease;
+  box-shadow: none; /* no shadow while closed, otherwise it bleeds onto the page edge */
   overflow-y: auto;
 }
 
 .mobile-drawer.open {
   right: 0;
+  box-shadow: -8px 0 30px rgba(10, 10, 10, 0.15);
 }
 
 .mobile-drawer-backdrop.open {
@@ -789,7 +821,7 @@ p.lead {
 
 
 /* ==========================================================================
-   PAGE BANNER & BREADCRUMBS
+   PAGE BANNER & BREADCRUMBS (HEADING SECTIONS)
    ========================================================================== */
 .page-banner {
   width: 100%;
@@ -797,12 +829,27 @@ p.lead {
   padding-right: var(--container-padding);
   padding-top: var(--space-8);
   padding-bottom: var(--space-8);
-  background: linear-gradient(180deg, var(--color-surface-alt) 0%, var(--color-bg) 100%);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   border-bottom: 1px solid var(--color-border);
   position: relative;
+  overflow: hidden;
+  color: #FFFFFF;
 }
 
-.breadcrumb-nav {
+.page-banner h1,
+.page-banner h2,
+.page-banner .page-title {
+  color: #FFFFFF !important;
+}
+
+.page-banner .lead,
+.page-banner p.lead {
+  color: #E2E8F0 !important;
+}
+
+.page-banner .breadcrumb-nav {
   display: flex;
   align-items: center;
   gap: var(--space-1);
@@ -810,7 +857,7 @@ p.lead {
   margin-bottom: var(--space-2);
 }
 
-.breadcrumb-list {
+.page-banner .breadcrumb-list {
   display: flex;
   align-items: center;
   gap: var(--space-1);
@@ -819,23 +866,29 @@ p.lead {
   margin: 0;
 }
 
-.breadcrumb-item a {
-  color: var(--color-text-muted);
+.page-banner .breadcrumb-item a {
+  color: #CBD5E1 !important;
+  transition: color var(--transition-base);
 }
 
-.breadcrumb-item a:hover {
-  color: var(--color-primary);
+.page-banner .breadcrumb-item a:hover {
+  color: #2DD4BF !important;
 }
 
-.breadcrumb-item.active {
-  color: var(--color-primary);
+.page-banner .breadcrumb-item.active {
+  color: #2DD4BF !important;
   font-weight: 600;
 }
 
-.breadcrumb-separator {
-  color: var(--color-text-muted);
+.page-banner .breadcrumb-separator {
+  color: rgba(255, 255, 255, 0.5) !important;
   display: inline-flex;
   align-items: center;
+}
+
+.page-banner .text-muted,
+.page-banner [style*="color: var(--color-text-muted)"] {
+  color: #CBD5E1 !important;
 }
 
 /* ==========================================================================
@@ -1126,6 +1179,13 @@ p.lead {
   border: 1px solid var(--color-border-subtle);
 }
 
+.doctor-avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .doctor-avatar-box svg.doctor-fallback {
   width: 70%;
   height: 70%;
@@ -1136,6 +1196,8 @@ p.lead {
 .doctor-spec-badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 4px 10px;
   border-radius: var(--border-radius-pill);
   background-color: var(--color-primary-tint);
@@ -1680,7 +1742,10 @@ p.lead {
   filter: contrast(105%) opacity(0.92);
 }
 
-
+html.dark-mode .map-container iframe,
+[data-theme="dark"] .map-container iframe {
+  filter: invert(90%) hue-rotate(180deg) brightness(85%) contrast(110%);
+}
 
 /* ==========================================================================
    ARTICLE & EDITORIAL CONTENT STYLING
@@ -1881,8 +1946,14 @@ html.rtl-mode .article-blockquote {
   object-fit: contain;
   vertical-align: middle;
 }
-
-
+html.dark-mode .logo-light,
+[data-theme="dark"] .logo-light {
+  display: none !important;
+}
+html.dark-mode .logo-dark,
+[data-theme="dark"] .logo-dark {
+  display: inline-block !important;
+}
 .footer-logo img {
   height: 38px;
   width: auto;
@@ -2109,20 +2180,43 @@ footer.site-footer {
   padding-right: 0 !important;
 }
 
-/* Dark mode: logo + map */
-html.dark-mode .logo-light,
-[data-theme="dark"] .logo-light {
-  display: none !important;
+
+/* Services toolbar: filters + search always aligned on one clean row (desktop) or stacked full-width (tablet/mobile) */
+.services-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
 }
-html.dark-mode .logo-dark,
-[data-theme="dark"] .logo-dark {
-  display: inline-block !important;
+.services-toolbar .filter-nav { margin-bottom: 0; flex: 1 1 0; min-width: 0; }
+.services-toolbar .search-box-wrapper { flex: 0 0 260px; max-width: 100%; }
+@media (max-width: 1099.98px) {
+  .services-toolbar .filter-nav { flex: 1 1 100%; }
+  .services-toolbar .search-box-wrapper { flex: 1 1 100%; max-width: none; }
 }
-html.dark-mode .logo-dark,
-[data-theme="dark"] .logo-dark {
-  mix-blend-mode: lighten;
+
+
+/* Featured Treatments: the "Explore All Clinical Services" button row spans the full grid width, so it is truly centered */
+.container > div[style*="display: grid"] > div[style*="text-align: center"][style*="margin-top"]:has(> a[href="services.html"]) {
+  grid-column: 1 / -1;
+  justify-self: stretch;
+  text-align: center;
 }
-html.dark-mode .map-container iframe,
-[data-theme="dark"] .map-container iframe {
-  filter: invert(90%) hue-rotate(180deg) brightness(85%) contrast(110%);
+
+
+/* Membership "Best Value" tag: a tab hanging from the top edge of its own plan card */
+.card-equal:has(.pricing-badge-pill),
+.card-body:has(> .pricing-badge-pill) {
+  position: relative;
+}
+.card-body > .pricing-badge-pill {
+  top: 0 !important;
+  right: 24px !important;
+  left: auto !important;
+  z-index: 2;
+  white-space: nowrap;
+  line-height: 1.2;
+  padding: 5px 14px 6px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
 }

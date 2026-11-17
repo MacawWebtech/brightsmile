@@ -1,6 +1,6 @@
 /**
  * ==========================================================================
- * BRIGHTSMILE DENTAL CARE — CORE JAVASCRIPT
+ * STACKLY DENTAL CLINIC & ORAL CARE CENTER — CORE JAVASCRIPT
  * Features:
  * 1. FOUC-Free Dark/Light Theme System with localStorage persistence
  * 2. True Layout-Level RTL Toggle System with localStorage persistence
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. THEME CONTROLLER (Dark / Light Mode)
   // ==========================================================================
   const ThemeController = (() => {
-    const STORAGE_KEY = 'brightsmile_dental_theme';
+    const STORAGE_KEY = 'stackly_dental_theme';
     const themeToggleBtns = document.querySelectorAll('[data-action="toggle-theme"]');
 
     const getPreferredTheme = () => {
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. RTL CONTROLLER (Layout-Level Direction Mirroring)
   // ==========================================================================
   const RTLController = (() => {
-    const STORAGE_KEY = 'brightsmile_dental_rtl';
+    const STORAGE_KEY = 'stackly_dental_rtl';
     const rtlToggleBtns = document.querySelectorAll('[data-action="toggle-rtl"]');
 
     const getPreferredDirection = () => {

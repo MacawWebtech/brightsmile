@@ -3,26 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BrightSmile Dental Care — General & Family Care</title>
+  <title>Stackly Dental Clinic — General & Family Care</title>
+  <link rel="icon" type="image/x-icon" href="../assets/images/logo/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/logo/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo/apple-touch-icon.png">
   <meta name="description" content="Premier family dental care, oral surgery, and teeth whitening in Boston. Book certified dentists and advanced hygiene treatments today.">
-  <link rel="canonical" href="https://demo.brightsmiledental.com/pages/index.html">
+  <link rel="canonical" href="https://demo.stacklydental.com/pages/index.html">
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="BrightSmile Dental Care — General & Family Care">
+  <meta property="og:title" content="Stackly Dental Clinic — General & Family Care">
   <meta property="og:description" content="Premier family dental care, oral surgery, and teeth whitening in Boston. Book certified dentists and advanced hygiene treatments today.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://demo.brightsmiledental.com/pages/index.html">
-  <meta property="og:image" content="https://demo.brightsmiledental.com/assets/images/og-preview.jpg">
+  <meta property="og:url" content="https://demo.stacklydental.com/pages/index.html">
+  <meta property="og:image" content="https://demo.stacklydental.com/assets/images/og-preview.jpg">
 
   <!-- DentalClinic Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "DentalClinic",
-    "name": "BrightSmile Dental Care",
-    "image": "https://demo.brightsmiledental.com/assets/images/clinic-exterior.jpg",
-    "@id": "https://demo.brightsmiledental.com",
-    "url": "https://demo.brightsmiledental.com",
+    "name": "Stackly Dental Clinic & Oral Care Center",
+    "image": "https://demo.stacklydental.com/assets/images/clinic-exterior.jpg",
+    "@id": "https://demo.stacklydental.com",
+    "url": "https://demo.stacklydental.com",
     "telephone": "+1-555-234-5678",
     "priceRange": "$$",
     "address": {
@@ -79,8 +83,8 @@
   <script>
     (function() {
       try {
-        var theme = localStorage.getItem('brightsmile_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        var savedRtl = localStorage.getItem('brightsmile_dental_rtl') || localStorage.getItem('rtl');
+        var theme = localStorage.getItem('stackly_dental_theme') || localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        var savedRtl = localStorage.getItem('stackly_dental_rtl') || localStorage.getItem('rtl');
         var isRtl = (savedRtl === 'true' || savedRtl === 'rtl');
         if (theme === 'dark') {
           document.documentElement.classList.add('dark-mode');
@@ -118,9 +122,9 @@
        ========================================================================== -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="index.html" class="header-logo" aria-label="BrightSmile Dental Care Home">
-        <img src="../assets/images/logo/logo.jpg" alt="BrightSmile Dental Care" class="logo-light" width="160" height="38">
-        <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" class="logo-dark" width="160" height="38">
+      <a href="index.html" class="header-logo" aria-label="Stackly Dental Home">
+        <img src="../assets/images/logo/logo.jpg" alt="Stackly Dental Clinic" class="logo-light" width="160" height="38">
+        <img src="../assets/images/logo/logo-white.jpg" alt="Stackly Dental Clinic" class="logo-dark" width="160" height="38">
       </a>
 
       <nav class="header-nav" aria-label="Main Navigation">
@@ -152,17 +156,17 @@
           <span class="rtl-label" style="font-size: 0.8rem; font-weight: 700;">RTL</span>
         </button>
 
-        <a href="../patient-dashboard/index.html" class="btn btn-outline desktop-only portal-btn">
+        <a href="login.html?next=patient-dashboard/index.html" class="btn btn-outline desktop-only portal-btn">
           <span class="icon-text">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
             <span>Patient Portal</span>
           </span>
         </a>
 
-        <a href="login.html" class="btn btn-primary desktop-only header-login-btn">
+        <a href="appointment.html" class="btn btn-primary desktop-only">
           <span class="icon-text">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
-            <span>Login</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Book Appointment</span>
           </span>
         </a>
 
@@ -181,9 +185,9 @@
   <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
   <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
     <div class="mobile-drawer-header">
-      <a href="index.html" class="header-logo" aria-label="BrightSmile Dental Care Home">
-        <img src="../assets/images/logo/logo.jpg" alt="BrightSmile Dental Care" class="logo-light" width="160" height="38">
-        <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" class="logo-dark" width="160" height="38">
+      <a href="index.html" class="header-logo" aria-label="Stackly Dental Home">
+        <img src="../assets/images/logo/logo.jpg" alt="Stackly Dental Clinic" class="logo-light" width="160" height="38">
+        <img src="../assets/images/logo/logo-white.jpg" alt="Stackly Dental Clinic" class="logo-dark" width="160" height="38">
       </a>
       <button type="button" class="btn-icon" data-action="close-drawer" aria-label="Close Navigation Menu">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -220,7 +224,7 @@
           </span>
         </button>
       </div>
-      <a href="login.html" class="btn btn-primary" style="width: 100%; text-align: center;"><span class="icon-text" style="justify-content: center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg><span>Login</span></span></a>
+      <a href="appointment.html" class="btn btn-primary" style="width: 100%; text-align: center;">Book Appointment</a>
     </div>
   </aside>
 
@@ -230,7 +234,7 @@
          ========================================================================== -->
     <section class="hero-section" style="padding-top: var(--space-8); padding-bottom: var(--space-8);">
       <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-6); align-items: center;">
+        <div class="split-section-tablet-stack hero-split-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-6); align-items: center;">
           <div>
             <div class="badge-status badge-confirmed" style="margin-bottom: var(--space-2); display: inline-flex;">
               <span class="icon-text">
@@ -244,7 +248,7 @@
             <p style="font-size: 1.1rem; line-height: 1.6; color: var(--color-text-muted); margin-bottom: var(--space-4);">
               From routine pediatric checkups and ultrasonic cleanings to advanced dental implants and emergency relief, our compassionate specialists combine painless clinical techniques with cutting-edge comfort.
             </p>
-            <div style="display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-5);">
+            <div style="display: flex; flex-wrap: wrap; gap: var(--space-2);">
               <a href="appointment.html" class="btn btn-primary">
                 <span class="icon-text">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
@@ -258,27 +262,30 @@
                 </span>
               </a>
             </div>
-            <!-- Trust Indicator Micro-Strip -->
-            <div style="display: flex; align-items: center; gap: var(--space-4); border-top: 1px solid var(--color-border); padding-top: var(--space-3);">
-              <div>
-                <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">15,000+</span>
-                <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">Happy Patients</p>
-              </div>
-              <div style="width: 1px; height: 32px; background: var(--color-border);"></div>
-              <div>
-                <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">4.9 / 5.0</span>
-                <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">Google Rating</p>
-              </div>
-              <div style="width: 1px; height: 32px; background: var(--color-border);"></div>
-              <div>
-                <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">25+ Yrs</span>
-                <p style="font-size: 0.85rem; color: var(--color-text-muted); margin: 0;">Clinical Service</p>
-              </div>
-            </div>
           </div>
           <!-- Hero Image -->
           <div style="text-align: center;">
-            <img src="../assets/images/home/hero-clinic.jpg" alt="BrightSmile Dental Care modern operatory and welcoming dentist" width="720" height="540" style="width: 100%; max-width: 620px; height: auto; border-radius: 20px; object-fit: cover; box-shadow: 0 12px 32px rgba(10,10,10,0.08);">
+            <img src="../assets/images/home/hero-clinic.jpg" alt="Stackly Dental Clinic modern operatory and welcoming dentist" width="720" height="540" style="width: 100%; max-width: 620px; height: auto; border-radius: 20px; object-fit: cover; box-shadow: 0 12px 32px rgba(10,10,10,0.08);">
+          </div>
+        </div>
+
+        <!-- FULL-WIDTH TRUST INDICATOR STRIP (DESKTOP & TABLET FULL WIDTH) -->
+        <div class="hero-trust-indicator-strip" style="width: 100%; border-top: 1px solid var(--color-border); margin-top: var(--space-8); padding-top: var(--space-4);">
+          <div class="trust-stats-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); align-items: center; width: 100%; text-align: center;">
+            <div style="position: relative; padding: var(--space-2) var(--space-4);">
+              <span style="font-family: var(--font-heading); font-size: clamp(1.5rem, 2.5vw, 1.85rem); font-weight: 700; color: var(--color-primary); display: block;">15,000+</span>
+              <p style="font-size: 0.92rem; color: var(--color-text-muted); margin: 0;">Happy Patients</p>
+              <div class="stat-divider" style="position: absolute; right: 0; top: 15%; height: 70%; width: 1px; background: var(--color-border);"></div>
+            </div>
+            <div style="position: relative; padding: var(--space-2) var(--space-4);">
+              <span style="font-family: var(--font-heading); font-size: clamp(1.5rem, 2.5vw, 1.85rem); font-weight: 700; color: var(--color-primary); display: block;">4.9 / 5.0</span>
+              <p style="font-size: 0.92rem; color: var(--color-text-muted); margin: 0;">Google Rating</p>
+              <div class="stat-divider" style="position: absolute; right: 0; top: 15%; height: 70%; width: 1px; background: var(--color-border);"></div>
+            </div>
+            <div style="padding: var(--space-2) var(--space-4);">
+              <span style="font-family: var(--font-heading); font-size: clamp(1.5rem, 2.5vw, 1.85rem); font-weight: 700; color: var(--color-primary); display: block;">25+ Yrs</span>
+              <p style="font-size: 0.92rem; color: var(--color-text-muted); margin: 0;">Clinical Service</p>
+            </div>
           </div>
         </div>
       </div>
@@ -319,7 +326,7 @@
          ========================================================================== -->
     <section style="padding: var(--space-6) 0;">
       <div class="container">
-        <div class="split-section-tablet-stack" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-6); align-items: center;">
+        <div class="split-section-tablet-stack hero-split-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-6); align-items: center;">
           <div style="display: flex; flex-direction: column; gap: var(--space-3);">
             <img src="../assets/images/about/about-clinic-team.jpg" alt="Multidisciplinary dental clinic team in modern lobby" width="640" height="380" style="width: 100%; border-radius: var(--border-radius-lg); object-fit: cover; border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3);">
@@ -347,7 +354,7 @@
             <span class="badge-status badge-confirmed" style="margin-bottom: var(--space-2); display: inline-flex;">Our Philosophy</span>
             <h2 style="font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: var(--space-2);">A Calming Dental Experience Built Around Your Comfort</h2>
             <p style="color: var(--color-text-muted); line-height: 1.6; margin-bottom: var(--space-3);">
-              We understand dental visits can cause anxiety. That is why BrightSmile Dental Care was designed from the ground up to redefine clinical visits. From heated massage dental chairs and noise-canceling headphones to gentle micro-anesthesia, our team ensures every visit is peaceful and stress-free.
+              We understand dental visits can cause anxiety. That is why Stackly Clinic was designed from the ground up to redefine clinical visits. From heated massage dental chairs and noise-canceling headphones to gentle micro-anesthesia, our team ensures every visit is peaceful and stress-free.
             </p>
             <ul style="list-style: none; padding: 0; margin-bottom: var(--space-3);">
               <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
@@ -388,7 +395,7 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-4);">
           <!-- Service Card 1 -->
           <div class="card-equal" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; padding: var(--space-4);">
-            <img src="../assets/images/services/service-checkup.jpg" alt="Comprehensive Dental Checkup and diagnostic examination" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3);">
+            <img src="../assets/images/services/service-01-checkup.jpg" alt="Comprehensive Dental Checkup and diagnostic examination" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3);">
             <div class="card-body">
               <h3 style="font-size: 1.2rem; margin-bottom: 8px;">Dental Check-up & Diagnostics</h3>
               <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: var(--space-3);">High-definition intraoral cameras and low-dose 3D digital imaging detect micro-cavities and structural risks before pain develops.</p>
@@ -401,7 +408,7 @@
 
           <!-- Service Card 2 -->
           <div class="card-equal" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; padding: var(--space-4);">
-            <img src="../assets/images/services/service-cleaning.jpg" alt="Ultrasonic Teeth Cleaning and plaque prophylaxis" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3);">
+            <img src="../assets/images/services/service-02-cleaning.jpg" alt="Ultrasonic Teeth Cleaning and plaque prophylaxis" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3);">
             <div class="card-body">
               <h3 style="font-size: 1.2rem; margin-bottom: 8px;">Ultrasonic Teeth Cleaning</h3>
               <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: var(--space-3);">Non-abrasive piezo scaling eradicates stubborn calculus and biofilm followed by gentle enamel air-polishing.</p>
@@ -414,7 +421,7 @@
 
           <!-- Service Card 3 -->
           <div class="card-equal" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; padding: var(--space-4);">
-            <img src="../assets/images/services/service-whitening.jpg" alt="Laser Teeth Whitening in-chair acceleration" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3);">
+            <img src="../assets/images/services/service-06-whitening.jpg" alt="Laser Teeth Whitening in-chair acceleration" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3);">
             <div class="card-body">
               <h3 style="font-size: 1.2rem; margin-bottom: 8px;">Laser Teeth Whitening</h3>
               <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: var(--space-3);">Safely lift years of tea, coffee, and enamel stains up to 8 shades in a single comfortable 45-minute chairside session.</p>
@@ -427,7 +434,7 @@
 
           <!-- Service Card 4 -->
           <div class="card-equal" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; padding: var(--space-4);">
-            <img src="../assets/images/services/service-implants.jpg" alt="Titanium Dental Implants 3D guided surgery" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3);">
+            <img src="../assets/images/services/service-07-implants.jpg" alt="Titanium Dental Implants 3D guided surgery" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3);">
             <div class="card-body">
               <h3 style="font-size: 1.2rem; margin-bottom: 8px;">3D Guided Dental Implants</h3>
               <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: var(--space-3);">Permanent titanium root replacement with computer-guided surgical accuracy and natural zirconia crowns.</p>
@@ -438,33 +445,7 @@
             </div>
           </div>
 
-          <!-- Service Card 5 -->
-          <div class="card-equal" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; padding: var(--space-4);">
-            <img src="../assets/images/services/service-orthodontics.jpg" alt="Clear Aligners and Orthodontics for teeth straightening" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3);">
-            <div class="card-body">
-              <h3 style="font-size: 1.2rem; margin-bottom: 8px;">Clear Aligners & Orthodontics</h3>
-              <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: var(--space-3);">Virtually invisible, removable aligners engineered to correct crowding, crossbites, and spacing without metal brackets.</p>
-            </div>
-            <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--color-border); padding-top: var(--space-3);">
-              <span style="font-weight: 700; color: var(--color-primary);">From $1,250</span>
-              <a href="service-details.html" class="btn btn-outline" style="padding: 6px 14px; font-size: 0.85rem;">View Procedure</a>
-            </div>
-          </div>
-
-          <!-- Service Card 6 -->
-          <div class="card-equal" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; padding: var(--space-4);">
-            <img src="../assets/images/services/service-rootcanal.jpg" alt="Microscopic Root Canal Therapy for gentle nerve salvation" width="400" height="260" style="width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: var(--space-3);">
-            <div class="card-body">
-              <h3 style="font-size: 1.2rem; margin-bottom: 8px;">Painless Root Canal Therapy</h3>
-              <p style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: var(--space-3);">Advanced surgical microscopes allow endodontic specialists to cleanse infected canals with minimal sensation.</p>
-            </div>
-            <div class="card-footer" style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--color-border); padding-top: var(--space-3);">
-              <span style="font-weight: 700; color: var(--color-primary);">From $390</span>
-              <a href="service-details.html" class="btn btn-outline" style="padding: 6px 14px; font-size: 0.85rem;">View Procedure</a>
-            </div>
-          </div>
-        </div>
-
+         
         <div style="text-align: center; margin-top: var(--space-6);">
           <a href="services.html" class="btn btn-primary">
             <span class="icon-text">
@@ -482,7 +463,7 @@
     <section style="padding: var(--space-8) 0;">
       <div class="container">
         <div style="text-align: center; max-width: 680px; margin: 0 auto var(--space-6);">
-          <span class="badge-status badge-confirmed" style="margin-bottom: var(--space-2); display: inline-flex;">The BrightSmile Difference</span>
+          <span class="badge-status badge-confirmed" style="margin-bottom: var(--space-2); display: inline-flex;">The Stackly Difference</span>
           <h2 style="font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: var(--space-2);">Why Boston Families Trust Our Care</h2>
           <p style="color: var(--color-text-muted);">Setting the gold standard in clinical comfort, sterilization integrity, and transparent care.</p>
         </div>
@@ -596,7 +577,7 @@
          ========================================================================== -->
     <section style="padding: var(--space-8) 0;">
       <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-6); align-items: center;">
+        <div class="split-section-tablet-stack hero-split-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-6); align-items: center;">
           <div>
             <span class="badge-status badge-confirmed" style="margin-bottom: var(--space-2); display: inline-flex;">Advanced Clinical Tech</span>
             <h2 style="font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: var(--space-3);">Precision Dentistry Powered by Innovation</h2>
@@ -689,10 +670,10 @@
           <div class="card-equal" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 16px; padding: var(--space-5);">
             <div style="color: var(--color-primary); margin-bottom: var(--space-2); font-size: 1.1rem;">★★★★★</div>
             <p style="color: var(--color-text-soft); font-style: italic; line-height: 1.6; margin-bottom: var(--space-4); flex: 1;">
-              "I had avoided the dentist for nearly 6 years due to severe dental phobia. Dr. Mitchell and the BrightSmile hygiene team treated me with unmatched kindness. The laser cleaning was 100% painless!"
+              "I had avoided the dentist for nearly 6 years due to severe dental phobia. Dr. Mitchell and the Stackly hygiene team treated me with unmatched kindness. The laser cleaning was 100% painless!"
             </p>
             <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--color-primary-tint); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--color-primary);">CW</div>
+              <img src="../assets/images/testimonials/testimonial-1.jpg" alt="Claire Worthington" width="48" height="48" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-primary-border); flex-shrink: 0;">
               <div>
                 <h4 style="font-size: 0.95rem; margin: 0;">Claire Worthington</h4>
                 <p style="font-size: 0.8rem; color: var(--color-text-muted); margin: 0;">Back Bay, Boston • Patient since 2024</p>
@@ -707,7 +688,7 @@
               "Dr. Vance placed two dental implants using their 3D surgical guide. The entire procedure took under 45 minutes, and I had zero swelling the next morning. True surgical masters."
             </p>
             <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--color-primary-tint); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--color-primary);">TH</div>
+              <img src="../assets/images/testimonials/testimonial-2.jpg" alt="Thomas Henderson" width="48" height="48" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-primary-border); flex-shrink: 0;">
               <div>
                 <h4 style="font-size: 0.95rem; margin: 0;">Thomas Henderson</h4>
                 <p style="font-size: 0.8rem; color: var(--color-text-muted); margin: 0;">Cambridge, MA • Implant Patient</p>
@@ -722,7 +703,7 @@
               "The patient portal is incredible! I can see my X-rays, tooth condition ledger, and prescription receipts right from my phone. No other dental office in Boston has this level of transparency."
             </p>
             <div style="display: flex; align-items: center; gap: 12px;">
-              <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--color-primary-tint); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--color-primary);">SR</div>
+              <img src="../assets/images/testimonials/testimonial-3.jpg" alt="Sophia Ramirez" width="48" height="48" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-primary-border); flex-shrink: 0;">
               <div>
                 <h4 style="font-size: 0.95rem; margin: 0;">Sophia Ramirez</h4>
                 <p style="font-size: 0.8rem; color: var(--color-text-muted); margin: 0;">Brookline, MA • Family Plan</p>
@@ -747,7 +728,7 @@
         <div class="accordion-group">
           <div class="accordion-item open" style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; margin-bottom: var(--space-2); overflow: hidden;">
             <button type="button" class="accordion-btn" aria-expanded="true" style="width: 100%; text-align: left; padding: var(--space-3) var(--space-4); background: none; border: none; font-weight: 700; font-size: 1.05rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: var(--color-text-main);">
-              <span>Do dental cleanings hurt at BrightSmile Dental Care?</span>
+              <span>Do dental cleanings hurt at Stackly Clinic?</span>
               <span class="accordion-icon">+</span>
             </button>
             <div class="accordion-body" style="padding: 0 var(--space-4) var(--space-3); color: var(--color-text-muted); line-height: 1.6;">
@@ -869,15 +850,15 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <a href="index.html" class="footer-logo" aria-label="BrightSmile Dental Care Home">
-              <img src="../assets/images/logo/logo-white.jpg" alt="BrightSmile Dental Care" width="160" height="38">
+            <a href="index.html" class="footer-logo" aria-label="Stackly Dental Home">
+              <img src="../assets/images/logo/logo-white.jpg" alt="Stackly Dental Clinic" width="160" height="38">
             </a>
             <p class="footer-desc">
               Boston's trusted comprehensive family dental clinic and surgical oral care center. Dedicated to painless dentistry and lifelong smile health.
             </p>
             <div style="font-size: 0.85rem; color: var(--color-dark-section-muted); margin-top: 12px;">
               <strong>Emergency Triage:</strong> (555) 234-5678<br>
-              <strong>Email:</strong> care@brightsmiledental.com
+              <strong>Email:</strong> care@stacklydental.com
             </div>
           </div>
 
@@ -897,12 +878,12 @@
           <div class="footer-col">
             <h4 class="footer-heading">Patient Portals</h4>
             <ul class="footer-links">
-              <li><a href="../patient-dashboard/index.html">Patient Dashboard</a></li>
-              <li><a href="../patient-dashboard/appointments.html">Manage Appointments</a></li>
-              <li><a href="../patient-dashboard/treatment-history.html">Tooth Health Chart</a></li>
-              <li><a href="../patient-dashboard/prescriptions.html">Digital Prescriptions</a></li>
-              <li><a href="../patient-dashboard/payments.html">Invoices & Receipts</a></li>
-              <li><a href="../admin-dashboard/index.html">Staff & Admin Login</a></li>
+              <li><a href="login.html?next=patient-dashboard/index.html">Patient Dashboard</a></li>
+              <li><a href="login.html?next=patient-dashboard/appointments.html">Manage Appointments</a></li>
+              <li><a href="login.html?next=patient-dashboard/treatment-history.html">Tooth Health Chart</a></li>
+              <li><a href="login.html?next=patient-dashboard/prescriptions.html">Digital Prescriptions</a></li>
+              <li><a href="login.html?next=patient-dashboard/payments.html">Invoices & Receipts</a></li>
+              <li><a href="login.html?next=admin-dashboard/index.html">Staff & Admin Login</a></li>
             </ul>
           </div>
 
@@ -934,7 +915,7 @@
       <div class="container">
         <div class="footer-bottom-inner">
           <p class="footer-copy">
-            &copy; 2026 BrightSmile Dental Care. All rights reserved.
+            &copy; 2026 Stackly Dental Clinic & Oral Care Center. All rights reserved.
           </p>
           <div class="footer-bottom-links">
             <a href="contact.html">Privacy Policy</a>

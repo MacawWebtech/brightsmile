@@ -1,6 +1,6 @@
 /**
  * ==========================================================================
- * BRIGHTSMILE DENTAL CARE — COMPLETE DASHBOARD CONTROLLER
+ * STACKLY DENTAL CLINIC — COMPLETE DASHBOARD CONTROLLER
  * Handles:
  * 1. Collapsible Sidebar (Desktop toggle + Mobile drawer)
  * 2. Topbar Dropdowns (Notifications & Profile menu)
@@ -26,7 +26,7 @@ const DentalDashboard = (() => {
         e.preventDefault();
         if (window.innerWidth >= 1024) {
           sidebar?.classList.toggle('collapsed');
-          localStorage.setItem('brightsmile_dashboard_collapsed', sidebar?.classList.contains('collapsed'));
+          localStorage.setItem('stackly_dashboard_collapsed', sidebar?.classList.contains('collapsed'));
         } else {
           sidebar?.classList.toggle('mobile-open');
           overlay?.classList.toggle('active');
@@ -40,7 +40,7 @@ const DentalDashboard = (() => {
     });
 
     // Restore desktop collapsed state
-    if (window.innerWidth >= 1024 && localStorage.getItem('brightsmile_dashboard_collapsed') === 'true') {
+    if (window.innerWidth >= 1024 && localStorage.getItem('stackly_dashboard_collapsed') === 'true') {
       sidebar?.classList.add('collapsed');
     }
   };
@@ -81,7 +81,7 @@ const DentalDashboard = (() => {
         e.preventDefault();
         const isDark = document.documentElement.classList.toggle('dark-mode');
         document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-        localStorage.setItem('brightsmile_dental_theme', isDark ? 'dark' : 'light');
+        localStorage.setItem('stackly_dental_theme', isDark ? 'dark' : 'light');
       });
     });
 
@@ -90,7 +90,7 @@ const DentalDashboard = (() => {
         e.preventDefault();
         const isRtl = document.documentElement.classList.toggle('rtl-mode');
         document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
-        localStorage.setItem('brightsmile_dental_rtl', isRtl ? 'rtl' : 'ltr');
+        localStorage.setItem('stackly_dental_rtl', isRtl ? 'rtl' : 'ltr');
       });
     });
   };
